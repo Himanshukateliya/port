@@ -141,7 +141,8 @@
 .navbar-collapse {
   flex-basis: 100%;
   flex-grow: 1;
-  // For always expanded or extra full navbars, ensure content aligns itself
+   transform: translateX(-300px);
+  // transition: transform 250ms ease-in-out !important;  // For always expanded or extra full navbars, ensure content aligns itself
   // properly vertically. Can be easily overridden with flex utilities.
   align-items: center;
 }
@@ -151,6 +152,16 @@
   padding: var(--#{$prefix}navbar-toggler-padding-y) var(--#{$prefix}navbar-toggler-padding-x);
   @include font-size(var(--#{$prefix}navbar-toggler-font-size));
   line-height: 1;
+
+    // height: 100% !important;
+    // position: fixed !important;
+    // left: 0 !important;
+    // width: 250px !important;
+    margin-top: 60px !important;
+    transform: translateX(0) ;
+    transition: transform 250ms ease-in-out !important;
+    background: linear-gradient(180deg, #FC466B 0%, #3F5EFB 100%) !important;
+
   color: var(--#{$prefix}navbar-color);
   background-color: transparent; // remove default button style
   border: var(--#{$prefix}border-width) solid var(--#{$prefix}navbar-toggler-border-color); // remove default button style

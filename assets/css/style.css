@@ -4785,6 +4785,8 @@ textarea.form-control-lg {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+          
+            transition: transform 250ms ease-in-out !important;
 }
 
 .navbar-toggler {
@@ -5055,6 +5057,7 @@ textarea.form-control-lg {
   }
   .navbar-expand-xl .navbar-toggler {
     display: none;
+    transform: translateX(0) !important;
   }
   .navbar-expand-xl .offcanvas {
     position: static;

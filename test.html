@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <style>
+        
+
+
+
+
+
+#sidebarMenu {
+    height: 100%;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    margin-top: 60px;
+    transform: translateX(-250px);
+    transition: transform 250ms ease-in-out;
+    background: linear-gradient(180deg, #FC466B 0%, #3F5EFB 100%);
+}
+
+
+
+
+input[type="checkbox"]:checked ~ #sidebarMenu {
+    transform: translateX(0);
+}
+
+input[type=checkbox] {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: none;
+}
+.sidebarIconToggle {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    top: 22px;
+    left: 15px;
+    height: 22px;
+    width: 22px;
+}
+.spinner {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: #000000;
+}
+.horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+.diagonal.part-1 {
+    position: relative;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    float: left;
+}
+.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    opacity: 0;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    margin-top: -9px;
+}
+    </style>
+</head>
+<body>
+    
+    <!-- <div class="header"></div> -->
+    <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+      <!-- <div class="spinner diagonal part-1"></div>
+      <div class="spinner horizontal"></div>
+      <div class="spinner diagonal part-2"></div> -->
+    </label>
+    <div id="sidebarMenu">
+   
+    </div>
+    <!-- <div id='center' class="main center"> -->
+      <!-- <div class="mainInner">
+        <div>PURE CSS SIDEBAR TOGGLE MENU</div>
+      </div>
+      <div class="mainInner">
+        <div>PURE CSS SIDEBAR TOGGLE MENU</div>
+      </div>
+      <div class="mainInner">
+        <div>PURE CSS SIDEBAR TOGGLE MENU</div>
+      </div> -->
+    <!-- </div> -->
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+
+
+
+<!-- <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" data-bs-toggle="collapse"
+    data-bs-target="#sidebarMenu" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+<label for="openSidebarMenu" class="sidebarIconToggle">
+    <div class="spinner diagonal part-1"></div>
+    <div class="spinner horizontal"></div>
+    <div class="spinner diagonal part-2"></div>
+</label>
+<div id="sidebarMenu">
+
+</div> -->
+
+
+
+
+<style>
+    #sidebarMenu {
+        height: 100%;
+        /* position: fixed; */
+        display: flex;
+        /* justify-content: center; */
+        left: 0;
+        top: 10%;
+        width: 250px;
+        margin-top: 60px;
+        /* transform: translateX(-250px); */
+        transition: transform 250ms ease-in-out;
+        background: linear-gradient(180deg, white 100%);
+    }
+
+    input[type="checkbox"]:checked~#sidebarMenu {
+        transform: translateX(0);
+    }
+
+    input[type=checkbox] {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        display: none;
+    }
+
+    .sidebarIconToggle {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        cursor: pointer;
+        position: absolute;
+        z-index: 99;
+        /* height: 100%;
+					width: 100%; */
+        top: 50px;
+        left: 78%;
+        height: 22px;
+        width: 22px;
+    }
+
+    .spinner {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background-color: #000000;
+    }
+
+    .horizontal {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        position: relative;
+        float: left;
+        margin-top: 3px;
+    }
+
+    .diagonal.part-1 {
+        position: relative;
+        transition: all 0.3s;
+        box-sizing: border-box;
+        float: left;
+    }
+
+    .diagonal.part-2 {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        position: relative;
+        float: left;
+        margin-top: 3px;
+    }
+
+    input[type=checkbox]:checked~.sidebarIconToggle>.horizontal {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        opacity: 0;
+    }
+
+    input[type=checkbox]:checked~.sidebarIconToggle>.diagonal.part-1 {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        transform: rotate(135deg);
+        margin-top: 8px;
+    }
+
+    input[type=checkbox]:checked~.sidebarIconToggle>.diagonal.part-2 {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        transform: rotate(-135deg);
+        margin-top: -9px;
+    }
+
+    /* Extra small devices (phones, 600px and down) */
+    @media only screen and (max-width: 600px) {
+        #sidebarMenu {
+            display: flex;
+            transform: translateX(-250px);
+        }
+    }
+
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 600px) {
+        #sidebarMenu {
+            display: flex;
+            transform: translateX(-250px);
+        }
+    }
+
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 768px) {
+        #sidebarMenu {
+            display: flex;
+            transform: translateX(-250px);
+        }
+    }
+
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+        #sidebarMenu {
+            display: flex;
+            transform: translateX(-250px);
+        }
+    }
+
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) {
+        #sidebarMenu {
+            display: none;
+            margin: 0 auto;
+            /* transform: translateX(-250px); */
+        }
+
+        .sidebarIconToggle {
+            display: none;
+        }
+    }
+</style>
+
+
+<!-- Main navbar START -->
+
+<div class="navbar-collapse w-100 collapse " id="sidebarMenu">
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
