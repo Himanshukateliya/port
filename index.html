@@ -980,7 +980,9 @@ Main Banner START -->
 
 							<!-- Button -->
 
-							<a href="#" class="btn btn-lg btn-danger-soft me-2 mb-4 mb-sm-0">Get Started</a>
+							<a href="#" class="btn btn-lg btn-danger-soft me-2 mb-4 mb-sm-0" id="myBtn"
+								data-bs-toggle="modal" data-bs-target="#exampleModal" data-whatever="@mdo">Get
+								Started</a>
 
 							<!-- Video button -->
 
@@ -4670,15 +4672,15 @@ Reviews END -->
 
 
 	<div class="rounded-social-buttons d-block d-sm-none fixed-bottom bg-blur border border-opacity-10 border-black ">
-		<a class="social-button facebook rounded-circle" href="#" target="_blank" rel="noopener"><i
+		<a class="social-button facebook rounded-circle" href="https://wa.me/91123-456-7878"><i
 				class="fa-solid fa-phone-volume"></i></a>
-		<a class="social-button twitter rounded-circle" href="#" target="_blank" rel="noopener"><i
+		<a class="social-button twitter rounded-circle" href="tel:+91 123-456-7878"><i
 				class="fa-brands fa-whatsapp"></i></a>
-		<!-- <a class="social-button linkedin" href="https://www.linkedin.com/" target="_blank" rel="noopener"><i class="fab fa-linkedin fs-6"></i></a> -->
-		<a class="social-button youtube rounded-circle" href="#" target="_blank" rel="noopener"><i
-				class="fa-solid fa-file-export"></i></a>
-		<a class="social-button instagram rounded-circle m-0" href="#" target="_blank" rel="noopener"><i
-				class="fa-solid fa-file-signature"></i></a>
+		<a class="social-button youtube rounded-circle" id="mBtn" data-bs-toggle="modal" data-bs-target="#ronak"
+			data-whatever="@mdo"><i class="fa-solid fa-file-export"></i></a>
+		<a class="social-button instagram rounded-circle m-0" id="myBtn" data-bs-toggle="modal"
+			data-bs-target="#exampleModal" data-whatever="@mdo">
+			<i class="fa-solid fa-file-signature"></i></a>
 	</div>
 
 
@@ -5006,7 +5008,7 @@ Footer START -->
 				</div>
 				<div class="modal-body">
 					<form action="#!">
-						<div class="row gy-4 gy-xl-5 p-2">
+						<div class="row gy-4  p-2">
 							<div class="col-12">
 								<label for="fullname" class="form-label">Full Name <span
 										class="text-danger">*</span></label>
