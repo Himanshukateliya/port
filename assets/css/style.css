@@ -22156,6 +22156,43 @@ html[dir=rtl] .choices__input {
   right: 0;
 }
 
+/* ---------High Demanding Programs-------- */
+
+/* .ron-controls [data-controls] {
+  position: absolute;
+  top: 22%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 0.325rem;
+  display: block;
+  z-index: 9;
+  text-align: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background: rgba(var(--bs-white-rgb), 0.3);
+  color: var(--bs-white);
+  border: none;
+  margin: 0 10px;
+}
+.ron-controls [data-controls]:hover {
+  background-color: var(--bs-primary);
+  color: var(--bs-white);
+}
+.ron-controls [data-controls] i {
+  line-height: inherit;
+}
+
+.ron-controls [data-controls=prev] {
+  left: 6%;
+}
+
+.ron-controls [data-controls=next] {
+  right: 6%;
+} */
+
 /* rtl:raw:
 .tiny-slider .tns-controls [data-controls]{
   transform: scaleX(-1) translateY(-50%);
