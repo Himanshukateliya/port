@@ -22962,3 +22962,22 @@ html[dir=rtl] .choices__input {
   background: #fefefe;
   border-color: #125688;
 }
+
+
+/* icon color */
+.twi-color:hover{
+  background-color: #1DA1F2 !important;
+  color: white;
+}
+.face-color:hover{
+  background-color: #1877F2 !important;
+  color: white;
+}
+.insta-color:hover{
+  background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf) !important;
+  color: white;
+}
+.Youtube-color:hover{
+  background-color: #FF0000 !important;
+  color: white;
+}
