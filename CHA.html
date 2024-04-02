@@ -1,0 +1,2899 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <title>CHA - LMS, Education and Course Theme</title>
+
+    <!-- Meta Tags -->
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="author" content="Webestica.com">
+
+    <meta name="description" content="Eduport- LMS, Education and Course Theme">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!-- Dark mode -->
+
+    <script>
+
+        const storedTheme = localStorage.getItem('theme')
+
+
+
+        const getPreferredTheme = () => {
+
+            if (storedTheme) {
+
+                return storedTheme
+
+            }
+
+            return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'light'
+
+        }
+
+        const setTheme = function (theme) {
+
+            if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+
+                document.documentElement.setAttribute('data-bs-theme', 'dark')
+
+            } else {
+
+                document.documentElement.setAttribute('data-bs-theme', theme)
+
+            }
+
+        }
+
+
+        setTheme(getPreferredTheme())
+
+
+        window.addEventListener('DOMContentLoaded', () => {
+
+            var el = document.querySelector('.theme-icon-active');
+
+            if (el != 'undefined' && el != null) {
+
+                const showActiveTheme = theme => {
+
+                    const activeThemeIcon = document.querySelector('.theme-icon-active use')
+
+                    const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+
+                    const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
+
+                    document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+
+                        element.classList.remove('active')
+
+                    })
+
+                    btnToActive.classList.add('active')
+
+                    activeThemeIcon.setAttribute('href', svgOfActiveBtn)
+
+                }
+
+                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+
+                    if (storedTheme !== 'light' || storedTheme !== 'dark') {
+
+                        setTheme(getPreferredTheme())
+
+                    }
+
+                })
+
+                showActiveTheme(getPreferredTheme())
+
+                document.querySelectorAll('[data-bs-theme-value]')
+
+                    .forEach(toggle => {
+
+                        toggle.addEventListener('click', () => {
+
+                            const theme = toggle.getAttribute('data-bs-theme-value')
+
+                            localStorage.setItem('theme', theme)
+
+                            setTheme(theme)
+
+                            showActiveTheme(theme)
+
+                        })
+                    })
+            }
+        })
+
+    </script>
+
+    <!-- Favicon -->
+
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- Google Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
+
+    <!-- Plugins CSS -->
+
+    <link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/vendor/tiny-slider/tiny-slider.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/vendor/aos/aos.css">
+
+    <!-- Theme CSS -->
+
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+
+<body>
+    <!-- Header START -->
+
+    <header class="navbar-light navbar-sticky">
+
+        <!-- Logo Nav START -->
+
+        <nav class="navbar navbar-expand-xl">
+
+            <div class="container">
+
+                <!-- Logo START -->
+
+                <a class="navbar-brand" href="index.html">
+
+                    <img class="light-mode-item navbar-brand-item" src="assets/images/Gfe Business.png" alt="logo"
+                        style="height:55px;width:180px;">
+
+                    <img class="dark-mode-item navbar-brand-item" src="assets/images/Gfe Business.png" alt="logo"
+                        style="height:55px;width:180px;">
+
+                </a>
+
+                <!-- Logo END -->
+
+                <!-- Responsive navbar toggler -->
+
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                    aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-animation">
+
+                        <span></span>
+
+                        <span></span>
+
+                        <span></span>
+
+                    </span>
+
+                </button>
+                <!-- Main navbar START -->
+
+                <div class="navbar-collapse w-100 collapse" id="navbarCollapse">
+
+                    <ul class="navbar-nav navbar-nav-scroll me-auto">
+
+                        <!-- Nav item 1 Demos -->
+
+                        <li class="nav-item dropdown">
+
+                            <a class="nav-link" href="index.html" id="demoMenu" aria-haspopup="true"
+                                aria-expanded="false">Home</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+
+                            <a class="nav-link" href="about.html" id="demoMenu" aria-haspopup="true"
+                                aria-expanded="false">About Us</a>
+
+                        </li>
+
+                        <li class="nav-item dropdown">
+
+                            <a class="nav-link dropdown-toggle" href="gallery.html" id="demoMenu"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gallery</a>
+
+                            <ul class="dropdown-menu" aria-labelledby="demoMenu">
+
+                                <li> <a class="dropdown-item" href="team.html">Team</a></li>
+
+                                <li> <a class="dropdown-item" href="clients.html">Clients</a></li>
+
+                                <li> <a class="dropdown-item" href="events.html">Events</a></li>
+
+                                <li> <a class="dropdown-item " href="awards.html">Awards</a></li>
+
+                                <li> <a class="dropdown-item " href="media.html">Media Coverage</a></li>
+
+                            </ul>
+
+                        </li>
+
+                        <li class="nav-item dropdown">
+
+                            <a class="nav-link dropdown-toggle" href="download.html" id="demoMenu"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Download</a>
+
+                            <ul class="dropdown-menu" aria-labelledby="demoMenu">
+                                <li> <a class="dropdown-item" id="mBtn" data-bs-toggle="modal" data-bs-target="#ronak"
+                                        data-whatever="@mdo">Product Research Report</a></li>
+
+                                <li> <a class="dropdown-item" id="mBtn" data-bs-toggle="modal" data-bs-target="#ronak"
+                                        data-whatever="@mdo">Genuine International Buyers-Sellers
+                                        Data</a></li>
+
+                            </ul>
+
+                        </li>
+
+                        <li class="nav-item dropdown">
+
+                            <a class="nav-link dropdown-toggle" href="resources.html" id="demoMenu"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources</a>
+
+                            <ul class="dropdown-menu" aria-labelledby="demoMenu">
+
+                                <li> <a class="dropdown-item" href="https://www.indiantradeportal.in/">HSN Code
+                                        Search</a></li>
+
+                                <li> <a class="dropdown-item" href="https://www.xe.com/currencyconverter/">Currency
+                                        Converter</a></li>
+                            </ul>
+
+                        </li>
+                        <li class="nav-item dropdown">
+
+                            <a class="nav-link" href="career.html" id="demoMenu" aria-haspopup="true"
+                                aria-expanded="false">Career</a>
+
+                        </li>
+                        <li class="nav-item dropdown">
+
+                            <a class="nav-link" href="contact-us.html" id="demoMenu" aria-haspopup="true"
+                                aria-expanded="false">Contact Us</a>
+
+                        </li>
+                    </ul>
+
+                    </li>
+
+                    <!-- Nav Search START -->
+
+                    <div class="nav my-3 my-xl-0 px-4 flex-nowrap align-items-center">
+
+                        <div class="nav-item w-100">
+
+                            <form class="position-relative">
+
+                                <input class="form-control pe-5 bg-transparent" type="search" placeholder="Search"
+                                    aria-label="Search">
+
+                                <button
+                                    class="bg-transparent p-2 position-absolute top-50 end-0 translate-middle-y border-0 text-primary-hover text-reset"
+                                    type="submit">
+
+                                    <i class="fas fa-search fs-6 "></i>
+
+                                </button>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Nav Search END -->
+
+                </div>
+
+                <!-- Main navbar END -->
+
+                <!-- Profile START -->
+
+                <div class="dropdown ms-1 ms-lg-0">
+
+                    <a class="avatar avatar-sm p-0" href="#" id="profileDropdown" role="button"
+                        data-bs-auto-close="outside" data-bs-display="static" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+
+                        <img class="avatar-img rounded-circle" src="assets/images/avatar/01.jpg" alt="avatar">
+
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-animation dropdown-menu-end shadow pt-3"
+                        aria-labelledby="profileDropdown">
+
+                        <!-- Profile info -->
+
+                        <li class="px-3 mb-3">
+
+                            <div class="d-flex align-items-center">
+
+                                <!-- Avatar -->
+
+                                <div class="avatar me-3">
+
+                                    <img class="avatar-img rounded-circle shadow" src="assets/images/avatar/01.jpg"
+                                        alt="avatar">
+
+                                </div>
+
+                                <div>
+
+                                    <a class="h6" href="#">Lori Ferguson</a>
+
+                                    <p class="small m-0">example@gmail.com</p>
+
+                                </div>
+
+                            </div>
+
+                        </li>
+
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <!-- Links -->
+
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-person fa-fw me-2"></i>Edit Profile</a>
+                        </li>
+
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-gear fa-fw me-2"></i>Account Settings</a>
+                        </li>
+
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-info-circle fa-fw me-2"></i>Help</a></li>
+
+                        <li><a class="dropdown-item bg-danger-soft-hover" href="#"><i
+                                    class="bi bi-power fa-fw me-2"></i>Sign Out</a></li>
+
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <!-- Dark mode options START -->
+
+                        <li>
+
+                            <div
+                                class="bg-light dark-mode-switch theme-icon-active d-flex align-items-center p-1 rounded mt-2">
+
+                                <button type="button" class="btn btn-sm mb-0" data-bs-theme-value="light">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-sun fa-fw mode-switch" viewBox="0 0 16 16">
+
+                                        <path
+                                            d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+
+                                        <use href="#"></use>
+
+                                    </svg> Light
+
+                                </button>
+
+                                <button type="button" class="btn btn-sm mb-0" data-bs-theme-value="dark">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-moon-stars fa-fw mode-switch" viewBox="0 0 16 16">
+
+                                        <path
+                                            d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z" />
+
+                                        <path
+                                            d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+
+                                        <use href="#"></use>
+
+                                    </svg> Dark
+
+                                </button>
+
+                                <button type="button" class="btn btn-sm mb-0 active" data-bs-theme-value="auto">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-circle-half fa-fw mode-switch" viewBox="0 0 16 16">
+
+                                        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+
+                                        <use href="#"></use>
+
+                                    </svg> Auto
+
+                                </button>
+
+                            </div>
+
+                        </li>
+
+                        <!-- Dark mode options END-->
+
+                    </ul>
+
+                </div>
+
+                <!-- Profile START -->
+
+            </div>
+
+        </nav>
+
+        <!-- Logo Nav END -->
+
+    </header>
+
+    <!-- Header END -->
+
+    <!-- **************** MAIN CONTENT START **************** -->
+
+    <main>
+        <div class="row gx-0">
+
+            <!-- Title and SVG START -->
+
+            <div class="col-10 text-center mx-auto position-relative">
+
+                <!-- SVG decoration -->
+
+                <!-- SVG decoration -->
+
+                <figure class="position-absolute top-0 start-0 ms-n9">
+
+                    <svg width="22px" height="22px" viewBox="0 0 22 22">
+
+                        <polygon class="fill-orange"
+                            points="22,8.3 13.7,8.3 13.7,0 8.3,0 8.3,8.3 0,8.3 0,13.7 8.3,13.7 8.3,22 13.7,22 13.7,13.7 22,13.7 " />
+
+                    </svg>
+
+                </figure>
+
+                <!-- SVG decoration -->
+
+                <figure class="position-absolute top-100 start-100 translate-middle ms-5 d-none d-md-block">
+
+                    <svg width="21.5px" height="21.5px" viewBox="0 0 21.5 21.5">
+
+                        <polygon class="fill-danger"
+                            points="21.5,14.3 14.4,9.9 18.9,2.8 14.3,0 9.9,7.1 2.8,2.6 0,7.2 7.1,11.6 2.6,18.7 7.2,21.5 11.6,14.4 18.7,18.9 " />
+
+                    </svg>
+
+                </figure>
+
+                <!-- SVG decoration -->
+
+                <!-- Title -->
+
+                <div class="card card-body shadow p-4 p-sm-5 position-relative">
+
+                    <h3 class="position-relative fs-3" style="padding-top:10px">We are holding our position amongst
+                        top 10 CHAs in india </h3>
+
+                    <h3 class="my-3"><span class="text-warning"> if you want any CHA service after starting
+                            your export business on </span></h3>
+
+                    <h3 class="mb-3">regular mode, we are always there to</h3>
+
+                    <h4>support you at ground level.</h4>
+
+                    <!-- <h4><span class="text-warning">GFE – Global Federation of Entrepreneurs!</span></h4> -->
+
+                </div>
+
+            </div>
+
+            <!-- Title and SVG END -->
+
+        </div>
+
+
+        <!-- Video & form -->
+
+        <section class="bg-light position-relative">
+
+            <!-- SVG decoration -->
+
+            <figure class="position-absolute bottom-0 start-0 d-none d-lg-block">
+
+                <svg width="822.2px" height="301.9px" viewBox="0 0 822.2 301.9">
+
+                    <path class="fill-warning"
+                        d="M752.5,51.9c-4.5,3.9-8.9,7.8-13.4,11.8c-51.5,45.3-104.8,92.2-171.7,101.4c-39.9,5.5-80.2-3.4-119.2-12.1 c-32.3-7.2-65.6-14.6-98.9-13.9c-66.5,1.3-128.9,35.2-175.7,64.6c-11.9,7.5-23.9,15.3-35.5,22.8c-40.5,26.4-82.5,53.8-128.4,70.7 c-2.1,0.8-4.2,1.5-6.2,2.2L0,301.9c3.3-1.1,6.7-2.3,10.2-3.5c46.1-17,88.1-44.4,128.7-70.9c11.6-7.6,23.6-15.4,35.4-22.8 c46.7-29.3,108.9-63.1,175.1-64.4c33.1-0.6,66.4,6.8,98.6,13.9c39.1,8.7,79.6,17.7,119.7,12.1C634.8,157,688.3,110,740,64.6 c4.5-3.9,9-7.9,13.4-11.8C773.8,35,797,16.4,822.2,1l-0.7-1C796.2,15.4,773,34,752.5,51.9z" />
+
+                </svg>
+
+            </figure>
+
+
+
+            <!-- SVG decoration -->
+
+            <figure class="position-absolute top-0 end-0">
+
+                <svg width="822.2px" height="301.9px" viewBox="0 0 822.2 301.9">
+
+                    <path class="fill-primary"
+                        d="M752.5,51.9c-4.5,3.9-8.9,7.8-13.4,11.8c-51.5,45.3-104.8,92.2-171.7,101.4c-39.9,5.5-80.2-3.4-119.2-12.1 c-32.3-7.2-65.6-14.6-98.9-13.9c-66.5,1.3-128.9,35.2-175.7,64.6c-11.9,7.5-23.9,15.3-35.5,22.8c-40.5,26.4-82.5,53.8-128.4,70.7 c-2.1,0.8-4.2,1.5-6.2,2.2L0,301.9c3.3-1.1,6.7-2.3,10.2-3.5c46.1-17,88.1-44.4,128.7-70.9c11.6-7.6,23.6-15.4,35.4-22.8 c46.7-29.3,108.9-63.1,175.1-64.4c33.1-0.6,66.4,6.8,98.6,13.9c39.1,8.7,79.6,17.7,119.7,12.1C634.8,157,688.3,110,740,64.6 c4.5-3.9,9-7.9,13.4-11.8C773.8,35,797,16.4,822.2,1l-0.7-1C796.2,15.4,773,34,752.5,51.9z" />
+
+                </svg>
+
+            </figure>
+
+
+
+            <!-- SVG decoration -->
+
+            <figure class="position-absolute bottom-0 start-50 translate-middle-x ms-n9 mb-5">
+
+                <svg width="23px" height="23px">
+
+                    <path class="fill-primary"
+                        d="M23.003,11.501 C23.003,17.854 17.853,23.003 11.501,23.003 C5.149,23.003 -0.001,17.854 -0.001,11.501 C-0.001,5.149 5.149,-0.000 11.501,-0.000 C17.853,-0.000 23.003,5.149 23.003,11.501 Z">
+                    </path>
+
+                </svg>
+
+            </figure>
+
+
+
+            <!-- SVG decoration -->
+
+            <figure class="position-absolute bottom-0 end-0 me-5 mb-5">
+
+                <svg width="22px" height="22px">
+
+                    <path class="fill-warning"
+                        d="M22.003,11.001 C22.003,17.078 17.077,22.003 11.001,22.003 C4.925,22.003 -0.001,17.078 -0.001,11.001 C-0.001,4.925 4.925,-0.000 11.001,-0.000 C17.077,-0.000 22.003,4.925 22.003,11.001 Z">
+                    </path>
+
+                </svg>
+
+            </figure>
+
+
+
+            <div class="container position-relative">
+
+                <div class="row justify-content-between align-items-center my-5">
+
+
+
+                    <div class="col-lg-5 position-relative">
+
+                        <!-- SVG decoration -->
+
+                        <figure class="position-absolute top-0 start-0 translate-middle mt-n5">
+
+                            <svg width="29px" height="29px">
+
+                                <path class="fill-orange"
+                                    d="M29.004,14.502 C29.004,22.512 22.511,29.004 14.502,29.004 C6.492,29.004 -0.001,22.512 -0.001,14.502 C-0.001,6.492 6.492,-0.001 14.502,-0.001 C22.511,-0.001 29.004,6.492 29.004,14.502 Z">
+                                </path>
+
+                            </svg>
+
+                        </figure>
+
+
+
+                        <!-- Title -->
+
+                        <div class="row position-relative z-index-6">
+
+                            <div class="col-12 mx-auto">
+
+                                <div class="card card-body shadow p-4 position-relative bg-primary">
+
+                                    <h4 style="padding-bottom:10px;color:white">Register Now</h4>
+
+                                    <form class="row g-3 position-relative bg-primary">
+
+                                        <!-- Name -->
+
+                                        <div class="col-12">
+
+                                            <label class="form-label text-white">Name *</label>
+
+                                            <input type="text" class="form-control" aria-label="Name" placeholder="Enter your name">
+
+                                        </div>
+
+                                        <!-- Phone number -->
+                                        
+                                        <div class="col-12">
+                                            
+                                            <label class="form-label text-white">Phone number *</label>
+                                            
+                                            <input type="text" class="form-control" placeholder="number">
+                                            
+                                        </div>
+                                        <div class="col-12">
+
+                                            <label class="form-label text-white">Email *</label>
+
+                                            <input type="email" class="form-control" placeholder="email">
+
+                                        </div>
+
+                                        <div class="col-12 col-md-6">
+                                            <label for="state" class="form-label text-white">State *</label>
+                                            <input type="text" class="form-control" name="State" value="" list="state"
+                                                placeholder="State" required>
+                                            <datalist id="state">
+                                                <option value="Gujarat">
+                                                <option value="Goa">
+                                                <option value="Maharashtra">
+                                                <option value="West Bengal">
+                                                <option value="Punjab">
+                                            </datalist>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <label for="city" class="form-label text-white">City *</label>
+                                            <input type="text" class="form-control" name="City" value="" list="city"
+                                                placeholder="City" required>
+                                            <datalist id="city">
+                                                <option value="Patan">
+                                                <option value="Ahmedabad">
+                                                <option value="Hyderabad">
+                                                <option value="Kolkata">
+                                                <option value="Chennai">
+                                            </datalist>
+                                        </div>
+
+
+                                        <div class="col-12">
+
+                                            <button type="submit" class="btn btn-success mb-0">Send Inquiry</button>
+
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-lg-5 position-relative mt-4 mt-lg-0">
+
+                        <!-- Image -->
+
+                        <img src="assets/images/pages/VS & VIVEK Bindra.png"
+                            class="border border-5 border-white rounded-2" alt="" style="height
+				:500px;width:800px;">
+
+                        <div class="position-absolute top-50 start-50 translate-middle">
+
+                            <!-- Video link -->
+
+                            <a href="https://www.youtube.com/watch?v=sdnKi5kYc-E"
+                                class="btn text-danger btn-round btn-white-shadow btn-lg mb-0" data-glightbox
+                                data-gallery="video-tour" target="_blank">
+
+                                <i class="fas fa-play"></i>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Video & form end -->
+
+        <section class="pt-0 pt-lg-5">
+
+            <div class="container">
+
+                <div class="row g-4 align-items-center">
+
+                    <!-- Left side START -->
+
+                    <div class="col-lg-6">
+
+                        <!-- Title -->
+
+                        <h4 class="h4 mb-4">What benefits will you get?</h4>
+
+                        <!-- List -->
+
+                        <ul class="list-group list-group-borderless mt-0">
+
+                            <li class="list-group-item d-flex">
+                                <i class="bi bi-patch-check-fill text-success me-2"></i>
+                                Expertise and Experience: Our team of experienced professionals possesses in-depth
+                                knowledge of customs regulations, tariffs, and trade policies. with years of experience
+                                in the field, we ensure smooth clearance of your goods through customs, minimizing
+                                delays and avoiding penalties.
+                            </li>
+
+                            <li class="list-group-item d-flex">
+                                <i class="bi bi-patch-check-fill text-success me-2"></i>
+                                Customized Solutions: We understand that every business has unique requirements. whether
+                                you're importing machinery, electronics, textiles, or any other goods, we tailor our
+                                services to meet your specific needs. from documentation to cargo handling, we provide
+                                personalized solutions to streamline your operations.
+                            </li>
+
+                            <li class="list-group-item d-flex">
+                                <i class="bi bi-patch-check-fill text-success me-2"></i>
+                                Efficient Clearance Process: Navigating the customs clearance process can be
+                                time-consuming and challenging. by entrusting us with your customs documentation and
+                                procedures, you can save valuable time and resources. Our streamlined approach ensures
+                                prompt clearance of your shipments, allowing you to focus on your core business
+                                activities.
+                            </li>
+
+                            <li class="list-group-item d-flex">
+                                <i class="bi bi-patch-check-fill text-success me-2"></i>
+                                Cost Savings: Delays in customs clearance can lead to storage charges, demurrage fees,
+                                and other additional costs. with our efficient customs clearance services, we help
+                                minimize these expenses, ultimately saving you money in the long run. our expertise also
+                                enables us to identify opportunities for duty optimization and tariff concessions,
+                                further reducing your overall costs.
+                            </li>
+
+                            <li class="list-group-item d-flex">
+                                <i class="bi bi-patch-check-fill text-success me-2"></i>
+                                Compliance Assurance: Compliance with customs regulations is critical to avoiding
+                                penalties and disruptions to your supply chain. our CHA services ensure that your import
+                                and export activities adhere to all applicable laws and regulations. we stay updated on
+                                the latest changes in customs procedures, keeping your business compliant at all times.
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <i class="bi bi-patch-check-fill text-success me-2"></i>
+                                Risk Mitigation: International trade involves inherent risks, including regulatory
+                                compliance, documentation errors, and cargo security issues. our team employs robust
+                                risk management practices to mitigate these risks effectively. from thorough
+                                documentation checks to cargo tracking and security measures, we prioritize the safety
+                                and security of your shipments.
+                            </li>
+                            <li class="list-group-item d-flex">
+                                <i class="bi bi-patch-check-fill text-success me-2"></i>
+                                Customer Support: At every step of the import and export process, our dedicated customer
+                                support team is available to address your queries and concerns. whether you need
+                                assistance with documentation, customs clearance status updates, or any other issue, we
+                                provide prompt and reliable support to ensure a seamless experience.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <!-- Left side END -->
+
+                    <!-- Right side START -->
+
+                    <div class="col-lg-6 position-relative text-center">
+
+                        <!-- Image -->
+
+                        <img src="assets/images/courses/programs/benefits.png" class="rounded-2" alt=""
+                            style="background-color: rgba(130, 185, 75, 0.385);">
+
+                    </div>
+
+                    <!-- Right side END -->
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- About END -->
+
+
+
+        <section class="pt-0 pt-lg-5">
+
+            <div class="container">
+
+                <div class="row g-4 align-items-center">
+
+                    <div class="col-lg-6">
+
+                        <img src="assets/images/courses/programs/Ecommercebussiness.jpg" class="rounded-2" alt=""
+                            style="height:400px;width:600px;">
+
+                    </div>
+
+                    <!--Right side	-->
+
+                    <div class="col-lg-6 position-relative">
+
+                        <!-- Title -->
+
+                        <h4 class="h4 mb-4">Anyone can start an E-Commerce Business</h4>
+
+                        <!-- List -->
+
+                        <ul class="list-group list-group-borderless mt-0">
+
+                            <li class="list-group-item d-flex">
+
+                                <i class="bi bi-patch-check-fill text-success me-2"></i>
+                                Who is currently selling any products
+
+                            </li>
+
+                            <li class="list-group-item d-flex">
+
+                                <i class="bi bi-patch-check-fill text-success me-2"></i>
+                                Who is Fresher, doing job , Students, Housewives
+
+                            </li>
+
+                            <li class="list-group-item d-flex">
+
+                                <i class="bi bi-patch-check-fill text-success me-2"></i>
+                                Anyone who already tried on E-Comm but failed
+                            </li>
+
+                            <li class="list-group-item d-flex">
+
+                                <i class="bi bi-patch-check-fill text-success me-2"></i>Anyone- who is listed but not
+                                getting orders
+
+                            </li>
+
+                            <li class="list-group-item d-flex">
+
+                                <i class="bi bi-patch-check-fill text-success me-2"></i>Any Start up from zero level
+                                with no idea
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--Counter section start-->
+
+        <section class="pt-0 pt-lg-5">
+
+            <div class="container">
+
+                <div class="row g-4 align-items-center">
+
+                    <!-- Left side START -->
+
+                    <div class="col-lg-6">
+
+                        <!-- Title -->
+
+                        <h4 class="h4 mb-4">Things will be covered in the eCommerce business setup</h4>
+
+                        <!-- List -->
+
+                        <ul class="list-group list-group-borderless mt-0">
+
+                            <li class="list-group-item d-flex">
+
+                                <i class="bi bi-patch-check-fill text-success me-2"></i>The latest trends of eCommerce
+                                Industry
+
+                            </li>
+
+                            <li class="list-group-item d-flex">
+
+                                <i class="bi bi-patch-check-fill text-success me-2"></i>Multiple product ideas with
+                                their margin rates and assistance in selecting the right product
+
+                            </li>
+
+                            <li class="list-group-item d-flex">
+
+                                <i class="bi bi-patch-check-fill text-success me-2"></i>
+                                Procedure and documentation needed in the eCommerce business
+
+                            </li>
+
+                            <li class="list-group-item d-flex">
+
+                                <i class="bi bi-patch-check-fill text-success me-2"></i>Things to avoid in eCommerce
+                                business
+
+                            </li>
+
+                            <li class="list-group-item d-flex">
+
+                                <i class="bi bi-patch-check-fill text-success me-2"></i>
+                                Live Q&A session
+
+                            </li>
+
+                            <li class="list-group-item d-flex">
+
+                                <i class="bi bi-patch-check-fill text-success me-2"></i>Join our community to get
+                                regular latest updates
+
+                            </li>
+
+
+                        </ul>
+
+                    </div>
+
+                    <!-- Left side END -->
+
+                    <!-- Right side START -->
+
+                    <div class="col-lg-6 position-relative">
+
+                        <!-- Image -->
+
+                        <img src="assets/images/courses/programs/EcommerceBussinessSetup.jpg" class="rounded-2" alt=""
+                            style="background-color: rgba(132, 198, 66, 0.385);">
+
+                    </div>
+
+                    <!-- Right side END -->
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <section class="py-0 py-xl-5">
+
+            <div class="container" align="center">
+
+                <h4 class="h4 mb-4">Empowering Entrepreneurs Globally</h4>
+
+                <p class="mb-4">A Community of 25,000+ Business Owners in 35+ Countries & 100+ Cities</p>
+
+            </div>
+
+
+
+            <div class="container">
+
+                <div class="row g-4">
+
+                    <!-- Counter item -->
+
+                    <div class="col-sm-6 col-xl-3">
+
+                        <div
+                            class="d-flex justify-content-center align-items-center p-4 bg-warning bg-opacity-15 rounded-3">
+
+                            <span class="display-6 lh-1 text-warning mb-0"><i class="fas fa-globe"></i></span>
+
+                            <div class="ms-4 h6 fw-normal mb-0">
+
+                                <div class="d-flex">
+
+                                    <h5 class="purecounter mb-0 fw-bold" data-purecounter-start="0"
+                                        data-purecounter-end="35" data-purecounter-delay="200">35</h5>
+
+                                    <span class="mb-0 h5">+</span>
+
+                                </div>
+
+                                <p class="mb-0">Country Presence</p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Counter item -->
+
+                    <div class="col-sm-6 col-xl-3">
+
+                        <div
+                            class="d-flex justify-content-center align-items-center p-4 bg-blue bg-opacity-10 rounded-3">
+
+                            <span class="display-6 lh-1 text-blue mb-0"><i class="fas fa-city"></i></span>
+
+                            <div class="ms-4 h6 fw-normal mb-0">
+
+                                <div class="d-flex">
+
+                                    <h5 class="purecounter mb-0 fw-bold" data-purecounter-start="0"
+                                        data-purecounter-end="100" data-purecounter-delay="200">100</h5>
+
+                                    <span class="mb-0 h5">+</span>
+
+                                </div>
+
+                                <p class="mb-0">Cities Reach</p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Counter item -->
+
+                    <div class="col-sm-6 col-xl-3">
+
+                        <div
+                            class="d-flex justify-content-center align-items-center p-4 bg-purple bg-opacity-10 rounded-3">
+
+                            <span class="display-6 lh-1 text-purple mb-0"><i class="fas fa-user-graduate"></i></span>
+
+                            <div class="ms-4 h6 fw-normal mb-0">
+
+                                <div class="d-flex">
+
+                                    <h5 class="purecounter mb-0 fw-bold" data-purecounter-start="0"
+                                        data-purecounter-end="25" data-purecounter-delay="200">25</h5>
+
+                                    <span class="mb-0 h5">K+</span>
+
+                                </div>
+
+                                <p class="mb-0"> Premium Members</p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Counter item -->
+
+                    <div class="col-sm-6 col-xl-3">
+
+                        <div
+                            class="d-flex justify-content-center align-items-center p-4 bg-info bg-opacity-10 rounded-3">
+
+                            <span class="display-6 lh-1 text-info mb-0"><i class="bi bi-phone"></i></span>
+
+                            <div class="ms-4 h6 fw-normal mb-0">
+
+                                <div class="d-flex">
+
+                                    <h5 class="purecounter mb-0 fw-bold" data-purecounter-start="0"
+                                        data-purecounter-end="30" data-purecounter-delay="300">30</h5>
+
+                                    <span class="mb-0 h5">K+</span>
+
+                                </div>
+
+                                <p class="mb-0"> App Downloads</p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Reviews start -->
+
+
+        <section class="bg-light position-relative">
+
+            <!-- SVG Image -->
+
+
+            <div class="container">
+
+                <!-- Title -->
+
+                <div class="row mb-4">
+
+                    <div class="col-lg-8 mx-auto text-center">
+
+                        <h2>Amazing Reviews</h2>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Feedback START -->
+
+                <div class="row">
+
+                    <style>
+                        .m-y {
+                            padding: 4px 0;
+                        }
+                    </style>
+
+                    <!-- Slider START -->
+
+                    <div class="tiny-slider arrow-round arrow-creative arrow-dark arrow-hover ">
+
+                        <div class="tiny-slider-inner" data-autoplay="true" data-edge="5" data-arrow="true"
+                            data-dots="false" data-items="4" data-items-xl="3" data-items-md="2" data-items-xs="1">
+
+
+
+                            <!-- Feedback item -->
+
+                            <div>
+
+                                <div class="bg-body text-center p-4 rounded-3 border border-1 position-relative">
+
+                                    <!-- Avatar -->
+
+                                    <div class="avatar avatar-lg mb-3">
+
+                                        <img class="avatar-img rounded-circle" src="assets/images/pages/3.png"
+                                            alt="avatar">
+
+                                    </div>
+
+                                    <!-- Title -->
+
+                                    <h6 class="mb-2">Megha shah</h6>
+
+                                    <!-- Content -->
+
+                                    <blockquote class="mt-1">
+
+                                        <p>
+
+                                            <span class="me-1 small"><i class="fas fa-quote-left"></i></span>
+
+                                            I had an excellent experience with GFE group. Took GSP Plan service , All
+                                            the business setup done at place with proper team support. The customer
+                                            service and all the process was really satisfactory..all GFE
+                                            staff are lovely
+
+                                            <span class="ms-1 small"><i class="fas fa-quote-right"></i></span>
+
+                                        </p>
+
+                                    </blockquote>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- Feedback item -->
+
+                            <div>
+
+                                <div class="bg-body text-center p-4  rounded-3 border border-1 position-relative">
+
+                                    <!-- Avatar -->
+
+                                    <div class="avatar avatar-lg mb-3">
+
+                                        <img class="avatar-img rounded-circle" src="assets/images/pages/4.png"
+                                            alt="avatar">
+
+                                    </div>
+
+                                    <!-- Title -->
+
+                                    <h6 class="mb-2">Sunirmal Dutta</h6>
+
+                                    <!-- Content -->
+
+                                    <blockquote class="mt-1 m-y">
+
+                                        <p>
+
+                                            <span class="me-1 small"><i class="fas fa-quote-left"></i></span>
+
+                                            The training the faculties imparting are really helpful with detail coverage
+                                            on each subject......I am getting real idea on EXIM after attending their
+                                            session.... Simply Great GFE...
+
+                                            <span class="ms-1 small"><i class="fas fa-quote-right"></i></span>
+
+                                        </p>
+
+                                    </blockquote>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- Feedback item -->
+
+                            <div>
+
+                                <div class="bg-body text-center p-4 rounded-3 border border-1 position-relative">
+
+                                    <!-- Avatar -->
+
+                                    <div class="avatar avatar-lg mb-3">
+
+                                        <img class="avatar-img rounded-circle" src="assets/images/pages/P 1.jpg"
+                                            alt="avatar">
+
+                                    </div>
+
+                                    <!-- Title -->
+
+                                    <h6 class="mb-2">Prashant Sharma</h6>
+
+                                    <!-- Content -->
+
+                                    <blockquote class="mt-1">
+
+                                        <p>
+
+                                            <span class="me-1 small"><i class="fas fa-quote-left"></i></span>
+
+                                            It's really wonderful telling that problem solving part by GFE is awesome
+                                            ... GFE staff is well equipped with both theoretical and practical solutions
+                                            relating to Import/Export and once again thanks for supporting..
+
+                                            <span class="ms-1 small"><i class="fas fa-quote-right"></i></span>
+
+                                        </p>
+
+                                    </blockquote>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- Feedback item -->
+
+                            <div>
+
+                                <div class="bg-body text-center p-4 rounded-3 border border-1 position-relative">
+
+                                    <!-- Avatar -->
+
+                                    <div class="avatar avatar-lg mb-3">
+
+                                        <img class="avatar-img rounded-circle" src="assets/images/pages/2.png"
+                                            alt="avatar">
+
+                                    </div>
+
+                                    <!-- Title -->
+
+                                    <h6 class="mb-2">Mayur Patel</h6>
+
+                                    <!-- Content -->
+
+                                    <blockquote class="mt-1">
+
+                                        <p>
+
+                                            <span class="me-1 small"><i class="fas fa-quote-left"></i></span>
+
+                                            attended all sessions, All sessions are helpful to do business at
+                                            international level . All gfe staff members are cooperative and thanks to
+                                            all staff member who give directly or indirectly support in business set
+                                            up and guidence.
+
+                                            <span class="ms-1 small"><i class="fas fa-quote-right"></i></span>
+
+                                        </p>
+
+                                    </blockquote>
+
+                                </div>
+
+                            </div>
+
+
+                            <div>
+
+                                <div class="bg-body text-center p-4 rounded-3 border border-1 position-relative">
+
+                                    <!-- Avatar -->
+
+                                    <div class="avatar avatar-lg mb-3">
+
+                                        <img class="avatar-img rounded-circle" src="assets/images/pages/5.png"
+                                            alt="avatar">
+
+                                    </div>
+
+                                    <!-- Title -->
+
+                                    <h6 class="mb-2">Jayesh Pravinbhai Patel</h6>
+
+                                    <!-- Content -->
+
+                                    <blockquote class="mt-1 m-y">
+
+                                        <p>
+
+                                            <span class="me-1 small"><i class="fas fa-quote-left"></i></span>
+
+                                            We have taken GSP plan from GFE, and we heartly thank full to GFE all team
+                                            members for their great support by training, business set up and trade
+                                            related guidance
+
+                                            <span class="ms-1 small"><i class="fas fa-quote-right"></i></span>
+
+                                        </p>
+
+                                    </blockquote>
+
+                                </div>
+
+                            </div>
+
+                            <div>
+
+                                <div class="bg-body text-center p-4 rounded-3 border border-1 position-relative">
+
+                                    <!-- Avatar -->
+
+                                    <div class="avatar avatar-lg mb-3">
+
+                                        <img class="avatar-img rounded-circle" src="assets/images/pages/6.png"
+                                            alt="avatar">
+
+                                    </div>
+
+                                    <!-- Title -->
+
+                                    <h6 class="mb-2">Shashank Rai</h6>
+
+                                    <!-- Content -->
+
+                                    <blockquote class="mt-1 m-y">
+
+                                        <p>
+
+                                            <span class="me-1 small"><i class="fas fa-quote-left"></i></span>
+
+                                            Shipping our first full container with the support of GFE team to Dubai. It
+                                            contains mixed variety of fruits and vegetables like Chili, Pomegranate,
+                                            Lemon, Red Pumpkin, Turmeric, etc.
+
+                                            <span class="ms-1 small"><i class="fas fa-quote-right"></i></span>
+
+                                        </p>
+
+                                    </blockquote>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Slider START -->
+
+                </div>
+
+                <!-- Feedback END -->
+
+            </div>
+
+        </section>
+
+
+        <!-- Reviews end -->
+
+        <!-- Action box START  -->
+
+        <section>
+
+            <div class="bg-image p-3 shadow-1-strong rounded mb-5 text-white bg-opacity-10"
+                style="background-image: url('assets/images/banner.png');">
+
+                <h2 class="text-center pb-3">Why Guaranteed Shipment Plan with GFE is safe and best options for new
+                    exporters?</h2>
+
+                <div class="row gx-0 justify-content-around gap-3">
+
+                    <!-- Action box item -->
+
+                    <div class="col-xl-5 col-sm-6">
+
+                        <div class="b-dark h-100 p-4 rounded-3 position-relative">
+
+                            <style>
+                                .b-dark {
+                                    background-color: rgba(0, 0, 0, 0.385);
+                                }
+                            </style>
+
+                            <!-- Title and content -->
+
+                            <ul class="list-group list-group-borderless mt-0">
+
+                                <li class="list-group-item d-flex text-white">
+
+                                    <i class="bi bi-patch-check-fill text-success me-2"></i>100% Payment safety, 4%
+                                    Commission (6% for others)
+
+                                </li>
+
+                                <li class="list-group-item d-flex text-white">
+
+                                    <i class="bi bi-patch-check-fill text-success me-2"></i>Life Time Unlimited Trades
+                                    with GFE Group
+
+                                </li>
+
+                                <li class="list-group-item d-flex text-white">
+
+                                    <i class="bi bi-patch-check-fill text-success me-2"></i>Packing, Stuffing site
+                                    visits and Develop own Network with our guidance
+
+                                </li>
+
+                                <li class="list-group-item d-flex text-white">
+
+                                    <i class="bi bi-patch-check-fill text-success me-2"></i>Upto 40% Adv payment we can
+                                    give (No advance for others)
+
+                                </li>
+
+                                <li class="list-group-item d-flex text-white">
+
+                                    <i class="bi bi-patch-check-fill text-success me-2"></i>After 2 trade - Visa and
+                                    Dubai stay in 3N/4D from GFE Group for Dubai Market Visit
+
+                                </li>
+
+                                <li class="list-group-item d-flex text-white">
+
+                                    <i class="bi bi-patch-check-fill text-success me-2"></i>Start Shipment with GFE
+
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Action box item -->
+
+                    <div class="col-xl-5 col-sm-6">
+
+                        <div class="b-dark h-100 p-4 rounded-3 position-relative">
+
+
+                            <!-- Title and content -->
+
+                            <ul class="list-group list-group-borderless mt-0 ">
+
+
+
+                                <li class="list-group-item d-flex text-white">
+
+                                    <i class="bi bi-patch-check-fill text-success me-2"></i>Work As Partner with GFE
+                                    Life Time
+
+                                </li>
+
+                                <li class="list-group-item d-flex text-white">
+
+                                    <i class="bi bi-patch-check-fill text-success me-2"></i>Learn Practically on Live
+                                    Trade
+
+                                </li>
+
+                                <li class="list-group-item d-flex text-white">
+
+                                    <i class="bi bi-patch-check-fill text-success me-2"></i>Safe and Secure Terms
+
+                                </li>
+
+                                <li class="list-group-item d-flex text-white">
+
+                                    <i class="bi bi-patch-check-fill text-success me-2"></i>Learn and Start More
+                                    Products
+                                </li>
+
+                                <li class="list-group-item d-flex text-white">
+
+                                    <i class="bi bi-patch-check-fill text-success me-2"></i>Start Trade in Multiple
+                                    Countries
+                                </li>
+
+                                <li class="list-group-item d-flex text-white">
+
+                                    <i class="bi bi-patch-check-fill text-success me-2"></i>Visit Many Countries with
+                                    GFE Team
+                                </li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div> <!-- Row END -->
+
+            </div>
+
+        </section>
+
+
+        <!-- USPs end -->
+
+
+
+        <!-- Success start-->
+
+        <section class="pb-0 pb-md-5">
+
+            <div class="container">
+
+                <!-- Title -->
+
+                <div class="row mb-4">
+
+                    <h2 class="mb-0">Entrepreneurs <span class="text-success">Success </span>Story</h2>
+
+                </div>
+
+                <div class="row">
+
+                    <!-- Slider START -->
+
+                    <div class="tiny-slider arrow-round arrow-creative arrow-blur arrow-hover">
+
+                        <div class="tiny-slider-inner" data-autoplay="false" data-arrow="true" data-dots="false"
+                            data-items-xl="3" data-items-md="2" data-items-xs="1">
+
+                            <!-- Card item START -->
+
+                            <div class="card bg-transparent">
+
+                                <div class="position-relative">
+
+                                    <!-- Image -->
+
+                                    <img src="assets/images/pages/ss1.jpg" class="card-img" alt="course image">
+
+                                    <!-- Overlay -->
+
+                                    <div class="position-absolute top-50 start-50 translate-middle">
+
+                                        <!-- Video link -->
+
+                                        <a href="https://youtube.com/shorts/f-JJL_JgWiw?si=2m7JduRxKlSzB0Sp"
+                                            class="btn text-danger btn-round btn-white-shadow btn-lg mb-0"
+                                            data-glightbox data-gallery="video-tour" target="_blank" rel="noopener">
+
+                                            <i class="fas fa-play"></i>
+
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <!-- Card item END -->
+
+                            <!-- Card item START -->
+
+                            <div class="card bg-transparent">
+
+                                <div class="position-relative">
+
+                                    <!-- Image -->
+
+                                    <img src="assets/images/pages/ss2.jpg" class="card-img" alt="course image">
+
+                                    <!-- Overlay -->
+
+                                    <div class="position-absolute top-50 start-50 translate-middle">
+
+                                        <!-- Video link -->
+
+                                        <a href="https://youtube.com/shorts/_6cKhwv-umc?si=1LvY0sUPsBKmVnjf"
+                                            class="btn text-danger btn-round btn-white-shadow btn-lg mb-0"
+                                            data-glightbox data-gallery="video-tour" target="_blank" rel="noopener">
+
+                                            <i class="fas fa-play"></i>
+
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <!-- Card item END -->
+
+                            <!-- Card item START -->
+
+                            <div class="card bg-transparent">
+
+                                <div class="position-relative">
+
+                                    <!-- Image -->
+
+                                    <img src="assets/images/pages/ss3.jpg" class="card-img" alt="course image">
+
+                                    <!-- Overlay -->
+
+                                    <div class="position-absolute top-50 start-50 translate-middle">
+
+                                        <!-- Video link -->
+
+                                        <a href="https://youtube.com/shorts/1hinlUm2kNA?si=T5hOGkGS5p11egVQ"
+                                            class="btn text-danger btn-round btn-white-shadow btn-lg mb-0"
+                                            data-glightbox data-gallery="video-tour" target="_blank" rel="noopener">
+
+                                            <i class="fas fa-play"></i>
+
+                                        </a>
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Slider END -->
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Success end -->
+
+
+        <!-- Video & form end -->
+
+
+
+        <section class="pt-0 pt-lg-5">
+
+            <div class="container">
+
+                <div class="row g-4 align-items-center">
+
+                    <!-- Left side START -->
+
+                    <h3 class="h3 mb-4">Why Export- Import is BEST OPPORTUNITY for Future</h3>
+
+
+                    <div class="col-lg-6">
+
+                        <!-- List -->
+
+                        <ul class="list-inline vstack gap-4 flex-wrap mb-4">
+
+                            <!-- Item -->
+
+                            <li class="list-inline-item d-sm-flex">
+
+                                <div class="ms-0 ms-sm-3 mt-2 mt-sm-0">
+
+                                    <h5 class="mb-0">Unveiling Your Dream Business:</h5>
+
+                                    <br />
+
+                                    <p class="mb-0"><strong>1. Evergreen & Global: </strong>Tap into a resilient
+                                        business opportunity operating in 190+ countries.</p>
+
+                                    <br />
+
+                                    <p class="mb-0"><strong>2. Pandemic-Proof:</strong>Stay unaffected by market
+                                        fluctuations and thrive even during challenging times.</p>
+
+                                </div>
+
+                            </li>
+
+                            <li class="list-inline-item d-sm-flex">
+
+                                <div class="ms-0 ms-sm-3 mt-2 mt-sm-0">
+
+                                    <h5 class="mb-0">Low Investment, High Reward:</h5>
+
+                                    <br />
+
+                                    <p class="mb-0"><strong>1. Start Smart:</strong> Minimize your initial investment
+                                        and maximize your earning potential.</p>
+
+                                    <br />
+
+                                    <p class="mb-0"><strong>2. Lucrative Margins:</strong> Enjoy superior profit margins
+                                        compared to other industries.</p>
+
+
+                                </div>
+
+                            </li>
+
+                            <li class="list-inline-item d-sm-flex">
+
+                                <div class="ms-0 ms-sm-3 mt-2 mt-sm-0">
+
+                                    <h5 class="mb-0">Flexible & Scalable:</h5>
+
+                                    <br />
+
+                                    <p class="mb-0"><strong>1. Consultancy Option:</strong> Choose to be a consultant or
+                                        build your own export empire.</p>
+
+                                    <br />
+
+                                    <p class="mb-0"><strong>2. Minimal Operations:</strong> Manage your business
+                                        efficiently with minimal operational costs.</p>
+
+                                </div>
+
+                            </li>
+
+                            <li class="list-inline-item d-sm-flex">
+
+                                <div class="ms-0 ms-sm-3 mt-2 mt-sm-0">
+
+                                    <h5 class="mb-0">Earning Potential Unlocked:</h5>
+
+                                    <br />
+
+                                    <p class="mb-0"><strong>1. Life-Changing Income:</strong> Achieve financial freedom
+                                        with earnings ranging from 25k PM to 5 Lakhs PM.</p>
+
+                                </div>
+
+                            </li>
+
+                            <li class="list-inline-item d-sm-flex">
+
+                                <div class="ms-0 ms-sm-3 mt-2 mt-sm-0">
+
+                                    <h5 class="mb-0">Expert-Driven Success:</h5>
+
+                                    <br />
+
+                                    <p class="mb-0"><strong>1. Adani Advantage:</strong> Learn from the proven
+                                        strategies of the Adani Exports team.</p>
+
+                                </div>
+
+                            </li>
+
+                            <li class="list-inline-item d-sm-flex">
+                                <div class="ms-0 ms-sm-3 mt-2 mt-sm-0">
+
+                                    <h5 class="mb-0">Lifelong Support:</h5>
+
+                                    <br />
+
+                                    <p class="mb-0"><strong>1. Continuous Improvement:</strong> Benefit from free
+                                        lifetime upgrades to stay ahead of the curve.</p>
+
+                                    <br />
+
+                                    <p class="mb-0"><strong>2. Global Network Access:</strong> Gain exclusive access to
+                                        our extensive network of buyers and suppliers.</p>
+
+                                </div>
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <!-- Left side END -->
+
+                    <!-- Right side START -->
+
+                    <div class="col-lg-6 position-relative">
+
+                        <!-- Image -->
+
+
+                        <img src="assets/images/about/24.jpg" class="rounded-2" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About END -->
+
+
+        <!-- Social icons start -->
+
+        <section class="position-relative pb-0 pb-sm-5">
+
+            <div class="container">
+                <div class="row g-4">
+
+                    <!-- Item -->
+
+                    <div class="col-sm-6 col-md-4 col-xl-3">
+
+                        <div
+                            class="bg-primary bg-opacity-10 rounded-3 text-center p-3 position-relative btn-transition">
+
+                            <!-- Image -->
+
+                            <div class="icon-xl bg-body mx-auto rounded-circle mb-3">
+
+                                <img src="assets/images/element/data-science.svg" alt="">
+
+                            </div>
+
+                            <!-- Title -->
+
+                            <h5 class="mb-1"><a href="#" class="stretched-link">194000</a></h5>
+
+                            <span class="mb-0">Followers</span>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Item -->
+
+                    <div class="col-sm-6 col-md-4 col-xl-3">
+
+                        <div
+                            class="bg-primary bg-opacity-10 rounded-3 text-center p-3 position-relative btn-transition">
+
+                            <!-- Image -->
+
+                            <div class="icon-xl bg-body mx-auto rounded-circle mb-3">
+
+                                <img src="assets/images/element/online.svg" alt="">
+
+                            </div>
+
+                            <!-- Title -->
+
+                            <h5 class="mb-1"><a href="#" class="stretched-link">117000</a></h5>
+
+                            <span class="mb-0">Subscribers</span>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Item -->
+
+                    <div class="col-sm-6 col-md-4 col-xl-3">
+
+                        <div
+                            class="bg-primary bg-opacity-10 rounded-3 text-center p-3 position-relative btn-transition">
+
+                            <!-- Image -->
+
+                            <div class="icon-xl bg-body mx-auto rounded-circle mb-3">
+
+                                <img src="assets/images/element/engineering.svg" alt="">
+
+                            </div>
+
+                            <!-- Title -->
+
+                            <h5 class="mb-1"><a href="#" class="stretched-link">33000</a></h5>
+
+                            <span class="mb-0">Followers</span>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Item -->
+
+                    <div class="col-sm-6 col-md-4 col-xl-3">
+
+                        <div
+                            class="bg-primary bg-opacity-10 rounded-3 text-center p-3 position-relative btn-transition">
+
+                            <!-- Image -->
+
+                            <div class="icon-xl bg-body mx-auto rounded-circle mb-3">
+
+                                <img src="assets/images/element/coding.svg" alt="">
+
+                            </div>
+
+                            <!-- Title -->
+
+                            <h5 class="mb-1"><a href="#" class="stretched-link">31000</a></h5>
+
+                            <span class="mb-0">Followers</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Social icons end -->
+
+
+        <!--FAQ Start-->
+
+        <section class="position-relative overflow-hidden pt-0 pt-sm-5">
+
+            <div class="container">
+
+                <!-- Title -->
+
+                <div class="row position-relative z-index-9">
+
+                    <div class="col-12 text-center mx-auto">
+
+                        <h2 class="mb-0">Frequently Asked Questions</h2>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-10 col-xl-8 mx-auto text-center position-relative">
+
+                        <!-- SVG decoration -->
+
+                        <figure class="position-absolute top-0 start-0 translate-middle ms-8">
+
+                            <svg style="enable-background:new 0 0 141.7 143.9;">
+
+                                <path class="fill-success"
+                                    d="M137.7,53.1c9.6,29.3,1.8,64.7-20.2,80.7s-58.1,12.6-83.5-5.8C8.6,109.5-6.1,76.1,2.4,48.7 C10.8,21.1,42.2-0.7,71.5,0S128.1,23.8,137.7,53.1z" />
+
+                            </svg>
+
+                        </figure>
+
+                        <!-- SVG decoration -->
+
+                        <figure class="position-absolute bottom-0 end-0 me-n9 rotate-193">
+
+                            <svg width="297.5px" height="295.9px">
+
+                                <path stroke="#F99D2B" fill="none" stroke-width="13"
+                                    d="M286.2,165.5c-9.8,74.9-78.8,128.9-153.9,120.4c-76-8.6-131.4-78.2-122.8-154.2C18.2,55.8,87.8,0.3,163.7,9">
+                                </path>
+
+                            </svg>
+
+                        </figure>
+
+                        <!-- FAQ START -->
+
+                        <div class="accordion accordion-icon accordion-shadow mt-4 text-start position-relative"
+                            id="accordionExample2">
+
+                            <!-- Item -->
+
+                            <div class="accordion-item mb-3">
+
+                                <h6 class="accordion-header font-base" id="heading-1">
+
+                                    <button class="accordion-button fw-bold rounded collapsed pe-5" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true"
+                                        aria-controls="collapse-1">
+
+                                        Why to do Export Import Business?
+
+                                    </button>
+
+                                </h6>
+
+                                <!-- Body -->
+
+                                <div id="collapse-1" class="accordion-collapse collapse show"
+                                    aria-labelledby="heading-1" data-bs-parent="#accordionExample2">
+
+                                    <div class="accordion-body mt-3">
+
+                                        This is biggest and Best opportunity with less investment, global reach in 190+
+                                        Countries with Uniform System.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <!-- Item -->
+
+                            <div class="accordion-item mb-3">
+
+                                <h6 class="accordion-header font-base" id="heading-2">
+
+                                    <button class="accordion-button fw-bold rounded collapsed pe-5" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false"
+                                        aria-controls="collapse-2">
+
+                                        Why come for Export Import with GFE?
+
+                                    </button>
+
+                                </h6>
+
+                                <!-- Body -->
+
+                                <div id="collapse-2" class="accordion-collapse collapse" aria-labelledby="heading-2"
+                                    data-bs-parent="#accordionExample2">
+
+                                    <div class="accordion-body mt-3">
+
+                                        GFE is world’s Biggest Business Support Platform with Best brains from Industry,
+                                        we have 15,000+ success stories, presence in 30+ Countries and 50+ Cities.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <!-- Item -->
+
+                            <div class="accordion-item mb-3">
+
+                                <h6 class="accordion-header font-base" id="heading-3">
+
+                                    <button class="accordion-button fw-bold collapsed rounded pe-5" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="false"
+                                        aria-controls="collapse-3">
+
+                                        I already have documents, IEC, but got no orders?
+
+                                    </button>
+
+                                </h6>
+
+                                <!-- Body -->
+
+                                <div id="collapse-3" class="accordion-collapse collapse" aria-labelledby="heading-3"
+                                    data-bs-parent="#accordionExample2">
+
+                                    <div class="accordion-body mt-3">
+
+                                        We have big network and Ready Deals from UAE, Bangladesh, Nepal, UK, USA and
+                                        many other Countries.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <!-- Item -->
+
+                            <div class="accordion-item mb-3">
+
+                                <h6 class="accordion-header font-base" id="heading-4">
+
+                                    <button class="accordion-button fw-bold collapsed rounded pe-5" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse-4" aria-expanded="false"
+                                        aria-controls="collapse-4">
+
+                                        I have very less investment?
+
+                                    </button>
+
+                                </h6>
+
+                                <!-- Body -->
+
+                                <div id="collapse-4" class="accordion-collapse collapse" aria-labelledby="heading-4"
+                                    data-bs-parent="#accordionExample2">
+
+                                    <div class="accordion-body mt-3">
+
+                                        <p>This is a low investment Business model which you can scale up later
+                                            gradually.</p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <!-- Item -->
+
+                            <div class="accordion-item mb-3">
+
+                                <h6 class="accordion-header font-base" id="heading-5">
+
+                                    <button class="accordion-button fw-bold collapsed rounded pe-5" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse-5" aria-expanded="false"
+                                        aria-controls="collapse-5">
+
+                                        How will I get support?
+
+                                    </button>
+
+                                </h6>
+
+                                <!-- Body -->
+
+                                <div id="collapse-5" class="accordion-collapse collapse" aria-labelledby="heading-5"
+                                    data-bs-parent="#accordionExample2">
+
+                                    <div class="accordion-body mt-3">
+
+                                        One to one support by team, Helpline IVR, GFE Biz Application, weekly Growth &
+                                        Training sessions for any query, doubts , knowledge upgrade ( No other Company
+                                        in world have this kind of support system).
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <!-- Item -->
+
+                            <div class="accordion-item mb-3">
+
+                                <h6 class="accordion-header font-base" id="heading-6">
+
+                                    <button class="accordion-button fw-bold collapsed rounded pe-5" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse-6" aria-expanded="false"
+                                        aria-controls="collapse-6">
+
+                                        How to Enroll?
+
+                                    </button>
+
+                                </h6>
+
+                                <!-- Body -->
+
+                                <div id="collapse-6" class="accordion-collapse collapse" aria-labelledby="heading-6"
+                                    data-bs-parent="#accordionExample2">
+
+                                    <div class="accordion-body mt-3">
+
+                                        you may apply on this page – our team contact you for profiling and enroll!
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <!-- Item -->
+
+                            <div class="accordion-item mb-3">
+
+                                <h6 class="accordion-header font-base" id="heading-7">
+
+                                    <button class="accordion-button fw-bold rounded collapsed pe-5" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse-7" aria-expanded="false"
+                                        aria-controls="collapse-7">
+
+                                        Why come for Export Import with GFE?
+
+                                    </button>
+
+                                </h6>
+
+                                <!-- Body -->
+
+                                <div id="collapse-7" class="accordion-collapse collapse" aria-labelledby="heading-7"
+                                    data-bs-parent="#accordionExample2">
+
+                                    <div class="accordion-body mt-3">
+
+                                        GFE is world’s Biggest Business Support Platform with Best brains from Industry,
+                                        we have 15,000+ success stories, presence in 30+ Countries and 50+ Cities.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- FAQ END -->
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--Contact form start-->
+
+
+
+        <section id="contact-form" class="position-relative overflow-hidden pt-0 pt-md-5">
+
+
+
+            <div class="container">
+
+                <div class="row g-4 g-lg-5 align-items-center">
+
+                    <div class="col-12 col-md-6 mx-auto">
+
+                        <div class="card card-body shadow p-4 position-relative bg-primary">
+
+                            <h4 style="padding-bottom:10px;color:white">Register Now</h4>
+
+
+
+                            <!-- Form START -->
+
+                            <form class="row g-3 position-relative bg-primary">
+
+                                <!-- Name -->
+
+                                <div class="col-12">
+
+                                    <label class="form-label text-white">Name *</label>
+
+                                    <input type="text" class="form-control" aria-label="Name">
+
+                                </div>
+
+                                <!-- Phone number -->
+
+                                <div class="col-12">
+
+                                    <label class="form-label text-white">Phone number *</label>
+
+                                    <input type="text" class="form-control">
+
+                                </div>
+                                <div class="col-12">
+
+                                    <label class="form-label text-white">Email *</label>
+
+                                    <input type="email" class="form-control">
+
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <label for="state" class="form-label text-white">State *</label>
+                                    <input type="text" class="form-control" name="State" value="" list="state"
+                                        placeholder="State" required>
+                                    <datalist id="state">
+                                        <option value="Gujarat">
+                                        <option value="Goa">
+                                        <option value="Maharashtra">
+                                        <option value="West Bengal">
+                                        <option value="Punjab">
+                                    </datalist>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label for="city" class="form-label text-white">City *</label>
+                                    <input type="text" class="form-control" name="City" value="" list="city"
+                                        placeholder="City" required>
+                                    <!-- <input id="color" list="suggestions"> -->
+                                    <datalist id="city">
+                                        <option value="Patan">
+                                        <option value="Ahmedabad">
+                                        <option value="Hyderabad">
+                                        <option value="Kolkata">
+                                        <option value="Chennai">
+                                    </datalist>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-success mt-2">Send Inquiry</button>
+                                </div>
+
+                            </form>
+
+                            <!-- Form END -->
+
+                        </div>
+
+                    </div>
+
+                    <!-- Contact form END -->
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =======================
+
+Contact form END -->
+
+
+    </main>
+
+    <!-- **************** MAIN CONTENT END **************** -->
+
+
+    <div class="rounded-social-buttons d-block d-sm-none fixed-bottom bg-blur border border-opacity-10 border-black ">
+        <a class="social-button facebook rounded-circle" href="#" target="_blank" rel="noopener"><i
+                class="fa-solid fa-phone-volume"></i></a>
+        <a class="social-button twitter rounded-circle" href="#" target="_blank" rel="noopener"><i
+                class="fa-brands fa-whatsapp"></i></a>
+        <!-- <a class="social-button linkedin" href="https://www.linkedin.com/" target="_blank" rel="noopener"><i class="fab fa-linkedin fs-6"></i></a> -->
+        <a class="social-button youtube rounded-circle" id="mBtn" data-bs-toggle="modal" data-bs-target="#ronak"
+            data-whatever="@mdo"><i class="fa-solid fa-file-export"></i></a>
+        <a class="social-button instagram rounded-circle m-0" id="myBtn" data-bs-toggle="modal"
+            data-bs-target="#exampleModal" data-whatever="@mdo"><i class="fa-solid fa-file-signature"></i></a>
+    </div>
+
+
+    <!-- =======================
+
+Footer START -->
+
+    <footer class="pt-5 bg-body-secondary">
+
+        <div class="container">
+
+            <!-- Row START -->
+
+            <div class="row g-4 justify-content-between align-items-center text-center">
+
+
+
+                <!-- Widget 1 START -->
+
+                <div class="col-lg-3">
+
+                    <!-- logo -->
+
+                    <a class="me-0" href="index.html">
+
+                        <img class="light-mode-item navbar-brand-item" src="assets/images/gfe.png" alt="logo"
+                            style="height:65px;width:257px;">
+
+                        <img class="dark-mode-item navbar-brand-item" src="assets/images/gfe.png" alt="logo"
+                            style="height:65px;width:257px;">
+
+                    </a>
+
+                    <br />
+
+                    <p class="fs-5 my-3">
+                        Let your Business dreams come true with World’s Fastest growing & India’s Biggest Unique
+                        Organization.</p>
+
+                    <!-- Social media icon -->
+
+                    <ul class="list-inline mb-0 mt-3">
+
+						<li class="list-inline-item"> <a href="https://twitter.com/gfebusiness" target="_blank"
+								rel="noopener"><i
+									class="fa-brands fa-twitter fs-5 bg-light-subtle twi-color p-2 rounded-circle"></i></a>
+						</li>
+						<li class="list-inline-item"> <a href="https://www.instagram.com/gfe.business/" target="_blank"
+							rel="noopener"><i
+								class="fa-brands fa-instagram fs-5 bg-light-subtle insta-color p-2 rounded-circle"></i></a>
+						</li>
+						<li class="list-inline-item"> <a href="https://www.facebook.com/GFEbusiness" target="_blank"
+								rel="noopener"><i
+									class="fa-brands fa-facebook-f fs-5 bg-light-subtle face-color p-2 rounded-circle"></i></a>
+						</li>
+						<li class="list-inline-item"> <a
+								href="https://www.youtube.com/@gfebusiness" target="_blank"
+								rel="noopener"><i
+									class="fa-brands fa-youtube fs-5 bg-light-subtle Youtube-color p-2 rounded-circle"></i></a>
+						</li>
+						<li class="list-inline-item"> <a
+								href="https://www.linkedin.com/company/13249941/admin/feed/posts/" target="_blank"
+								rel="noopener"><i
+									class="fa-brands fa-linkedin fs-5 bg-light-subtle linkdin-color p-2 rounded-circle"></i></a>
+						</li>
+
+					</ul>
+
+                </div>
+
+                <!-- Widget 1 END -->
+
+
+
+                <!-- Widget 2 START -->
+
+                <div class="col-lg-3">
+
+                    <div class="row gx-0 text-center">
+
+                        <!-- Link block -->
+
+                        <!-- <div class="col-4 col-md-4"> -->
+
+                        <h5 class="mb-3 fs-4">Company</h5>
+
+                        <ul class="nav flex-column p-0">
+
+                            <li class="nav-item fs-5"><a class="nav-link" href="./career.html">Career</a></li>
+
+                            <li class="nav-item fs-5"><a class="nav-link" href="./about.html">About us</a></li>
+
+                            <li class="nav-item fs-5"><a class="nav-link" href="./contact-us.html">Contact us</a></li>
+
+                            <li class="nav-item fs-5"><a class="nav-link" href="#">Blogs</a></li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <!-- Widget 2 END -->
+
+
+
+                <!-- Widget 3 START -->
+
+                <div class="col-lg-3">
+
+                    <h5 class="mb-2 mb-md-4 fs-4">Contact</h5>
+
+                    <!-- Time -->
+
+                    <p class="mb-2  fs-5">
+
+                        Boardline No.: <a href="#"><span class="h6 fw-light ms-2">+91 9211066888</span></a>
+
+                        <!--<span class="d-block small">(9:AM to 8:PM IST)</span>-->
+
+                    </p>
+
+
+
+                    <p class="mb-0 fs-5">Email:<span class="h6 fw-light ms-2 fs-5">info@gfebusiness.org</span></p>
+
+
+
+                    <div class="row g-2 mt-2">
+
+                        <!-- Google play store button -->
+
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-6 mx-auto">
+
+                            <a href="https://play.google.com/store/apps/details?id=crm.ani.com&pcampaignid=web_share">
+                                <img src="assets/images/client/google-play.svg" alt=""> </a>
+
+                        </div>
+
+                        <!-- App store button -->
+
+                        <!--<div class="col-6 col-sm-4 col-md-3 col-lg-6">-->
+
+                        <!--	<a href="#"> <img src="assets/images/client/app-store.svg" alt="app-store"> </a>-->
+
+                        <!--</div>-->
+
+                    </div> <!-- Row END -->
+
+                </div>
+
+                <!-- Widget 3 END -->
+
+            </div><!-- Row END -->
+
+
+
+            <!-- Divider -->
+
+            <hr class="mt-4 mb-0">
+
+
+
+            <!-- Bottom footer -->
+
+            <div class="py-3">
+
+                <div class="container px-0">
+
+                    <div class="d-lg-flex justify-content-between align-items-center py-3 text-center text-md-left">
+
+                        <!-- copyright text -->
+
+                        <div class="text-body text-primary-hover"> Copyrights 2024 <a href="#" target="_blank"
+                                class="text-body">@ GFE Group</a></div>
+
+                        <!-- copyright links-->
+
+                        <div class="justify-content-center mt-3 mt-lg-0">
+
+                            <ul class="nav list-inline justify-content-center mb-0">
+
+                                <li class="list-inline-item">
+
+                                    <!-- Language selector -->
+
+                                    <div class="dropup mt-0 text-center text-sm-end">
+
+                                        <a class="dropdown-toggle nav-link" href="#" role="button" id="languageSwitcher"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+
+                                            <i class="fas fa-globe me-2"></i>Language
+
+                                        </a>
+
+                                        <ul class="dropdown-menu min-w-auto" aria-labelledby="languageSwitcher">
+
+                                            <li><a class="dropdown-item me-4" href="#"><img class="fa-fw me-2"
+                                                        src="assets/images/flags/uk.svg" alt="">English</a></li>
+
+                                            <li><a class="dropdown-item me-4" href="#"><img class="fa-fw me-2"
+                                                        src="assets/images/flags/gr.svg" alt="">German </a></li>
+
+                                            <li><a class="dropdown-item me-4" href="#"><img class="fa-fw me-2"
+                                                        src="assets/images/flags/sp.svg" alt="">French</a></li>
+
+                                        </ul>
+
+                                    </div>
+
+                                </li>
+
+                                <li class="list-inline-item"><a class="nav-link" href="#">Terms & Conditions</a></li>
+
+                                <li class="list-inline-item"><a class="nav-link pe-0" href="#">Privacy & policy</a></li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- =======================
+
+Footer END -->
+
+    <!-- -------------START Popup Button------------- -->
+    <a href="https://wa.me/91123-456-7878"
+        class="d-sm-block d-none back-to-top row align-items-center justify-content-center"><i
+            class="fa-brands fa-whatsapp mt-3 px-2"></i></a>
+    <a href="tel:+91 123-456-7878"
+        class="d-sm-block d-none back-to-top_1 row align-items-center justify-content-center"><i
+            class="fa-solid fa-phone mt-3 px-2"></i></a>
+    <a type="button" title="Enquiry Form"
+        class="d-sm-block d-none back-to-top_2 row align-items-center justify-content-center" id="myBtn"
+        data-bs-toggle="modal" data-bs-target="#exampleModal" data-whatever="@mdo"><i
+            class="fa-solid fa-file-signature mt-3 px-2"></i></a>
+    <!-- <div class="hide">Enquiry</div> -->
+    <a href="#" title="Get Buyer Data"
+        class="d-sm-block d-none back-to-top_3 row align-items-center justify-content-center" id="mBtn"
+        data-bs-toggle="modal" data-bs-target="#ronak" data-whatever="@mdo"><i
+            class="fa-solid fa-file-export fa-bounce mt-3 px-2"></i></a>
+
+    <!-- -------------END Popup Button------------- -->
+
+
+    <!-- --------------Enquiry Form------------------- -->
+
+    <div class="modal fade overflow-y-hidden" id="exampleModal" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fs-2 font-bold honey" id="exampleModalLabel">Enquiry Form</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="#!">
+                        <div class="row gy-4  p-2">
+                            <div class="col-12">
+                                <label for="fullname" class="form-label">Full Name <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="fullname" name="fullname" value="" required>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                            <path
+                                                d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                                        </svg>
+                                    </span>
+                                    <input type="email" class="form-control" id="email" name="email" value="" required>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                                            <path
+                                                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                                        </svg>
+                                    </span>
+                                    <input type="tel" class="form-control" id="phone" name="phone" value="">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="subject" class="form-label">Subject <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="subject" name="subject" value="" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="message" class="form-label">Message <span
+                                        class="text-danger">*</span></label>
+                                <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                            </div>
+                            <div class="col-12">
+                                <div class="d-grid">
+                                    <button
+                                        class="btn bg-success btn-success focus:outline-none hover:bg-indigo-600 btn-lg"
+                                        data-mdb-ripple-init type="button" type="submit">Send Message</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on the button, open the modal
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+    <!-- ----------------END Enquairy Form------------------- -->
+    <div class="modal fade overflow-y-hidden" id="ronak" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content gfe-color">
+                <div class="modal-header">
+                    <h5 class="modal-title fs-2 font-bold honey text-white" id="exampleModalLabel">Get Buyer Data</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="#!">
+                        <div class="row gy-4">
+
+                            <div class="col-12 mt-3">
+                                <label for="fullname" class="form-label text-white">Full Name <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="fullname" name="fullname" value=""
+                                    placeholder="Enter Your Name" required>
+                            </div>
+
+                            <div class="col-12 col-md-6 mt-1">
+                                <label for="email" class="form-label text-white">Email <span
+                                        class="text-danger">*</span></label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-envelope text-black" viewBox="0 0 16 16">
+                                            <path
+                                                d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                                        </svg>
+                                    </span>
+                                    <input type="email" class="form-control" id="email" name="email" value=""
+                                        placeholder="email" required>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 mt-1">
+                                <label for="phone" class="form-label text-white">Phone Number<span
+                                        class="text-danger">*</span></label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-telephone text-black" viewBox="0 0 16 16">
+                                            <path
+                                                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                                        </svg>
+                                    </span>
+                                    <input type="tel" class="form-control" id="phone" name="phone" value=""
+                                        placeholder="number">
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 mt-1">
+                                <label for="state" class="form-label text-white">State <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" name="State" value="" list="state"
+                                    placeholder="State" required>
+                                <datalist id="state">
+                                    <option value="Gujarat">
+                                    <option value="Goa">
+                                    <option value="Maharashtra">
+                                    <option value="West Bengal">
+                                    <option value="Punjab">
+                                </datalist>
+                            </div>
+                            <div class="col-12 col-md-6 mt-1">
+                                <label for="city" class="form-label text-white">City <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" name="City" value="" list="city"
+                                    placeholder="City" required>
+                                <!-- <input id="color" list="suggestions"> -->
+                                <datalist id="city">
+                                    <option value="Patan">
+                                    <option value="Ahmedabad">
+                                    <option value="Hyderabad">
+                                    <option value="Kolkata">
+                                    <option value="Chennai">
+                                </datalist>
+                            </div>
+
+                            <div class="col-12 mt-1">
+                                <label for="hsn" class="form-label text-white">HSN Code <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="hsn" name="hsn" value=""
+                                    placeholder="HSN code" required>
+                            </div>
+
+                            <div class="col-12 mt-2">
+                                <div class="d-grid">
+                                    <button
+                                        class="btn bg-success btn-success focus:outline-none hover:bg-indigo-600 btn-lg"
+                                        data-mdb-ripple-init type="button" type="submit">Send Message</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .gfe-color {
+            background: radial-gradient(circle at 20% 130%, #003f8cb5 0%, #005b8ca8 45%);
+            /* background: -webkit-radial-gradient( #73D81C 0%, #2786ED 5%, #01228D 45%, #E9FF8D 60%, #85B4B8 90%); */
+        }
+    </style>
+
+
+    <script>
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("mBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on the button, open the modal
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+    <!-- ----------------END Get Buyer Data------------------- -->
+
+
+
+    <!-- Back to top -->
+
+    <div class="back-top"><i class="bi bi-arrow-up-short position-absolute top-50 start-50 translate-middle"></i></div>
+
+
+
+    <!-- Bootstrap JS -->
+
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+    <!-- Vendors -->
+
+    <script src="assets/vendor/tiny-slider/tiny-slider.js"></script>
+
+    <script src="assets/vendor/aos/aos.js"></script>
+
+
+
+    <!-- Template Functions -->
+
+    <script src="assets/js/functions.js"></script>
+
+
+
+</body>
+
+</html>
