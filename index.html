@@ -22,15 +22,11 @@
 
 	<meta name="description" content="Eduport- LMS, Education and Course Theme">
 
-
-
 	<!-- Dark mode -->
 
 	<script>
 
 		const storedTheme = localStorage.getItem('theme')
-
-
 
 		const getPreferredTheme = () => {
 
@@ -43,8 +39,6 @@
 			return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'light'
 
 		}
-
-
 
 		const setTheme = function (theme) {
 
@@ -60,11 +54,7 @@
 
 		}
 
-
-
 		setTheme(getPreferredTheme())
-
-
 
 		window.addEventListener('DOMContentLoaded', () => {
 
@@ -80,23 +70,17 @@
 
 					const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
 
-
-
 					document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
 
 						element.classList.remove('active')
 
 					})
 
-
-
 					btnToActive.classList.add('active')
 
 					activeThemeIcon.setAttribute('href', svgOfActiveBtn)
 
 				}
-
-
 
 				window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
 
@@ -108,11 +92,7 @@
 
 				})
 
-
-
 				showActiveTheme(getPreferredTheme())
-
-
 
 				document.querySelectorAll('[data-bs-theme-value]')
 
@@ -132,17 +112,11 @@
 
 					})
 
-
-
 			}
 
 		})
 
-
-
 	</script>
-
-
 
 	<!-- Favicon -->
 
@@ -159,8 +133,6 @@
 	<link rel="stylesheet"
 		href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
 
-
-
 	<!-- Plugins CSS -->
 
 	<link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
@@ -171,21 +143,13 @@
 
 	<link rel="stylesheet" type="text/css" href="assets/vendor/glightbox/css/glightbox.css">
 
-
-
 	<!-- Theme CSS -->
 
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
-
-
 </head>
 
-
-
 <body>
-
-
 
 	<!-- Header START -->
 
@@ -211,8 +175,6 @@
 
 				<!-- Logo END -->
 
-
-
 				<!-- Responsive navbar toggler -->
 
 				<button class="navbar-toggler ms-auto " type="button" data-bs-toggle="collapse"
@@ -231,13 +193,9 @@
 
 				</button>
 
-
-
 				<!-- Main navbar START -->
 
 				<div class="navbar-collapse w-100 collapse " id="navbarCollapse">
-
-
 
 					<!-- Nav category menu START -->
 
@@ -253,13 +211,7 @@
 
 							<ul class="dropdown-menu" aria-labelledby="categoryMenu">
 
-
-
 								<!-- Dropdown submenu -->
-
-
-
-
 
 								<li class="dropdown-submenu dropend">
 
@@ -285,8 +237,6 @@
 
 								</li>
 
-
-
 								<li class="dropdown-submenu dropend">
 
 									<a class="dropdown-item" href="#">International Buyers-Sellers Network</a>
@@ -310,21 +260,13 @@
 
 								</li>
 
-
-
-
-
 							</ul>
-
-
 
 						</li>
 
 					</ul>
 
 					<!-- Nav category menu END -->
-
-
 
 					<!-- Nav Main menu START -->
 
@@ -339,16 +281,12 @@
 
 						</li>
 
-
-
 						<li class="nav-item dropdown">
 
 							<a class="nav-link" href="about.html" id="demoMenu" aria-haspopup="true"
 								aria-expanded="false">About Us</a>
 
 						</li>
-
-
 
 						<li class="nav-item dropdown">
 
@@ -371,19 +309,12 @@
 
 						</li>
 
-
-
-
-
 						<li class="nav-item dropdown">
 
 							<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="download.html"
 								id="demoMenu" aria-haspopup="true" aria-expanded="false">Download</a>
 
 							<ul class="dropdown-menu" aria-labelledby="demoMenu">
-
-								<!-- <li> <a class="dropdown-item" href="brochures.html">Brochures</a></li> -->
-
 								<li> <a class="dropdown-item" id="mBtn" data-bs-toggle="modal" data-bs-target="#ronak"
 										data-whatever="@mdo">Product Research Report</a></li>
 
@@ -414,16 +345,12 @@
 
 						</li>
 
-
-
 						<li class="nav-item dropdown">
 
 							<a class="nav-link" href="career.html" id="demoMenu" aria-haspopup="true"
 								aria-expanded="false">Career</a>
 
 						</li>
-
-
 
 						<li class="nav-item dropdown">
 
@@ -433,8 +360,6 @@
 						</li>
 
 						<!-- Nav Main menu END -->
-
-
 
 						<!-- Nav Search START -->
 
@@ -466,8 +391,6 @@
 				</div>
 
 				<!-- Main navbar END -->
-
-
 
 				<!-- Profile START -->
 
@@ -606,20 +529,11 @@
 	<!-- Header END -->
 
 
-
-
-
-
-
 	<!-- **************** MAIN CONTENT START **************** -->
 
 	<main>
 
-
-
-		<!-- =======================
-
-Main Banner START -->
+		<!-- Main Banner START -->
 
 		<section class="position-relative overflow-hidden pt-5 pt-lg-3">
 
@@ -790,8 +704,6 @@ Main Banner START -->
 
 			<!-- SVG END -->
 
-
-
 			<!-- SVG START -->
 
 			<span class="position-absolute top-50 end-0 translate-middle-y mt-5 me-n5 d-none d-xxl-inline-flex">
@@ -867,8 +779,6 @@ Main Banner START -->
 
 			<!-- SVG END -->
 
-
-
 			<!-- SVG START -->
 
 			<figure class="position-absolute top-0 start-0 ms-5">
@@ -884,8 +794,6 @@ Main Banner START -->
 			</figure>
 
 			<!-- SVG END -->
-
-
 
 			<!-- Content START -->
 
@@ -932,8 +840,6 @@ Main Banner START -->
 
 							<span class="position-relative">awaiting for you!
 
-
-
 								<!-- SVG START -->
 
 								<span class="position-absolute top-50 start-50 translate-middle ms-3 z-index-n1">
@@ -954,21 +860,16 @@ Main Banner START -->
 
 						</h1>
 
-
-
 						<!-- Content -->
 
 						<p class="my-4 lead" data-aos="fade-down" data-aos-duration="1000">Explore the Globe with our
-							Different Initiative in the Field of
-							Export-Import | eCommerce | Logistics | Customs Clearance | CHA | Overseas Education |
+							Different Initiative in the Field of Export-Import | eCommerce | Logistics | Customs
+							Clearance | CHA | Overseas Education |
 							International Buyers-Suppliers Network</p>
-
-
 
 						<!-- Info -->
 
 						<ul class="list-inline position-relative justify-content-center justify-content-lg-start mb-4">
-
 							<li class="list-inline-item me-2" data-aos="zoom-in" data-aos-duration="500"> <i
 									class="bi bi-patch-check-fill text-success h6 me-1"></i>Learn with Experts</li>
 
@@ -978,10 +879,7 @@ Main Banner START -->
 							<li class="list-inline-item" data-aos="zoom-in" data-aos-duration="500"> <i
 									class="bi bi-patch-check-fill text-success h6 me-1"></i>Get
 								membership</li>
-
 						</ul>
-
-
 
 						<div class="d-sm-flex align-items-center justify-content-center justify-content-lg-start">
 
@@ -1006,7 +904,6 @@ Main Banner START -->
 									<h6
 										class="mb-0 ms-3 fw-normal position-absolute start-100 top-50 translate-middle-y">
 										Watch video</h6>
-
 								</a>
 
 							</div>
@@ -1016,8 +913,6 @@ Main Banner START -->
 					</div>
 
 					<!-- Left content END -->
-
-
 
 					<!-- Right content START -->
 
@@ -1080,15 +975,11 @@ Main Banner START -->
 
 		</section>
 
-		<!-- =======================
-
-Main Banner END -->
+		<!-- Main Banner END -->
 
 
 
-		<!-- =======================
-
-Counter START -->
+		<!-- Counter START -->
 
 		<section class="py-0 py-xl-5">
 
@@ -1214,16 +1105,9 @@ Counter START -->
 
 		</section>
 
-		<!-- =======================
+		<!-- Counter END -->
 
-Counter END -->
-
-		<!------>
-
-
-		<!-- =======================
-
-Popular course START -->
+		<!-- Popular course START -->
 
 		<section>
 
@@ -1243,8 +1127,6 @@ Popular course START -->
 
 				</div>
 
-
-
 				<!-- Tabs content START -->
 
 				<div class="tab-content" id="course-pills-tabContent" data-aos="zoom-in" data-aos-duration="1000">
@@ -1263,8 +1145,6 @@ Popular course START -->
 								<div class="tiny-slider-inner pb-1" data-autoplay="true" data-arrow="true" data-edge="2"
 									data-dots="false" data-items="4" data-items-lg="3" data-items-md="3"
 									data-items-sm="1">
-
-
 									<!-- Card item START -->
 
 									<div class="col-sm-6 col-lg-4 col-xl-3">
@@ -1293,8 +1173,6 @@ Popular course START -->
 									</div>
 
 									<!-- Card item END -->
-
-
 
 									<!-- Card item START -->
 
@@ -1325,8 +1203,6 @@ Popular course START -->
 
 									<!-- Card item END -->
 
-
-
 									<!-- Card item START -->
 
 									<div class="col-sm-6 col-lg-4 col-xl-3">
@@ -1354,7 +1230,6 @@ Popular course START -->
 
 									<!-- Card item END -->
 
-
 									<!-- Card item START -->
 
 									<div class="col-sm-6 col-lg-4 col-xl-3">
@@ -1381,9 +1256,6 @@ Popular course START -->
 									</div>
 
 									<!-- Card item END -->
-
-
-
 
 									<!-- Card item START -->
 
@@ -1413,8 +1285,6 @@ Popular course START -->
 
 									<!-- Card item END -->
 
-
-
 									<!-- Card item START -->
 
 									<div class="col-sm-6 col-lg-4 col-xl-3">
@@ -1441,8 +1311,6 @@ Popular course START -->
 									</div>
 
 									<!-- Card item END -->
-
-
 
 									<!-- Card item START -->
 
@@ -1471,8 +1339,6 @@ Popular course START -->
 									</div>
 
 									<!-- Card item END -->
-
-
 
 									<!-- Card item START -->
 
@@ -1515,12 +1381,6 @@ Popular course START -->
 
 				<!-- Content END -->
 
-
-
-
-
-
-
 			</div>
 
 			<!-- Tabs content END -->
@@ -1529,15 +1389,9 @@ Popular course START -->
 
 		</section>
 
-		<!-- =======================
+		<!-- Popular course END -->
 
-Popular course END -->
-
-
-
-		<!-- =======================
-
-Action box START -->
+		<!-- Action box START -->
 
 		<section class="pt-0 pt-lg-5">
 
@@ -1566,8 +1420,6 @@ Action box START -->
 				</figure>
 
 				<!-- SVG decoration END -->
-
-
 
 				<div class="row">
 
@@ -1635,46 +1487,133 @@ Action box START -->
 
 		</section>
 
-		<!-- =======================
+		<!-- Action box END -->
 
-Action box END -->
+		<style>
+			.Ak-size {
+				aspect-ratio: 3/2;
+				width: 100%;
+				object-fit: contain;
+			}
 
+			.jsb {
+				justify-content: space-evenly;
+			}
 
+			.D-b-co {
+				background-color: #FFC20f;
+			}
 
+			.D-b-co1 {
+				background-color: #36FF00;
+			}
 
+			.g-co {
+				background-color: rgba(255, 255, 255, 0.952);
+			}
 
+			.t-bold {
+				font-weight: bold;
+			}
 
+			.clip {
+				margin: 0 auto;
+				background-color: rgba(107, 216, 18, 0.5);
+				clip-path: polygon(100% 0%, 94% 48%, 100% 100%, 0% 100%, 6% 48%, 0% 0%);
+			}
+
+			.MARCH {
+				width: 25%;
+			}
+
+			@media only screen and (max-width: 600px) {
+				.MARCH {
+					width: 100%;
+				}
+			}
+		</style>
 
 		<!--Daily price-->
-
-
-		<div class="container-fluid">
-
-			<h2 class="text-center mb-4 fs-1 font-bold" data-aos="fade-down" data-aos-duration="1000">Daily Market Price
-			</h2>
-
-			<!-- <br/> -->
-
-
-			<div class="col-md-9 text-center mx-auto" data-aos="zoom-in" data-aos-duration="1000">
-
-				<a href="./temp.html" target="_blank">
-					<div class="card card-body ">
-						<!-- style="background-image:url(assets/images/DAILY\ PRICE.jpg); background-position: center left; background-size: cover;"> -->
-						<img src="assets/images/DAILY PRICE.jpg" class=" h-150px  w-100 object-fit-contain " alt="">
-					</div>
-				</a>
+		<section class="bg-black"">
+			<div class=" container-fluid">
+			<div>
+				<img src="assets/images/GFE.webp" class="mx-auto d-block" style="width: 300px;" alt="">
+				<h3 class="text-center text-white fs-2">DAILY MARKET PRICE</h3>
+				<p class="bg-body-secondary rounded-3 MARCH mx-auto text-center text-black t-bold fs-3 mb-4">
+					13th MARCH, 2024
+				</p>
 			</div>
-		</div>
 
-		<!--//Daily price-->
+			<div class=" row jsb">
+				<div class="col-md-3 g-co rounded-3">
+					<h3 class="text-center">Banana</h3>
+					<img src="assets/images/products/banana.jpg" class="card-img-top Ak-size" alt="...">
+					<div class="row col-12 text-black mx-auto justify-content-between mb-2">
+						<div class=" flex flex-column col-5 p-2 text-center D-b-co rounded-2">
+							<h5 class="card-title">India</h5>
+							<p class="card-text">440/- BOX</p>
+						</div>
+						<div class=" flex flex-column col-5 p-2 text-center D-b-co1 rounded-2">
+							<h5 class="card-title">Dubai</h5>
+							<p class="card-text">18-20</p>
+						</div>
+					</div>
+					<div class="row col-md-12 clip my-3">
+						<p class="mt-3 text-center text-black fs-5">Weight- 13kg Net,
+							14kg Gros Hands- 4,5,6
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3 g-co rounded-3">
+					<h3 class="text-center">Green Chilli</h3>
+					<img src="assets/images/products/green chilli.jpg" class="card-img-top Ak-size" alt="...">
+					<div class="row col-12 text-black mx-auto justify-content-between mb-2">
+						<div class=" flex flex-column col-5 p-2 text-center D-b-co rounded-2">
+							<h5 class="card-title">India</h5>
+							<p class="card-text">422/- BOX</p>
+						</div>
+						<div class=" flex flex-column col-5 p-2 text-center D-b-co1 rounded-2">
+							<h5 class="card-title">Dubai</h5>
+							<p class="card-text">18-21</p>
+						</div>
+					</div>
+					<div class="row col-md-12 clip my-3">
+						<p class="mt-3 text-center text-black fs-5">Weight- 13kg Net,
+							14kg Gros Hands- 4,5,6
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3 g-co rounded-3">
+					<h3 class="text-center">Ginger</h3>
+					<img src="assets/images/products/ginger.jpg" class="card-img-top Ak-size" alt="...">
+					<div class="row col-12 text-black mx-auto justify-content-between mb-2">
+						<div class=" flex flex-column col-5 p-2 text-center D-b-co rounded-2">
+							<h5 class="card-title">India</h5>
+							<p class="card-text">590/- BOX</p>
+						</div>
+						<div class=" flex flex-column col-5 p-2 text-center D-b-co1 rounded-2">
+							<h5 class="card-title">Dubai</h5>
+							<p class="card-text">15-17</p>
+						</div>
+					</div>
+					<div class="row col-md-12 clip my-3">
+						<p class="mt-3 text-center text-black fs-5">Weight- 13kg Net,
+							14kg Gros Hands- 4,5,6
+						</p>
+					</div>
+				</div>
+
+			</div>
+			</div>
+		</section>
+
+		<!-- Daily price -->
 
 
 
 
-		<!-- =======================
 
-Trending courses START -->
+		<!--Trending courses START -->
 
 		<section class="pb-5 pt-0 pt-lg-5">
 
