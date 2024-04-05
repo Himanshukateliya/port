@@ -26212,7 +26212,7 @@ html[dir=rtl] .choices__input {
 }
 
 .review-st {
-  bottom: 20%;
+  bottom: 15%;
   right: -5% !important;
 }
 
@@ -26228,6 +26228,7 @@ html[dir=rtl] .choices__input {
 
   .review-st {
     right: 5% !important;
+    bottom: 40% !important;
   }
 
   .t-whit {
@@ -26258,7 +26259,7 @@ html[dir=rtl] .choices__input {
 @media only screen and (min-width: 600px) {
   .review-st {
     right: 2% !important;
-    bottom: 50% !important;
+    bottom: 56% !important;
   }
 
   .t-whit {
@@ -26288,7 +26289,7 @@ html[dir=rtl] .choices__input {
 @media only screen and (min-width: 992px) {
   .review-st {
     right: 2% !important;
-    bottom: 40% !important;
+    bottom: 56% !important;
   }
 
   .goog-im {
@@ -26308,7 +26309,7 @@ html[dir=rtl] .choices__input {
 @media only screen and (min-width: 1200px) {
   .review-st {
     right: 2% !important;
-    bottom: 45% !important;
+    bottom: 55% !important;
   }
 
   .goog-im {
