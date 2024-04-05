@@ -2,168 +2,109 @@
 <html lang="en">
 
 <head>
-
-    <title>Eduport - LMS, Education and Course Theme</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css" rel="stylesheet" />
-
-
-    <!-- Meta Tags -->
-
-    <meta charset="utf-8">
-
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <meta name="author" content="Webestica.com">
-
-    <meta name="description" content="Eduport- LMS, Education and Course Theme">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- Dark mode -->
-
     <script>
-
         const storedTheme = localStorage.getItem('theme')
 
         const getPreferredTheme = () => {
-
             if (storedTheme) {
-
                 return storedTheme
-
             }
-
             return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'light'
-
         }
 
         const setTheme = function (theme) {
-
             if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-
                 document.documentElement.setAttribute('data-bs-theme', 'dark')
-
             } else {
-
                 document.documentElement.setAttribute('data-bs-theme', theme)
-
             }
-
         }
 
         setTheme(getPreferredTheme())
 
         window.addEventListener('DOMContentLoaded', () => {
-
             var el = document.querySelector('.theme-icon-active');
-
             if (el != 'undefined' && el != null) {
-
                 const showActiveTheme = theme => {
-
                     const activeThemeIcon = document.querySelector('.theme-icon-active use')
-
                     const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
-
                     const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
 
                     document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
-
                         element.classList.remove('active')
-
                     })
 
                     btnToActive.classList.add('active')
-
                     activeThemeIcon.setAttribute('href', svgOfActiveBtn)
-
                 }
 
                 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-
                     if (storedTheme !== 'light' || storedTheme !== 'dark') {
-
                         setTheme(getPreferredTheme())
-
                     }
-
                 })
 
                 showActiveTheme(getPreferredTheme())
 
                 document.querySelectorAll('[data-bs-theme-value]')
-
                     .forEach(toggle => {
-
                         toggle.addEventListener('click', () => {
-
                             const theme = toggle.getAttribute('data-bs-theme-value')
-
                             localStorage.setItem('theme', theme)
-
                             setTheme(theme)
-
                             showActiveTheme(theme)
-
                         })
-
                     })
 
             }
-
         })
 
     </script>
 
     <!-- Favicon -->
-
     <link rel="shortcut icon" href="assets/images/favicon.ico">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
 
+    <!-- -------FontAwsome----------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Google Font -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
 
     <!-- Plugins CSS -->
-
     <link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
-
     <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
-
     <link rel="stylesheet" type="text/css" href="assets/vendor/tiny-slider/tiny-slider.css">
-
-    <link rel="stylesheet" type="text/css" href="assets/vendor/glightbox/css/glightbox.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendor/aos/aos.css">
 
     <!-- Theme CSS -->
-
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
+    <!-- Custom meta tags -->
+    <!-- Include your custom meta tags here -->
+
+    <title>Terms & Conditions - World of Import Export Training Institute</title>
 </head>
 
 <body>
 
-    <!-- Header START -->
-
-    <header class="navbar-light navbar-sticky header-static">
-
-        <!-- Nav START -->
-
+    <header class="navbar-light navbar-sticky">
+        <!-- Logo Nav START -->
         <nav class="navbar navbar-expand-xl">
-
-            <div class="container-fluid px-3 px-xl-5">
-
+            <div class="container">
                 <!-- Logo START -->
-
                 <a class="navbar-brand" href="index.html">
 
                     <img class="light-mode-item navbar-brand-item" src="assets/images/Gfe Business.png" alt="logo"
@@ -173,768 +114,339 @@
                         style="height:55px;width:180px;">
 
                 </a>
-
                 <!-- Logo END -->
 
                 <!-- Responsive navbar toggler -->
-
-                <button class="navbar-toggler ms-auto " type="button" data-bs-toggle="collapse"
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
                     aria-label="Toggle navigation">
-
                     <span class="navbar-toggler-animation">
-
                         <span></span>
-
                         <span></span>
-
                         <span></span>
-
                     </span>
-
                 </button>
 
                 <!-- Main navbar START -->
-
                 <div class="navbar-collapse w-100 collapse ronni" id="navbarCollapse">
 
-                    <!-- Nav category menu START -->
-
                     <ul class="navbar-nav navbar-nav-scroll me-auto">
-
                         <!-- Nav item 1 Demos -->
-
-                        <li class="nav-item dropdown dropdown-menu-shadow-stacked">
-
-                            <a class="nav-link bg-primary bg-opacity-10 rounded-3 text-primary px-3 py-3 py-xl-0"
-                                href="#" id="categoryMenu" data-bs-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false"><i class="bi bi-ui-radios-grid me-2"></i><span>Category</span></a>
-
-                            <ul class="dropdown-menu" aria-labelledby="categoryMenu">
-
-                                <!-- Dropdown submenu -->
-
-                                <li class="dropdown-submenu dropend">
-
-                                    <a class="dropdown-item" href="#">Online Business University</a>
-
-                                    <ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
-
-                                        <!-- dropdown submenu open right -->
-
-                                        <li class="dropdown-submenu dropend">
-
-                                            <a class="dropdown-item" href="#">Export Import Training</a>
-
-                                        </li>
-
-                                        <li> <a class="dropdown-item" href="#">ECommerce Online Training</a> </li>
-
-                                        <li> <a class="dropdown-item" href="#">India’s Top 10 EXIM Products</a> </li>
-
-                                        <li> <a class="dropdown-item" href="#">Prepare Governments Documents</a> </li>
-
-                                    </ul>
-
-                                </li>
-
-                                <li class="dropdown-submenu dropend">
-
-                                    <a class="dropdown-item" href="#">International Buyers-Sellers Network</a>
-
-                                    <ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
-
-                                        <!-- dropdown submenu open right -->
-
-                                        <li class="dropdown-submenu dropend">
-
-                                            <a class="dropdown-item" href="#">Trade Activities</a>
-
-                                        </li>
-
-                                        <li> <a class="dropdown-item" href="#">Buy any Products</a> </li>
-
-                                        <li> <a class="dropdown-item" href="#">Become International Seller/Supplier</a>
-                                        </li>
-
-                                    </ul>
-
-                                </li>
-
-                            </ul>
-
-                        </li>
-
-                    </ul>
-
-                    <!-- Nav category menu END -->
-
-                    <!-- Nav Main menu START -->
-
-                    <ul class="navbar-nav navbar-nav-scroll me-auto">
-
-                        <!-- Nav item 1 Demos -->
-
                         <li class="nav-item dropdown">
-
                             <a class="nav-link" href="index.html" id="demoMenu" aria-haspopup="true"
                                 aria-expanded="false">Home</a>
-
                         </li>
 
                         <li class="nav-item dropdown">
-
                             <a class="nav-link" href="about.html" id="demoMenu" aria-haspopup="true"
                                 aria-expanded="false">About Us</a>
-
                         </li>
 
                         <li class="nav-item dropdown">
-
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="gallery.html"
-                                id="demoMenu" aria-haspopup="true" aria-expanded="false">Gallery</a>
-
+                            <a class="nav-link dropdown-toggle" href="gallery.html" id="demoMenu"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gallery</a>
                             <ul class="dropdown-menu" aria-labelledby="demoMenu">
-
                                 <li> <a class="dropdown-item" href="team.html">Team</a></li>
-
                                 <li> <a class="dropdown-item" href="clients.html">Clients</a></li>
-
                                 <li> <a class="dropdown-item" href="events.html">Events</a></li>
-
                                 <li> <a class="dropdown-item " href="awards.html">Awards</a></li>
-
                                 <li> <a class="dropdown-item " href="media.html">Media Coverage</a></li>
-
                             </ul>
-
                         </li>
 
+
                         <li class="nav-item dropdown">
-
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="download.html"
-                                id="demoMenu" aria-haspopup="true" aria-expanded="false">Download</a>
-
+                            <a class="nav-link dropdown-toggle" href="download.html" id="demoMenu"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Download</a>
                             <ul class="dropdown-menu" aria-labelledby="demoMenu">
                                 <li> <a class="dropdown-item" id="mBtn" data-bs-toggle="modal" data-bs-target="#ronak"
                                         data-whatever="@mdo">Product Research Report</a></li>
-
                                 <li> <a class="dropdown-item" id="mBtn" data-bs-toggle="modal" data-bs-target="#ronak"
-                                        data-whatever="@mdo">Genuine International Buyers-Sellers Data</a></li>
-
+                                        data-whatever="@mdo">Genuine International Buyers-Sellers
+                                        Data</a></li>
                             </ul>
-
                         </li>
 
-
                         <li class="nav-item dropdown">
-
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="resources.html"
-                                id="demoMenu" aria-haspopup="true" aria-expanded="false">Resources</a>
-
+                            <a class="nav-link dropdown-toggle" href="resources.html" id="demoMenu"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources</a>
                             <ul class="dropdown-menu" aria-labelledby="demoMenu">
-
                                 <li> <a class="dropdown-item" href="https://www.indiantradeportal.in/">HSN Code
                                         Search</a></li>
-
                                 <li> <a class="dropdown-item" href="https://www.xe.com/currencyconverter/">Currency
                                         Converter</a></li>
-
-                                <!-- <li> <a class="dropdown-item" href="countryviceproduct.html">Country vice Product Demand</a></li> -->
-
                             </ul>
-
                         </li>
 
                         <li class="nav-item dropdown">
-
                             <a class="nav-link" href="career.html" id="demoMenu" aria-haspopup="true"
                                 aria-expanded="false">Career</a>
-
                         </li>
 
                         <li class="nav-item dropdown">
-
                             <a class="nav-link" href="contact-us.html" id="demoMenu" aria-haspopup="true"
                                 aria-expanded="false">Contact Us</a>
-
                         </li>
 
-                        <!-- Nav Main menu END -->
+                    </ul>
+                    </li>
 
-                        <!-- Nav Search START -->
-
-                        <div class="nav my-3 my-xl-0 px-4 flex-nowrap align-items-center">
-
-                            <div class="nav-item w-100">
-
-                                <form class="position-relative">
-
-                                    <input class="form-control pe-5 bg-transparent" type="search" placeholder="Search"
-                                        aria-label="Search">
-
-                                    <button
-                                        class="bg-transparent p-2 position-absolute top-50 end-0 translate-middle-y border-0 text-primary-hover text-reset"
-                                        aria-label="submit" type="submit">
-
-                                        <i class="fas fa-search fs-6 "></i>
-
-                                    </button>
-
-                                </form>
-
-                            </div>
-
+                    <!-- Nav Search START -->
+                    <div class="nav my-3 my-xl-0 px-4 flex-nowrap align-items-center">
+                        <div class="nav-item w-100">
+                            <form class="position-relative">
+                                <input class="form-control pe-5 bg-transparent" type="search" placeholder="Search"
+                                    aria-label="Search">
+                                <button
+                                    class="bg-transparent p-2 position-absolute top-50 end-0 translate-middle-y border-0 text-primary-hover text-reset"
+                                    type="submit">
+                                    <i class="fas fa-search fs-6 "></i>
+                                </button>
+                            </form>
                         </div>
-
-                        <!-- Nav Search END -->
-
+                    </div>
+                    <!-- Nav Search END -->
                 </div>
-
                 <!-- Main navbar END -->
 
                 <!-- Profile START -->
-
                 <div class="dropdown ms-1 ms-lg-0">
-
                     <a class="avatar avatar-sm p-0" href="#" id="profileDropdown" role="button"
                         data-bs-auto-close="outside" data-bs-display="static" data-bs-toggle="dropdown"
                         aria-expanded="false">
-
                         <img class="avatar-img rounded-circle" src="assets/images/avatar/01.jpg" alt="avatar">
-
                     </a>
-
                     <ul class="dropdown-menu dropdown-animation dropdown-menu-end shadow pt-3"
                         aria-labelledby="profileDropdown">
-
                         <!-- Profile info -->
-
                         <li class="px-3 mb-3">
-
                             <div class="d-flex align-items-center">
-
                                 <!-- Avatar -->
-
                                 <div class="avatar me-3">
-
                                     <img class="avatar-img rounded-circle shadow" src="assets/images/avatar/01.jpg"
                                         alt="avatar">
-
                                 </div>
-
                                 <div>
-
                                     <a class="h6" href="#">Lori Ferguson</a>
-
                                     <p class="small m-0">example@gmail.com</p>
-
                                 </div>
-
                             </div>
-
                         </li>
-
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-
                         <!-- Links -->
-
                         <li><a class="dropdown-item" href="#"><i class="bi bi-person fa-fw me-2"></i>Edit Profile</a>
                         </li>
-
                         <li><a class="dropdown-item" href="#"><i class="bi bi-gear fa-fw me-2"></i>Account Settings</a>
                         </li>
-
                         <li><a class="dropdown-item" href="#"><i class="bi bi-info-circle fa-fw me-2"></i>Help</a></li>
-
                         <li><a class="dropdown-item bg-danger-soft-hover" href="#"><i
                                     class="bi bi-power fa-fw me-2"></i>Sign Out</a></li>
-
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-
                         <!-- Dark mode options START -->
-
                         <li>
-
                             <div
                                 class="bg-light dark-mode-switch theme-icon-active d-flex align-items-center p-1 rounded mt-2">
-
                                 <button type="button" class="btn btn-sm mb-0" data-bs-theme-value="light">
-
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-sun fa-fw mode-switch" viewBox="0 0 16 16">
-
                                         <path
                                             d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
-
                                         <use href="#"></use>
-
                                     </svg> Light
-
                                 </button>
-
                                 <button type="button" class="btn btn-sm mb-0" data-bs-theme-value="dark">
-
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-moon-stars fa-fw mode-switch" viewBox="0 0 16 16">
-
                                         <path
                                             d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z" />
-
                                         <path
                                             d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
-
                                         <use href="#"></use>
-
                                     </svg> Dark
-
                                 </button>
-
                                 <button type="button" class="btn btn-sm mb-0 active" data-bs-theme-value="auto">
-
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-circle-half fa-fw mode-switch" viewBox="0 0 16 16">
-
                                         <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
-
                                         <use href="#"></use>
-
                                     </svg> Auto
-
                                 </button>
-
                             </div>
-
                         </li>
-
                         <!-- Dark mode options END-->
-
                     </ul>
-
                 </div>
-
                 <!-- Profile START -->
-
             </div>
-
         </nav>
-
-        <!-- Nav END -->
-
+        <!-- Logo Nav END -->
     </header>
-
     <!-- Header END -->
 
-
-    <!-- ----------------Enquairy form----------------- -->
-
-
-    <div class="modal fade overflow-y-hidden" id="exampleModal" tabindex="-1" role="dialog"
-        aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title fs-2 font-bold honey" id="exampleModalLabel">Enquairy Form</h5>
-                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form action="#!">
-                        <div class="row gy-4 gy-xl-5 p-2">
-                            <div class="col-12">
-                                <label for="fullname" class="form-label">Full Name <span
-                                        class="text-danger">*</span></label>
-                                <input type="text" class="form-control" id="fullname" name="fullname" value="" required>
-                            </div>
-                            <div class="col-12 col-md-6">
-                                <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
-                                <div class="input-group">
-                                    <span class="input-group-text">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-                                            <path
-                                                d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
-                                        </svg>
-                                    </span>
-                                    <input type="email" class="form-control" id="email" name="email" value="" required>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6">
-                                <label for="phone" class="form-label">Phone Number</label>
-                                <div class="input-group">
-                                    <span class="input-group-text">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
-                                            <path
-                                                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
-                                        </svg>
-                                    </span>
-                                    <input type="tel" class="form-control" id="phone" name="phone" value="">
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <label for="subject" class="form-label">Subject <span
-                                        class="text-danger">*</span></label>
-                                <input type="text" class="form-control" id="subject" name="subject" value="" required>
-                            </div>
-                            <div class="col-12">
-                                <label for="message" class="form-label">Message <span
-                                        class="text-danger">*</span></label>
-                                <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
-                            </div>
-                            <div class="col-12">
-                                <div class="d-grid">
-                                    <button
-                                        class="btn bg-success btn-success focus:outline-none hover:bg-indigo-600 btn-lg"
-                                        data-mdb-ripple-init type="button" type="submit">Send Message</button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <main class="bg-black">
-        <section class="text-gray-600 body-font pb-0">
-            <div class="container-fluid mx-auto row justify-content-around">
-                <div>
-                    <img src="assets/images/GFE.webp" class="mx-auto d-block" style="width: 300px;" alt="">
-                    <h3 class="text-center text-white fs-2 my-3">DAILY MARKET PRICE</h3>
-                    <p class="bg-body-secondary rounded-3 MARCH mx-auto text-center text-black t-bold fs-3 mb-4">
-                        04th April, 2024
-                    </p>
+    <!-- Page content -->
+    <!-- Intro -->
+    <main class="page-wrapper">
+        <section class="container pt-5">
+            <h2 class="text-center">Terms & Conditions – Please Read Carefully</h2>
+            <div class="row align-items-center border-bottom">
+                <div class="col-md-12 py-3">
+                    <ul class="list-unstyled">
+                        <!-- List items here -->
+                        <li class="d-flex mb-2 pb-1"><i
+                                class="ai-check-circle text-success fs-xl mt-1 me-3"></i><span>1. We clearly deliver
+                                above mentioned specified services and benefits only, any other services we may or may
+                                not provide and if Provide, Govt. Charges will be Extra and Service Charges may be
+                                applicable as specified.</span></li>
+                        <li class="d-flex mb-2 pb-1"><i
+                                class="ai-check-circle text-success fs-xl mt-1 me-3"></i><span>2. 2 Months – Working
+                                days is the Standard TAT for completion of all the services across all the Products from
+                                the date of all documents provided or Full Payment cleared, whichever is later, however
+                                delays may occur due to Communication gap between you and our team members due to non
+                                reply of mails and calls to get necessary documents, OTPs , other formalities or some
+                                other unforeseen circumstances like these days we get unusual delays due to Covid19
+                                issues in many services but we are still working to make it faster.</span></li>
+                        <li class="d-flex mb-2 pb-1"><i
+                                class="ai-check-circle text-success fs-xl mt-1 me-3"></i><span>3. Buyers’ data may be
+                                provided one time only for any one Product HS code and we provide minimum20
+                                Contacts,however in some cases, data me be less in No. depending upon Products or
+                                Countries. Any more data or data for more products requests will be chargeable as per
+                                Data Top up Plans.</span></li>
+                        <li class="d-flex mb-2 pb-1"><i
+                                class="ai-check-circle text-success fs-xl mt-1 me-3"></i><span>4. In no case it is
+                                expected that any kind of lobbying, spread negativity among other participants through
+                                WhatsApp, social media, phone calls or any other mode, if we found any such case, harsh
+                                actions may be taken by organization including termination of life time benefits,
+                                helpdesk, network support and initiation of legal proceedings against such persons can
+                                also be done. We also don't have practice to share details of batch mates due to
+                                security reasons and keep all your details confidential.</span></li>
+                        <li class="d-flex mb-2 pb-1"><i
+                                class="ai-check-circle text-success fs-xl mt-1 me-3"></i><span>5. If you have taken FREE
+                                Website Package, which is Complementary website and this is provided to save your lot of
+                                time and money (earlier people were spending 15,000 to 50,000 Rs. and 1 to 2.5 month
+                                time), also we provide you with “6 months hosting FREE” also on your Domain. However
+                                “Domain, Logo, Product Images, Content related to your product” will be provided by your
+                                side along with all relevant documents and payments as applicable. After 6 months, you
+                                need to pay basic 2,500 rs per annum for hosting charges.</span></li>
+                        <li class="d-flex mb-2 pb-1"><i
+                                class="ai-check-circle text-success fs-xl mt-1 me-3"></i><span>6. “Website Changes” will
+                                be allowed “2 times” you can connect with team for that, any subsequent changes, which
+                                will be chargeable (500 Rs. Per changes after 2 times changes done) </span></li>
+                        <li class="d-flex mb-2 pb-1"><i
+                                class="ai-check-circle text-success fs-xl mt-1 me-3"></i><span>7. All services, benefits
+                                will be restricted to any one product only, you can take support for other products also
+                                but that will have extra charges, case to case basis.</span></li>
+                        <li class="d-flex mb-2 pb-1"><i
+                                class="ai-check-circle text-success fs-xl mt-1 me-3"></i><span>8. IEC – Documents and
+                                OTPs need to be provided on time otherwise work will be delayed and the Team will not be
+                                responsible.</span></li>
+                        <li class="d-flex mb-2 pb-1"><i
+                                class="ai-check-circle text-success fs-xl mt-1 me-3"></i><span>9. We do Free
+                                Registrations on B2B and Social platforms, but Products listing, image uploading, other
+                                posting, regular updating etc. need to be done by you only time to time to keep your
+                                account active to get maximum inquiries.</span></li>
+                        <li class="d-flex mb-2 pb-1"><i
+                                class="ai-check-circle text-success fs-xl mt-1 me-3"></i><span>10. Quotation will be
+                                provided on final stage on the display of mail communication with Buyers only otherwise
+                                lot of unwanted mails comes for quotation for non serious inquiries.</span></li>
+                        <li class="d-flex mb-2 pb-1"><i
+                                class="ai-check-circle text-success fs-xl mt-1 me-3"></i><span>11. No pending things
+                                will be entertained after 6 months of registration date if details were not provided on
+                                time and your account will be marked inactive.</span></li>
+                        <li class="d-flex mb-2 pb-1"><i
+                                class="ai-check-circle text-success fs-xl mt-1 me-3"></i><span>12. Any Fees, Charges
+                                etc., once paid in part or full, will be Non Refundable in any circumstances. </span>
+                        </li>
+                        <li class="d-flex mb-2 pb-1"><i
+                                class="ai-check-circle text-success fs-xl mt-1 me-3"></i><span>13. For detailed terms
+                                and conditions, you may go through our website www.GFE Group.com where all the terms and
+                                conditions are listed in sufficient details</span></li>
+                        <li class="d-flex mb-2 pb-1"><i
+                                class="ai-check-circle text-success fs-xl mt-1 me-3"></i><span>14. Ahmedabad will be the
+                                Jurisdiction in case of any legal dispute.</span></li>
+                        <li class="d-flex mb-2 pb-1"><i
+                                class="ai-check-circle text-success fs-xl mt-1 me-3"></i><span>15. No. of Training
+                                Sessions, timings may be changed as per some unforeseen situation, however organization
+                                will make sure that defined curriculum will get covered in given sessions.</span></li>
+                        <li class="d-flex mb-2 pb-1"><i
+                                class="ai-check-circle text-success fs-xl mt-1 me-3"></i><span>16. Impexpets is not
+                                responsible for any delay due to the process of Government approvals or due to the
+                                delay by clients to provide payments/necessary documents. </span></li>
+                        <li class="d-flex mb-2 pb-1"><i
+                                class="ai-check-circle text-success fs-xl mt-1 me-3"></i><span>17. GFE Group is not
+                                responsible for any rejection from the government authorities.</span></li>
+                        <li class="d-flex mb-2 pb-1"><i
+                                class="ai-check-circle text-success fs-xl mt-1 me-3"></i><span>18. Advance Services
+                                charges paid are non-refundable.</span></li>
+                        <li class="d-flex mb-2 pb-1"><i
+                                class="ai-check-circle text-success fs-xl mt-1 me-3"></i><span>19. Governments chargers
+                                are subject to change without prior notice.</span></li>
+                        <li class="d-flex mb-2 pb-1"><i
+                                class="ai-check-circle text-success fs-xl mt-1 me-3"></i><span>20. GFE Group is not
+                                responsible for any increase in the Govt. fees.</span></li>
+                        <li class="d-flex mb-2 pb-1"><i
+                                class="ai-check-circle text-success fs-xl mt-1 me-3"></i><span>21. GFE Group, as a
+                                company, we understand the importance of data and value your privacy the most. So we
+                                don’t sell your information to any third-party nor do we use it in any other
+                                inappropriate way which may harm your policy in future.</span></li>
+                        <li class="d-flex mb-2 pb-1"><i
+                                class="ai-check-circle text-success fs-xl mt-1 me-3"></i><span>Moreover, we have our own
+                                highly-protected CRM where we save our data and which is cloud-based so no one will have
+                                access to your information without your permission to do so.</span></li>
+                        <li class="d-flex mb-2 pb-1"><i
+                                class="ai-check-circle text-success fs-xl mt-1 me-3"></i><span>Any of your data like
+                                Name, Mobile Number Or Emails address are well-protected and we don’t sell or share it
+                                with anyone to get commercial profit out of it.</span></li>
+                        <li class="d-flex mb-2 pb-1"><i
+                                class="ai-check-circle text-success fs-xl mt-1 me-3"></i>Additionally, we also don’t use
+                            any types of cookies that may harm your privacy and security and we put our best foot
+                            forward to protect your data and ensure that there are no chances of leakage or
+                            hacking.<span></span></li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <style>
-            /* .Ak-size {
-            aspect-ratio: 3/2;
-            width: 100%;
-            object-fit: contain;
-        } */
-
-            .jsb {
-                justify-content: space-evenly;
-            }
-
-            .img-b-co {
-                background-color: #c8ee8250;
-                border-radius: 80%;
-                /* padding: 20px; */
-            }
-
-            .D-b-co {
-                background-color: #ffc30fbb;
-            }
-
-            .D-b-co1 {
-                background-color: #37ff0098;
-            }
-
-            .g-co {
-                background-color: rgba(255, 255, 255, 0.952);
-            }
-
-            .t-bold {
-                font-weight: bold;
-            }
-
-            .clip {
-                margin: 0 auto;
-                background-color: rgba(107, 216, 18, 0.5);
-                clip-path: polygon(100% 0%, 94% 48%, 100% 100%, 0% 100%, 6% 48%, 0% 0%);
-            }
-
-            .MARCH {
-                width: 25%;
-            }
-
-            @media only screen and (max-width: 600px) {
-                .MARCH {
-                    width: 100%;
-                }
-            }
-        </style>
-
-        <section class="py-4">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-7 mx-auto">
-                        <div data-aos="fade-down" data-aos-duration="800">
-                            <div class="card product-card my-3">
-                                <div class="text-center product-detail p-3">
-                                    <h4 class="fw-bold">Green Chilli</h4>
-                                </div>
-                                <div class="product-img img-b-co">
-                                    <img src="assets/images/products/green chilli.jpg" alt="">
-                                </div>
-                                <div class="row col-12 text-black mx-auto justify-content-around mb-2">
-                                    <div class=" flex flex-column col-5 p-2 text-center D-b-co rounded-2">
-                                        <h5 class="card-title">India</h5>
-                                        <p class="card-text">422/- BOX</p>
-                                    </div>
-                                    <div class=" flex flex-column col-5 p-2 text-center D-b-co1 rounded-2">
-                                        <h5 class="card-title">Dubai</h5>
-                                        <p class="card-text">18-21</p>
-                                    </div>
-                                </div>
-                                <div class="row col-md-12 clip my-3">
-                                    <p class="mt-3 text-center text-black fs-6">Weight- 3.8kg Net, 4.4kg Gross
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-7 mx-auto">
-                        <div data-aos="fade-down" data-aos-duration="1200">
-                            <div class="card product-card my-3">
-                                <div class="text-center product-detail p-3">
-                                    <h4 class="fw-bold">Banana</h4>
-                                </div>
-                                <div class="product-img img-b-co">
-                                    <img src="assets/images/products/banana.jpg" alt="">
-                                </div>
-                                <div class="row col-12 text-black mx-auto justify-content-around mb-2">
-                                    <div class=" flex flex-column col-5 p-2 text-center D-b-co rounded-2">
-                                        <h5 class="card-title">India</h5>
-                                        <p class="card-text">440/- BOX</p>
-                                    </div>
-                                    <div class=" flex flex-column col-5 p-2 text-center D-b-co1 rounded-2">
-                                        <h5 class="card-title">Dubai</h5>
-                                        <p class="card-text">18-20</p>
-                                    </div>
-                                </div>
-                                <div class="row col-md-12 clip my-3">
-                                    <p class="mt-3 text-center text-black fs-6"> Weight- 13kg Net,
-                                        14kg Gros Hands- 4,5,6
-                                    </p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-7 mx-auto">
-                        <div data-aos="fade-down" data-aos-duration="1600">
-                            <div class="card product-card my-3">
-                                <div class="text-center product-detail p-3">
-                                    <h4 class="fw-bold">Drumstick</h4>
-                                </div>
-                                <div class="product-img img-b-co">
-                                    <img src="assets/images/products/drumstick.jpg" alt="">
-                                </div>
-                                <div class="row col-12 text-black mx-auto justify-content-around mb-2">
-                                    <div class=" flex flex-column col-5 p-2 text-center D-b-co rounded-2">
-                                        <h5 class="card-title">India</h5>
-                                        <p class="card-text">300/- BOX</p>
-                                    </div>
-                                    <div class=" flex flex-column col-5 p-2 text-center D-b-co1 rounded-2">
-                                        <h5 class="card-title">Dubai</h5>
-                                        <p class="card-text">18-20</p>
-                                    </div>
-                                </div>
-                                <div class="row col-md-12 clip my-3">
-                                    <p class="mt-3 text-center text-black fs-6">Weight- 4kg Net and gross
-                                    </p>
-                                </div>
-
-                            </div>
-                        </div>
+        <section class="container my-lg-2 pt-5 pb-lg-7">
+            <div class="row align-items-center">
+                <div class="col-lg-12 py-3 py-lg-0">
+                    <h1>Note.</h1>
+                    <div class="py-4">
+                        <p class="callout">All the payments for services at made in favour of "GFE BUSINESS SERVICES
+                            PRIVATE LIMITED" only. We have not authorized any individual or organization to collect
+                            payments in any other name(i.e any other individual or organization name) or via personal
+                            account. You are informed that under no circumstances will GFE Business Services Private
+                            Limited be liable for any damage caused in your business transaction to such fraudulent
+                            individuals or organizations.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-4">
-            <div class="container">
-                <div class="row ">
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-7 mx-auto">
-                        <div data-aos="fade-up" data-aos-duration="800">
-                            <div class="card product-card my-3">
-                                <div class="text-center product-detail p-3">
-                                    <h4 class="fw-bold">Elephant yam</h4>
-                                </div>
-                                <div class="product-img img-b-co">
-                                    <img src="assets/images/products/elephant yam.jpg" alt="">
-                                </div>
-                                <div class="row col-12 text-black mx-auto justify-content-around mb-2">
-                                    <div class=" flex flex-column col-5 p-2 text-center D-b-co rounded-2">
-                                        <h5 class="card-title">India</h5>
-                                        <p class="card-text">645/- BOX</p>
-                                    </div>
-                                    <div class=" flex flex-column col-5 p-2 text-center D-b-co1 rounded-2">
-                                        <h5 class="card-title">Dubai</h5>
-                                        <p class="card-text">16-18</p>
-                                    </div>
-                                </div>
-                                <div class="row col-md-12 clip my-3">
-                                    <p class="mt-3 text-center text-black fs-6">Weight- 10kg Net and gross
-                                    </p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-7 mx-auto">
-                        <div data-aos="fade-up" data-aos-duration="1200">
-                            <div class="card product-card my-3">
-                                <div class="text-center product-detail p-3">
-                                    <h4 class="fw-bold">Ginger</h4>
-                                </div>
-                                <div class="product-img img-b-co">
-                                    <img src="assets/images/products/ginger.jpg" alt="">
-                                </div>
-                                <div class="row col-12 text-black mx-auto justify-content-around mb-2">
-                                    <div class=" flex flex-column col-5 p-2 text-center D-b-co rounded-2">
-                                        <h5 class="card-title">India</h5>
-                                        <p class="card-text">590/- BOX</p>
-                                    </div>
-                                    <div class=" flex flex-column col-5 p-2 text-center D-b-co1 rounded-2">
-                                        <h5 class="card-title">Dubai</h5>
-                                        <p class="card-text">15-17</p>
-                                    </div>
-                                </div>
-                                <div class="row col-md-12 clip my-3">
-                                    <p class="mt-3 text-center text-black fs-6">Weight- 4kg Net
-                                    </p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-7 mx-auto">
-                        <div data-aos="fade-up" data-aos-duration="1600">
-                            <div class="card product-card my-3">
-                                <div class="text-center product-detail p-3">
-                                    <h4 class="fw-bold">Lomon</h4>
-                                </div>
-                                <div class="product-img img-b-co">
-                                    <img src="assets/images/products/lomon.png" alt="">
-                                </div>
-                                <div class="row col-12 text-black mx-auto justify-content-around mb-2">
-                                    <div class=" flex flex-column col-5 p-2 text-center D-b-co rounded-2">
-                                        <h5 class="card-title">India</h5>
-                                        <p class="card-text">690/- BOX</p>
-                                    </div>
-                                    <div class=" flex flex-column col-5 p-2 text-center D-b-co1 rounded-2">
-                                        <h5 class="card-title">Dubai</h5>
-                                        <p class="card-text">11-13</p>
-                                    </div>
-                                </div>
-                                <div class="row col-md-12 clip my-3">
-                                    <p class="mt-3 text-center text-black fs-6">Weight- 6.5kg Net | 7 KG Gross
-                                    </p>
-                                </div>
-
-                            </div>
-                        </div>
+        <section class="container my-lg-2 pt-2 pb-lg-7">
+            <div class="row align-items-center">
+                <div class="col-lg-12 py-3 py-lg-0">
+                    <h1>Refund Policy</h1>
+                    <div class="py-4">
+                        <p class="callout">
+                            <!-- Refund policy items here -->
+                            <!-- Use the same structure for each item -->
+                            <li>If client have any doubts or questions related to your package.</li>
+                            <li>Client can connect with our team or draft an email at care@impexperts.com.</li>
+                            <li>Management will take the appropriate actions.</li>
+                            <li>If any false commitments are given by any team member, not in line with our policy,
+                                client can claim a refund within 3 working days from the date of payment.</li>
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
-
-        <section class="py-4">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-7 mx-auto">
-                        <div data-aos="fade-up" data-aos-duration="800">
-                            <div class="card product-card my-3">
-                                <div class="text-center p-3">
-                                    <h4 class="fw-bold">Pomegranate</h4>
-                                </div>
-                                <div class="product-img img-b-co">
-                                    <img src="assets/images/products/POMEGRANATE.jpg" alt="">
-                                </div>
-                                <div class="row col-12 text-black mx-auto justify-content-around mb-2">
-                                    <div class=" flex flex-column col-5 p-2 text-center D-b-co rounded-2">
-                                        <h5 class="card-title">India</h5>
-                                        <p class="card-text">275/- BOX</p>
-                                    </div>
-                                    <div class=" flex flex-column col-5 p-2 text-center D-b-co1 rounded-2">
-                                        <h5 class="card-title">Dubai</h5>
-                                        <p class="card-text">9-11</p>
-                                    </div>
-                                </div>
-                                <div class="row col-md-12 clip my-3">
-                                    <p class="mt-3 text-center text-black fs-6">Weight- 2kg Net, 2.6kg
-                                        gross
-                                    </p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-7 mx-auto">
-                        <div data-aos="fade-up" data-aos-duration="1200">
-                            <div class="card product-card my-3">
-                                <div class="text-center product-detail p-3">
-                                    <h4 class="fw-bold">Semi husk coconut</h4>
-                                </div>
-                                <div class="product-img img-b-co">
-                                    <img src="assets/images/products/semiHuskCoconut.jpg" alt="">
-                                </div>
-                                <div class="row col-12 text-black mx-auto justify-content-around mb-2">
-                                    <div class=" flex flex-column col-5 p-2 text-center D-b-co rounded-2">
-                                        <h5 class="card-title">India</h5>
-                                        <p class="card-text">40/- KG</p>
-                                    </div>
-                                    <div class=" flex flex-column col-5 p-2 text-center D-b-co1 rounded-2">
-                                        <h5 class="card-title">Dubai</h5>
-                                        <p class="card-text">17-19</p>
-                                    </div>
-                                </div>
-                                <div class="row col-md-12 clip my-3">
-                                    <p class="mt-3 text-center text-black fs-6">13KG Bag
-                                    </p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-7 mx-auto">
-                        <div data-aos="fade-up" data-aos-duration="1600">
-                            <div class="card product-card my-3">
-                                <div class="text-center product-detail p-3">
-                                    <h4 class="fw-bold">Turmeric</h4>
-                                </div>
-                                <div class="product-img img-b-co">
-                                    <img src="assets/images/products/turmeric.jpg" alt="">
-                                </div>
-                                <div class="row col-12 text-black mx-auto justify-content-around mb-2">
-                                    <div class=" flex flex-column col-5 p-2 text-center D-b-co rounded-2">
-                                        <h5 class="card-title">India</h5>
-                                        <p class="card-text">245/- BOX</p>
-                                    </div>
-                                    <div class=" flex flex-column col-5 p-2 text-center D-b-co1 rounded-2">
-                                        <h5 class="card-title">Dubai</h5>
-                                        <p class="card-text">11-13</p>
-                                    </div>
-                                </div>
-                                <div class="row col-md-12 clip my-3">
-                                    <p class="mt-3 text-center text-black fs-6">Weight- 4 kg Net
-                                    </p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
     </main>
 
-
-    <!-- **************** MAIN CONTENT END **************** -->
+    <!-- Bootstrap Bundle with Popper -->
 
     <div class="rounded-social-buttons d-block d-sm-none fixed-bottom bg-blur border border-opacity-10 border-black ">
         <a class="social-button facebook rounded-circle" href="#" target="_blank" rel="noopener"><i
@@ -948,8 +460,7 @@
             data-bs-target="#exampleModal" data-whatever="@mdo"><i class="fa-solid fa-file-signature"></i></a>
     </div>
 
-    <!-- Footer START -->
-
+    <!--Footer START -->
     <footer class="pt-5 bg-body-secondary">
 
         <div class="container">
@@ -957,7 +468,6 @@
             <!-- Row START -->
 
             <div class="row g-4 justify-content-between align-items-center text-center">
-
                 <!-- Widget 1 START -->
 
                 <div class="col-lg-3">
@@ -965,13 +475,17 @@
                     <!-- logo -->
 
                     <a class="me-0" href="index.html">
+
                         <img class="light-mode-item navbar-brand-item" src="assets/images/gfe.png" alt="logo"
                             style="height:65px;width:257px;">
 
                         <img class="dark-mode-item navbar-brand-item" src="assets/images/gfe.png" alt="logo"
                             style="height:65px;width:257px;">
+
                     </a>
+
                     <br />
+
                     <p class="fs-5 my-3">
                         Let your Business dreams come true with World’s Fastest growing & India’s Biggest Unique
                         Organization.</p>
@@ -1016,6 +530,8 @@
 
                         <!-- Link block -->
 
+                        <!-- <div class="col-4 col-md-4"> -->
+
                         <h5 class="mb-3 fs-4">Company</h5>
 
                         <ul class="nav flex-column p-0">
@@ -1037,8 +553,6 @@
 
                 <!-- Widget 2 END -->
 
-
-
                 <!-- Widget 3 START -->
 
                 <div class="col-lg-3">
@@ -1048,6 +562,7 @@
                     <!-- Time -->
 
                     <p class="mb-2  fs-5">
+
                         Boardline No.: <a href="#"><span class="h6 fw-light ms-2">+91 9211066888</span></a>
                     </p>
 
@@ -1063,10 +578,10 @@
                                 <img src="assets/images/client/google-play.svg" alt=""> </a>
 
                         </div>
-
                     </div> <!-- Row END -->
 
                 </div>
+
             </div><!-- Row END -->
 
             <!-- Divider -->
@@ -1141,9 +656,7 @@
         </div>
 
     </footer>
-
-    <!-- -------------Footer END------------- -->
-
+    <!-- Footer END -->
 
 
     <!-- -------------START Popup Button------------- -->
@@ -1180,7 +693,7 @@
                 </div>
                 <div class="modal-body">
                     <form action="#!">
-                        <div class="row gy-4  p-2">
+                        <div class="row gy-4 p-2">
                             <div class="col-12">
                                 <label for="fullname" class="form-label">Full Name <span
                                         class="text-danger">*</span></label>
@@ -1278,16 +791,13 @@
                 </div>
                 <div class="modal-body">
                     <form action="#!">
-                        <div class="row gy-4">
-
-                            <div class="col-12 mt-3">
+                        <div class="row gy-4 gy-xl-5 p-2">
+                            <div class="col-12">
                                 <label for="fullname" class="form-label text-white">Full Name <span
                                         class="text-danger">*</span></label>
-                                <input type="text" class="form-control" id="fullname" name="fullname" value=""
-                                    placeholder="Enter Your Name" required>
+                                <input type="text" class="form-control" id="fullname" name="fullname" value="" required>
                             </div>
-
-                            <div class="col-12 col-md-6 mt-1">
+                            <div class="col-12 col-md-6">
                                 <label for="email" class="form-label text-white">Email <span
                                         class="text-danger">*</span></label>
                                 <div class="input-group">
@@ -1298,13 +808,11 @@
                                                 d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
                                         </svg>
                                     </span>
-                                    <input type="email" class="form-control" id="email" name="email" value=""
-                                        placeholder="email" required>
+                                    <input type="email" class="form-control" id="email" name="email" value="" required>
                                 </div>
                             </div>
-
-                            <div class="col-12 col-md-6 mt-1">
-                                <label for="phone" class="form-label text-white">Phone Number<span
+                            <div class="col-12 col-md-6">
+                                <label for="phone" class="form-label text-white">Phone Number <span
                                         class="text-danger">*</span></label>
                                 <div class="input-group">
                                     <span class="input-group-text">
@@ -1314,47 +822,16 @@
                                                 d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
                                         </svg>
                                     </span>
-                                    <input type="tel" class="form-control" id="phone" name="phone" value=""
-                                        placeholder="number">
+                                    <input type="tel" class="form-control" id="phone" name="phone" value="">
                                 </div>
                             </div>
-
-                            <div class="col-12 col-md-6 mt-1">
-                                <label for="state" class="form-label text-white">State <span
-                                        class="text-danger">*</span></label>
-                                <input type="text" class="form-control" name="State" value="" list="state"
-                                    placeholder="State" required>
-                                <datalist id="state">
-                                    <option value="Gujarat">
-                                    <option value="Goa">
-                                    <option value="Maharashtra">
-                                    <option value="West Bengal">
-                                    <option value="Punjab">
-                                </datalist>
-                            </div>
-                            <div class="col-12 col-md-6 mt-1">
+                            <div class="col-12">
                                 <label for="city" class="form-label text-white">City <span
                                         class="text-danger">*</span></label>
-                                <input type="text" class="form-control" name="City" value="" list="city"
-                                    placeholder="City" required>
-                                <!-- <input id="color" list="suggestions"> -->
-                                <datalist id="city">
-                                    <option value="Patan">
-                                    <option value="Ahmedabad">
-                                    <option value="Hyderabad">
-                                    <option value="Kolkata">
-                                    <option value="Chennai">
-                                </datalist>
+                                <input type="text" class="form-control" id="City" name="City" value="" required>
                             </div>
 
-                            <div class="col-12 mt-1">
-                                <label for="hsn" class="form-label text-white">HSN Code <span
-                                        class="text-danger">*</span></label>
-                                <input type="text" class="form-control" id="hsn" name="hsn" value=""
-                                    placeholder="HSN code" required>
-                            </div>
-
-                            <div class="col-12 mt-2">
+                            <div class="col-12">
                                 <div class="d-grid">
                                     <button
                                         class="btn bg-success btn-success focus:outline-none hover:bg-indigo-600 btn-lg"
@@ -1406,34 +883,25 @@
 
     <!-- ----------------END Get Buyer Data------------------- -->
 
-    <!-- Back to top -->
 
+    <!-- Back to top -->
     <div class="back-top"><i class="bi bi-arrow-up-short position-absolute top-50 start-50 translate-middle"></i></div>
 
-
     <!-- Bootstrap JS -->
-
     <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
-
-
     <!-- Vendors -->
-
     <script src="assets/vendor/tiny-slider/tiny-slider.js"></script>
-
-    <script src="assets/vendor/glightbox/js/glightbox.js"></script>
-
-    <script src="assets/vendor/purecounterjs/dist/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
 
-
     <!-- Template Functions -->
-
     <script src="assets/js/functions.js"></script>
+
 </body>
 
 </html>
