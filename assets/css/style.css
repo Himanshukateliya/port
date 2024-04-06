@@ -26712,3 +26712,49 @@ html[dir=rtl] .choices__input {
 .ronni>ul li a:hover::before {
   width: 100%;
 }
+
+
+.clip {
+  position: absolute;
+  bottom: 10px;
+  right: 35px;
+  padding: 10px 20px;
+  background-color: #066ac9;
+  overflow: hidden !important;
+  clip-path: polygon(100% 0, 81% 49%, 100% 100%, 0% 100%, 20% 49%, 0% 0%);
+  transition: clip-path 0.5s;
+  /* Transition for smooth effect */
+  opacity: 0;
+  /* Initially hide the content */
+}
+
+.clip1 {
+  position: absolute;
+  bottom: 10px;
+  right: 30px;
+  padding: 10px 20px;
+  width: 80%;
+  background-color: #066ac9;
+  overflow: hidden !important;
+  clip-path: polygon(100% 0, 81% 49%, 100% 100%, 0% 100%, 20% 49%, 0% 0%);
+  transition: clip-path 0.5s;
+  /* Transition for smooth effect */
+  opacity: 0;
+  /* Initially hide the content */
+}
+
+.grid-item:hover .clip {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+  border-radius: 10px;
+  /* Modify the clip-path to reveal content */
+  opacity: 1;
+  /* Show the content on hover */
+}
+
+.grid-item:hover .clip1 {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+  border-radius: 10px;
+  /* Modify the clip-path to reveal content */
+  opacity: 1;
+  /* Show the content on hover */
+}
