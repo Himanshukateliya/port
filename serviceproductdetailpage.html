@@ -122,7 +122,8 @@
     <!-- Favicon -->
 
     <link rel="shortcut icon" href="assets/images/favicon.ico">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 
     <!-- Google Font -->
@@ -643,333 +644,313 @@
         </div>
     </div>
 
-    <main class="bg-black">
-        <section class="text-gray-600 body-font pb-0">
-            <div class="container-fluid mx-auto row justify-content-around">
-                <div>
-                    <img src="assets/images/GFE.webp" class="mx-auto d-block" style="width: 300px;" alt="">
-                    <h3 class="text-center text-white fs-2 my-3">DAILY MARKET PRICE</h3>
-                    <p class="bg-body-secondary rounded-3 MARCH mx-auto text-center text-black t-bold fs-3 mb-4">
-                        04th April, 2024
-                    </p>
-                </div>
-            </div>
-        </section>
+    <!-- START section -->
 
-        <style>
-            /* .Ak-size {
+    <style>
+        .preview {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+        }
+
+        @media screen and (max-width: 996px) {
+            .preview {
+                margin-bottom: 20px;
+            }
+        }
+
+        .preview-pic {
+            -webkit-box-flex: 1;
+            -webkit-flex-grow: 1;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
+        }
+
+        .preview-thumbnail.nav-tabs {
+            border: none;
+            margin-top: 15px;
+        }
+
+        .preview-thumbnail.nav-tabs li {
+            width: 18%;
+            margin-right: 2.5%;
+        }
+
+        .preview-thumbnail.nav-tabs li img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .preview-thumbnail.nav-tabs li a {
+            padding: 0;
+            margin: 0;
+        }
+
+        .preview-thumbnail.nav-tabs li:last-of-type {
+            margin-right: 0;
+        }
+
+        .tab-content {
+            overflow: hidden;
+        }
+
+        .tab-content img {
+            width: 100%;
+            -webkit-animation-name: opacity;
+            animation-name: opacity;
+            -webkit-animation-duration: .3s;
+            animation-duration: .3s;
+        }
+
+        .card {
+            margin-top: 50px;
+            background: #eee;
+            padding: 3em;
+            line-height: 1.5em;
+        }
+
+        @media screen and (min-width: 997px) {
+            .wrapper {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+            }
+        }
+
+        .details {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+        }
+
+        .colors {
+            -webkit-box-flex: 1;
+            -webkit-flex-grow: 1;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
+        }
+
+        .product-title,
+        .price,
+        .sizes,
+        .colors {
+            text-transform: UPPERCASE;
+            font-weight: bold;
+        }
+
+        .checked,
+        .price span {
+            color: #ff9f1a;
+        }
+
+        .product-title,
+        .rating,
+        .product-description,
+        .price,
+        .vote,
+        .sizes {
+            margin-bottom: 15px;
+        }
+
+        .product-title {
+            margin-top: 0;
+        }
+
+        .size {
+            margin-right: 10px;
+        }
+
+        .size:first-of-type {
+            margin-left: 40px;
+        }
+
+        .color {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
+            height: 2em;
+            width: 2em;
+            border-radius: 2px;
+        }
+
+        .color:first-of-type {
+            margin-left: 20px;
+        }
+
+        .add-to-cart,
+        .like {
+            background: #ff9f1a;
+            padding: 1.2em 1.5em;
+            border: none;
+            text-transform: UPPERCASE;
+            font-weight: bold;
+            color: #fff;
+            -webkit-transition: background .3s ease;
+            transition: background .3s ease;
+        }
+
+        .add-to-cart:hover,
+        .like:hover {
+            background: #b36800;
+            color: #fff;
+        }
+
+        .not-available {
+            text-align: center;
+            line-height: 2em;
+        }
+
+        .not-available:before {
+            font-family: fontawesome;
+            content: "\f00d";
+            color: #fff;
+        }
+
+        .orange {
+            background: #ff9f1a;
+        }
+
+        .green {
+            background: #85ad00;
+        }
+
+        .blue {
+            background: #0076ad;
+        }
+
+        .tooltip-inner {
+            padding: 1.3em;
+        }
+
+        @-webkit-keyframes opacity {
+            0% {
+                opacity: 0;
+                -webkit-transform: scale(3);
+                transform: scale(3);
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+        }
+
+        @keyframes opacity {
+            0% {
+                opacity: 0;
+                -webkit-transform: scale(3);
+                transform: scale(3);
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+        }
+
+        .hrh {
             aspect-ratio: 3/2;
             width: 100%;
-            object-fit: contain;
-        } */
+            object-fit: cover;
+        }
+    </style>
 
-            .jsb {
-                justify-content: space-evenly;
-            }
 
-            .img-b-co {
-                background-color: #c8ee8250;
-                border-radius: 80%;
-                /* padding: 20px; */
-            }
 
-            .D-b-co {
-                background-color: #ffc30fbb;
-            }
 
-            .D-b-co1 {
-                background-color: #37ff0098;
-            }
-
-            .g-co {
-                background-color: rgba(255, 255, 255, 0.952);
-            }
-
-            .t-bold {
-                font-weight: bold;
-            }
-
-            .Daily-clip {
-                margin: 0 auto;
-                background-color: rgba(107, 216, 18, 0.5);
-                clip-path: polygon(100% 0%, 94% 48%, 100% 100%, 0% 100%, 6% 48%, 0% 0%);
-            }
-
-            .MARCH {
-                width: 25%;
-            }
-
-            @media only screen and (max-width: 600px) {
-                .MARCH {
-                    width: 100%;
-                }
-            }
-        </style>
-
-        <section class="py-4">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-7 mx-auto">
-                        <div data-aos="fade-down" data-aos-duration="800">
-                            <div class="card product-card my-3">
-                                <div class="text-center product-detail p-3">
-                                    <h4 class="fw-bold">Green Chilli</h4>
+    <main class="">
+        <div class="container">
+            <div class="card">
+                <div class="container-fluid">
+                    <div class="wrapper row">
+                        <div class="preview col-md-6">
+                            <div class="preview-pic tab-content">
+                                <div class="tab-pane active" id="pic-1">
+                                    <img src="assets/images/products/ginger.jpg" alt="Ginger">
                                 </div>
-                                <div class="product-img img-b-co">
-                                    <img src="assets/images/products/green chilli.jpg" alt="">
+                                <div class="tab-pane" id="pic-2">
+                                    <img src="assets/images/products/elephant yam.jpg" alt="Elephant Yam">
                                 </div>
-                                <div class="row col-12 text-black mx-auto justify-content-around mb-2">
-                                    <div class=" flex flex-column col-5 p-2 text-center D-b-co rounded-2">
-                                        <h5 class="card-title">India</h5>
-                                        <p class="card-text">422/- BOX</p>
-                                    </div>
-                                    <div class=" flex flex-column col-5 p-2 text-center D-b-co1 rounded-2">
-                                        <h5 class="card-title">Dubai</h5>
-                                        <p class="card-text">18-21</p>
-                                    </div>
+                                <div class="tab-pane" id="pic-3">
+                                    <img src="assets/images/products/drumstick.jpg" alt="Drumstick">
                                 </div>
-                                <div class="row col-md-12 Daily-clip my-3">
-                                    <p class="mt-3 text-center text-black fs-6">Weight- 3.8kg Net, 4.4kg Gross
-                                    </p>
+                                <div class="tab-pane" id="pic-4">
+                                    <img src="assets/images/products/banana.jpg" alt="Banana">
+                                </div>
+                                <div class="tab-pane" id="pic-5">
+                                    <img src="assets/images/products/turmeric.jpg" alt="Turmeric">
                                 </div>
                             </div>
+                            <ul class="preview-thumbnail nav nav-tabs">
+                                <li class="active"><a data-bs-toggle="tab" href="#pic-1"><img
+                                            src="assets/images/products/ginger.jpg" alt="Ginger"></a></li>
+                                <li><a data-bs-toggle="tab" href="#pic-2"><img
+                                            src="assets/images/products/elephant yam.jpg" alt="Elephant Yam"></a></li>
+                                <li><a data-bs-toggle="tab" href="#pic-3"><img
+                                            src="assets/images/products/drumstick.jpg" alt="Drumstick"></a></li>
+                                <li><a data-bs-toggle="tab" href="#pic-4"><img src="assets/images/products/banana.jpg"
+                                            alt="Banana"></a></li>
+                                <li><a data-bs-toggle="tab" href="#pic-5"><img src="assets/images/products/turmeric.jpg"
+                                            alt="Turmeric"></a></li>
+                            </ul>
                         </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-7 mx-auto">
-                        <div data-aos="fade-down" data-aos-duration="1200">
-                            <div class="card product-card my-3">
-                                <div class="text-center product-detail p-3">
-                                    <h4 class="fw-bold">Banana</h4>
+                        <div class="col-md-6">
+                            <h3 class="product-title">Men's Shoes Fashion</h3>
+                            <div class="rating">
+                                <div class="stars">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
                                 </div>
-                                <div class="product-img img-b-co">
-                                    <img src="assets/images/products/banana.jpg" alt="">
-                                </div>
-                                <div class="row col-12 text-black mx-auto justify-content-around mb-2">
-                                    <div class=" flex flex-column col-5 p-2 text-center D-b-co rounded-2">
-                                        <h5 class="card-title">India</h5>
-                                        <p class="card-text">440/- BOX</p>
-                                    </div>
-                                    <div class=" flex flex-column col-5 p-2 text-center D-b-co1 rounded-2">
-                                        <h5 class="card-title">Dubai</h5>
-                                        <p class="card-text">18-20</p>
-                                    </div>
-                                </div>
-                                <div class="row col-md-12 Daily-clip my-3">
-                                    <p class="mt-3 text-center text-black fs-6"> Weight- 13kg Net,
-                                        14kg Gros Hands- 4,5,6
-                                    </p>
-                                </div>
-
+                                <span class="review-no">41 reviews</span>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-7 mx-auto">
-                        <div data-aos="fade-down" data-aos-duration="1600">
-                            <div class="card product-card my-3">
-                                <div class="text-center product-detail p-3">
-                                    <h4 class="fw-bold">Drumstick</h4>
-                                </div>
-                                <div class="product-img img-b-co">
-                                    <img src="assets/images/products/drumstick.jpg" alt="">
-                                </div>
-                                <div class="row col-12 text-black mx-auto justify-content-around mb-2">
-                                    <div class=" flex flex-column col-5 p-2 text-center D-b-co rounded-2">
-                                        <h5 class="card-title">India</h5>
-                                        <p class="card-text">300/- BOX</p>
-                                    </div>
-                                    <div class=" flex flex-column col-5 p-2 text-center D-b-co1 rounded-2">
-                                        <h5 class="card-title">Dubai</h5>
-                                        <p class="card-text">18-20</p>
-                                    </div>
-                                </div>
-                                <div class="row col-md-12 Daily-clip my-3">
-                                    <p class="mt-3 text-center text-black fs-6">Weight- 4kg Net and gross
-                                    </p>
-                                </div>
-
+                            <p class="product-description">Suspendisse quos? Tempus cras iure temporibus? Eu laudantium
+                                cubilia sem sem! Repudiandae et! Massa senectus enim minim sociosqu delectus posuere.
+                            </p>
+                            <h4 class="price">Current Price: <span>$180</span></h4>
+                            <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87
+                                    votes)</strong></p>
+                            <h5 class="sizes">Sizes:
+                                <span class="size" data-toggle="tooltip" title="Small">S</span>
+                                <span class="size" data-toggle="tooltip" title="Medium">M</span>
+                                <span class="size" data-toggle="tooltip" title="Large">L</span>
+                                <span class="size" data-toggle="tooltip" title="Xtra Large">XL</span>
+                            </h5>
+                            <h5 class="colors">Colors:
+                                <span class="color orange not-available" data-toggle="tooltip"
+                                    title="Not In Store"></span>
+                                <span class="color green"></span>
+                                <span class="color blue"></span>
+                            </h5>
+                            <div class="action">
+                                <button class="add-to-cart btn btn-default" type="button">Add to Cart</button>
+                                <button class="like btn btn-default" type="button"><span
+                                        class="fa fa-heart"></span></button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <section class="py-4">
-            <div class="container">
-                <div class="row ">
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-7 mx-auto">
-                        <div data-aos="fade-up" data-aos-duration="800">
-                            <div class="card product-card my-3">
-                                <div class="text-center product-detail p-3">
-                                    <h4 class="fw-bold">Elephant yam</h4>
-                                </div>
-                                <div class="product-img img-b-co">
-                                    <img src="assets/images/products/elephant yam.jpg" alt="">
-                                </div>
-                                <div class="row col-12 text-black mx-auto justify-content-around mb-2">
-                                    <div class=" flex flex-column col-5 p-2 text-center D-b-co rounded-2">
-                                        <h5 class="card-title">India</h5>
-                                        <p class="card-text">645/- BOX</p>
-                                    </div>
-                                    <div class=" flex flex-column col-5 p-2 text-center D-b-co1 rounded-2">
-                                        <h5 class="card-title">Dubai</h5>
-                                        <p class="card-text">16-18</p>
-                                    </div>
-                                </div>
-                                <div class="row col-md-12 Daily-clip my-3">
-                                    <p class="mt-3 text-center text-black fs-6">Weight- 10kg Net and gross
-                                    </p>
-                                </div>
 
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-7 mx-auto">
-                        <div data-aos="fade-up" data-aos-duration="1200">
-                            <div class="card product-card my-3">
-                                <div class="text-center product-detail p-3">
-                                    <h4 class="fw-bold">Ginger</h4>
-                                </div>
-                                <div class="product-img img-b-co">
-                                    <img src="assets/images/products/ginger.jpg" alt="">
-                                </div>
-                                <div class="row col-12 text-black mx-auto justify-content-around mb-2">
-                                    <div class=" flex flex-column col-5 p-2 text-center D-b-co rounded-2">
-                                        <h5 class="card-title">India</h5>
-                                        <p class="card-text">590/- BOX</p>
-                                    </div>
-                                    <div class=" flex flex-column col-5 p-2 text-center D-b-co1 rounded-2">
-                                        <h5 class="card-title">Dubai</h5>
-                                        <p class="card-text">15-17</p>
-                                    </div>
-                                </div>
-                                <div class="row col-md-12 Daily-clip my-3">
-                                    <p class="mt-3 text-center text-black fs-6">Weight- 4kg Net
-                                    </p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-7 mx-auto">
-                        <div data-aos="fade-up" data-aos-duration="1600">
-                            <div class="card product-card my-3">
-                                <div class="text-center product-detail p-3">
-                                    <h4 class="fw-bold">Lomon</h4>
-                                </div>
-                                <div class="product-img img-b-co">
-                                    <img src="assets/images/products/lomon.png" alt="">
-                                </div>
-                                <div class="row col-12 text-black mx-auto justify-content-around mb-2">
-                                    <div class=" flex flex-column col-5 p-2 text-center D-b-co rounded-2">
-                                        <h5 class="card-title">India</h5>
-                                        <p class="card-text">690/- BOX</p>
-                                    </div>
-                                    <div class=" flex flex-column col-5 p-2 text-center D-b-co1 rounded-2">
-                                        <h5 class="card-title">Dubai</h5>
-                                        <p class="card-text">11-13</p>
-                                    </div>
-                                </div>
-                                <div class="row col-md-12 Daily-clip my-3">
-                                    <p class="mt-3 text-center text-black fs-6">Weight- 6.5kg Net | 7 KG Gross
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-4">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-7 mx-auto">
-                        <div data-aos="fade-up" data-aos-duration="800">
-                            <div class="card product-card my-3">
-                                <div class="text-center p-3">
-                                    <h4 class="fw-bold">Pomegranate</h4>
-                                </div>
-                                <div class="product-img img-b-co">
-                                    <img src="assets/images/products/POMEGRANATE.jpg" alt="">
-                                </div>
-                                <div class="row col-12 text-black mx-auto justify-content-around mb-2">
-                                    <div class=" flex flex-column col-5 p-2 text-center D-b-co rounded-2">
-                                        <h5 class="card-title">India</h5>
-                                        <p class="card-text">275/- BOX</p>
-                                    </div>
-                                    <div class=" flex flex-column col-5 p-2 text-center D-b-co1 rounded-2">
-                                        <h5 class="card-title">Dubai</h5>
-                                        <p class="card-text">9-11</p>
-                                    </div>
-                                </div>
-                                <div class="row col-md-12 Daily-clip my-3">
-                                    <p class="mt-3 text-center text-black fs-6">Weight- 2kg Net, 2.6kg
-                                        gross
-                                    </p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-7 mx-auto">
-                        <div data-aos="fade-up" data-aos-duration="1200">
-                            <div class="card product-card my-3">
-                                <div class="text-center product-detail p-3">
-                                    <h4 class="fw-bold">Semi husk coconut</h4>
-                                </div>
-                                <div class="product-img img-b-co">
-                                    <img src="assets/images/products/semiHuskCoconut.jpg" alt="">
-                                </div>
-                                <div class="row col-12 text-black mx-auto justify-content-around mb-2">
-                                    <div class=" flex flex-column col-5 p-2 text-center D-b-co rounded-2">
-                                        <h5 class="card-title">India</h5>
-                                        <p class="card-text">40/- KG</p>
-                                    </div>
-                                    <div class=" flex flex-column col-5 p-2 text-center D-b-co1 rounded-2">
-                                        <h5 class="card-title">Dubai</h5>
-                                        <p class="card-text">17-19</p>
-                                    </div>
-                                </div>
-                                <div class="row col-md-12 Daily-clip my-3">
-                                    <p class="mt-3 text-center text-black fs-6">13KG Bag
-                                    </p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-7 mx-auto">
-                        <div data-aos="fade-up" data-aos-duration="1600">
-                            <div class="card product-card my-3">
-                                <div class="text-center product-detail p-3">
-                                    <h4 class="fw-bold">Turmeric</h4>
-                                </div>
-                                <div class="product-img img-b-co">
-                                    <img src="assets/images/products/turmeric.jpg" alt="">
-                                </div>
-                                <div class="row col-12 text-black mx-auto justify-content-around mb-2">
-                                    <div class=" flex flex-column col-5 p-2 text-center D-b-co rounded-2">
-                                        <h5 class="card-title">India</h5>
-                                        <p class="card-text">245/- BOX</p>
-                                    </div>
-                                    <div class=" flex flex-column col-5 p-2 text-center D-b-co1 rounded-2">
-                                        <h5 class="card-title">Dubai</h5>
-                                        <p class="card-text">11-13</p>
-                                    </div>
-                                </div>
-                                <div class="row col-md-12 Daily-clip my-3">
-                                    <p class="mt-3 text-center text-black fs-6">Weight- 4 kg Net
-                                    </p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
     </main>
 
@@ -1617,6 +1598,10 @@
 
 
     <!-- Template Functions -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
 
     <script src="assets/js/functions.js"></script>
 </body>
