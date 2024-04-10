@@ -125,6 +125,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
+        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
 
     <!-- Google Font -->
 
@@ -149,19 +159,11 @@
 
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
-    <style>
-        /* img {
-            max-width: 100%;
-        } */
+    <!-- <style>
 
         .preview {
             margin-bottom: 20px;
         }
-
-        /* .preview-pic {
-            display: flex;
-            flex-direction: column;
-        } */
 
         .preview-thumbnail.nav-tabs {
             border: none;
@@ -200,15 +202,6 @@
             background: #eee;
             padding: 3em;
             line-height: 1.5em;
-        }
-
-        /* .details {
-            display: flex;
-            flex-direction: column;
-        } */
-
-        .colors {
-            /* flex-grow: 1; */
         }
 
         .product-title,
@@ -304,7 +297,57 @@
             width: 100%;
             object-fit: cover;
         }
+    </style> -->
+
+    <style>
+        @media (max-width: 767px) {
+            .carousel-inner .carousel-item>div {
+                display: none;
+            }
+
+            .carousel-inner .carousel-item>div:first-child {
+                display: block;
+            }
+        }
+
+        .carousel-inner .carousel-item.active,
+        .carousel-inner .carousel-item-next,
+        .carousel-inner .carousel-item-prev {
+            display: flex;
+        }
+
+        /* medium and up screens */
+        @media (min-width: 768px) {
+
+            .carousel-inner .carousel-item-end.active,
+            .carousel-inner .carousel-item-next {
+                transform: translateX(25%);
+            }
+
+            .carousel-inner .carousel-item-start.active,
+            .carousel-inner .carousel-item-prev {
+                transform: translateX(-25%);
+            }
+        }
+
+        .carousel-inner .carousel-item-end,
+        .carousel-inner .carousel-item-start {
+            transform: translateX(0);
+        }
+
+        .hrh {
+            aspect-ratio: 3/2;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .hrh1 {
+            aspect-ratio: 3/2;
+            width: 100%;
+            object-fit: cover;
+        }
     </style>
+
 </head>
 
 <body>
@@ -800,7 +843,7 @@
     </div>
 
     <div class="container">
-        <div class="card mb-5">
+        <div class="card my-5 p-4">
             <div class="container-fliud">
                 <div class="wrapper row">
                     <div class="preview ">
@@ -813,22 +856,24 @@
                                     </div>
                                     <div class="details col-md-6">
                                         <h3 class="product-title">Turmeric</h3>
-                                        <div class="rating">
+                                        <!-- <div class="rating">
                                             <div class="stars">
                                                 <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star"></span>
+                                                <span class="fa fa-star "></span>
+                                                <span class="fa fa-star "></span>
+                                                <span class="fa fa-star "></span>
                                                 <span class="fa fa-star"></span>
                                             </div>
                                             <span class="review-no">41 reviews</span>
-                                        </div>
-                                        <p class="product-description">Suspendisse quos? Tempus cras iure temporibus? Eu
+                                        </div> -->
+                                        <p class="product-description pe-5">Suspendisse quos? Tempus
+                                            cras iure
+                                            temporibus? Eu
                                             laudantium
                                             cubilia sem sem! Repudiandae et! Massa senectus enim minim sociosqu delectus
                                             posuere.</p>
                                         <h4 class="price">current price: <span>$180</span></h4>
-                                        <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87
+                                        <!-- <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87
                                                 votes)</strong>
                                         </p>
                                         <h5 class="sizes">sizes:
@@ -848,7 +893,7 @@
                                                 cart</button>
                                             <button class="like btn btn-default" type="button"><span
                                                     class="fa fa-heart"></span></button>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
@@ -860,22 +905,23 @@
                                     </div>
                                     <div class="details col-md-6">
                                         <h3 class="product-title">Banana</h3>
-                                        <div class="rating">
+                                        <!-- <div class="rating">
                                             <div class="stars">
                                                 <span class="fa fa-star checked"></span>
                                                 <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star "></span>
                                                 <span class="fa fa-star"></span>
                                                 <span class="fa fa-star"></span>
                                             </div>
                                             <span class="review-no">41 reviews</span>
-                                        </div>
-                                        <p class="product-description">Suspendisse quos? Tempus cras iure temporibus? Eu
+                                        </div> -->
+                                        <p class="product-description pe-5">Suspendisse quos? Tempus cras iure
+                                            temporibus? Eu
                                             laudantium
                                             cubilia sem sem! Repudiandae et! Massa senectus enim minim sociosqu delectus
                                             posuere.</p>
                                         <h4 class="price">current price: <span>$190</span></h4>
-                                        <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87
+                                        <!-- <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87
                                                 votes)</strong>
                                         </p>
                                         <h5 class="sizes">sizes:
@@ -895,7 +941,7 @@
                                                 cart</button>
                                             <button class="like btn btn-default" type="button"><span
                                                     class="fa fa-heart"></span></button>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
@@ -906,22 +952,23 @@
                                     </div>
                                     <div class="details col-md-6">
                                         <h3 class="product-title">Lemon</h3>
-                                        <div class="rating">
+                                        <!-- <div class="rating">
                                             <div class="stars">
                                                 <span class="fa fa-star checked"></span>
                                                 <span class="fa fa-star checked"></span>
                                                 <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star"></span>
+                                                <span class="fa fa-star "></span>
                                                 <span class="fa fa-star"></span>
                                             </div>
                                             <span class="review-no">41 reviews</span>
-                                        </div>
-                                        <p class="product-description">Suspendisse quos? Tempus cras iure temporibus? Eu
+                                        </div> -->
+                                        <p class="product-description pe-5">Suspendisse quos? Tempus cras iure
+                                            temporibus? Eu
                                             laudantium
                                             cubilia sem sem! Repudiandae et! Massa senectus enim minim sociosqu delectus
                                             posuere.</p>
                                         <h4 class="price">current price: <span>$170</span></h4>
-                                        <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87
+                                        <!-- <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87
                                                 votes)</strong>
                                         </p>
                                         <h5 class="sizes">sizes:
@@ -941,7 +988,7 @@
                                                 cart</button>
                                             <button class="like btn btn-default" type="button"><span
                                                     class="fa fa-heart"></span></button>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
@@ -952,22 +999,23 @@
                                     </div>
                                     <div class="details col-md-6">
                                         <h3 class="product-title">Ginger</h3>
-                                        <div class="rating">
+                                        <!-- <div class="rating">
                                             <div class="stars">
                                                 <span class="fa fa-star checked"></span>
                                                 <span class="fa fa-star checked"></span>
                                                 <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star "></span>
                                             </div>
                                             <span class="review-no">41 reviews</span>
-                                        </div>
-                                        <p class="product-description">Suspendisse quos? Tempus cras iure temporibus? Eu
+                                        </div> -->
+                                        <p class="product-description pe-5">Suspendisse quos? Tempus cras iure
+                                            temporibus? Eu
                                             laudantium
                                             cubilia sem sem! Repudiandae et! Massa senectus enim minim sociosqu delectus
                                             posuere.</p>
                                         <h4 class="price">current price: <span>$150</span></h4>
-                                        <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87
+                                        <!-- <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87
                                                 votes)</strong>
                                         </p>
                                         <h5 class="sizes">sizes:
@@ -987,7 +1035,7 @@
                                                 cart</button>
                                             <button class="like btn btn-default" type="button"><span
                                                     class="fa fa-heart"></span></button>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
@@ -998,22 +1046,23 @@
                                     </div>
                                     <div class="details col-md-6">
                                         <h3 class="product-title">Drumstick</h3>
-                                        <div class="rating">
+                                        <!-- <div class="rating">
                                             <div class="stars">
                                                 <span class="fa fa-star checked"></span>
                                                 <span class="fa fa-star checked"></span>
                                                 <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
                                             </div>
                                             <span class="review-no">41 reviews</span>
-                                        </div>
-                                        <p class="product-description">Suspendisse quos? Tempus cras iure temporibus? Eu
+                                        </div> -->
+                                        <p class="product-description pe-5">Suspendisse quos? Tempus cras iure
+                                            temporibus? Eu
                                             laudantium
                                             cubilia sem sem! Repudiandae et! Massa senectus enim minim sociosqu delectus
                                             posuere.</p>
                                         <h4 class="price">current price: <span>$160</span></h4>
-                                        <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87
+                                        <!-- <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87
                                                 votes)</strong>
                                         </p>
                                         <h5 class="sizes">sizes:
@@ -1033,36 +1082,269 @@
                                                 cart</button>
                                             <button class="like btn btn-default" type="button"><span
                                                     class="fa fa-heart"></span></button>
-                                        </div>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="pic-6">
+                                <div class="row flex-col">
+                                    <div class="col-md-6 ">
+                                        <img src="assets/images/products/green chilli.jpg" class="hrh1" />
+                                    </div>
+                                    <div class="details col-md-6">
+                                        <h3 class="product-title">Green chilli</h3>
+                                        <!-- <div class="rating">
+                                            <div class="stars">
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                            </div>
+                                            <span class="review-no">41 reviews</span>
+                                        </div> -->
+                                        <p class="product-description pe-5">Suspendisse quos? Tempus cras iure
+                                            temporibus? Eu
+                                            laudantium
+                                            cubilia sem sem! Repudiandae et! Massa senectus enim minim sociosqu delectus
+                                            posuere.</p>
+                                        <h4 class="price">current price: <span>$160</span></h4>
+                                        <!-- <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87
+                                                votes)</strong>
+                                        </p>
+                                        <h5 class="sizes">sizes:
+                                            <span class="size" data-toggle="tooltip" title="small">s</span>
+                                            <span class="size" data-toggle="tooltip" title="medium">m</span>
+                                            <span class="size" data-toggle="tooltip" title="large">l</span>
+                                            <span class="size" data-toggle="tooltip" title="xtra large">xl</span>
+                                        </h5>
+                                        <h5 class="colors">colors:
+                                            <span class="color orange not-available" data-toggle="tooltip"
+                                                title="Not In store"></span>
+                                            <span class="color green"></span>
+                                            <span class="color blue"></span>
+                                        </h5>
+                                        <div class="action">
+                                            <button class="add-to-cart btn btn-default" type="button">add to
+                                                cart</button>
+                                            <button class="like btn btn-default" type="button"><span
+                                                    class="fa fa-heart"></span></button>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="pic-7">
+                                <div class="row flex-col">
+                                    <div class="col-md-6 ">
+                                        <img src="assets/images/products/elephant yam.jpg" class="hrh1" />
+                                    </div>
+                                    <div class="details col-md-6">
+                                        <h3 class="product-title">Elephant yam</h3>
+                                        <!-- <div class="rating">
+                                            <div class="stars">
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                            </div>
+                                            <span class="review-no">41 reviews</span>
+                                        </div> -->
+                                        <p class="product-description pe-5">Suspendisse quos? Tempus cras iure
+                                            temporibus? Eu
+                                            laudantium
+                                            cubilia sem sem! Repudiandae et! Massa senectus enim minim sociosqu delectus
+                                            posuere.</p>
+                                        <h4 class="price">current price: <span>$160</span></h4>
+                                        <!-- <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87
+                                                votes)</strong>
+                                        </p>
+                                        <h5 class="sizes">sizes:
+                                            <span class="size" data-toggle="tooltip" title="small">s</span>
+                                            <span class="size" data-toggle="tooltip" title="medium">m</span>
+                                            <span class="size" data-toggle="tooltip" title="large">l</span>
+                                            <span class="size" data-toggle="tooltip" title="xtra large">xl</span>
+                                        </h5>
+                                        <h5 class="colors">colors:
+                                            <span class="color orange not-available" data-toggle="tooltip"
+                                                title="Not In store"></span>
+                                            <span class="color green"></span>
+                                            <span class="color blue"></span>
+                                        </h5>
+                                        <div class="action">
+                                            <button class="add-to-cart btn btn-default" type="button">add to
+                                                cart</button>
+                                            <button class="like btn btn-default" type="button"><span
+                                                    class="fa fa-heart"></span></button>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <ul class="preview-thumbnail nav nav-tabs bg-black">
-                            <li class="active"><a data-toggle="tab" href="#pic-1"><img
-                                        src="assets/images/products/turmeric.jpg" class="hrh" /></a></li>
-                            <li><a data-toggle="tab" href="#pic-2"><img src="assets/images/products/banana.jpg"
-                                        class="hrh" /></a>
-                            </li>
-                            <li><a data-toggle="tab" href="#pic-3"><img src="assets/images/products/lomon.png"
-                                        class="hrh" /></a>
-                            </li>
-                            <li><a data-toggle="tab" href="#pic-4"><img src="assets/images/products/ginger.jpg"
-                                        class="hrh" /></a>
-                            </li>
-                            <li><a data-toggle="tab" href="#pic-5"><img src="assets/images/products/drumstick.jpg"
-                                        class="hrh" /></a>
-                            </li>
-                        </ul>
+
+
+                        <!-- <div class="card-group sakshi">
+                            <ul class="preview-thumbnail nav nav-tabs bg-black ">
+                                <li class="card active">
+                                    <a data-toggle="tab" href="#pic-1"><img src="assets/images/products/turmeric.jpg"
+                                            class="hrh" /></a>
+                                </li>
+                                <li class="card">
+                                    <a data-toggle="tab" href="#pic-2"><img src="assets/images/products/banana.jpg"
+                                            class="hrh" /></a>
+                                </li>
+                                <li class="card">
+                                    <a data-toggle="tab" href="#pic-3"><img src="assets/images/products/lomon.png"
+                                            class="hrh" /></a>
+                                </li>
+                                <li class="card">
+                                    <a data-toggle="tab" href="#pic-4"><img src="assets/images/products/ginger.jpg"
+                                            class="hrh" /></a>
+                                </li>
+                                <li class="card">
+                                    <a data-toggle="tab" href="#pic-5"><img src="assets/images/products/drumstick.jpg"
+                                            class="hrh" /></a>
+                                </li>
+                                <li class="card">
+                                    <a data-toggle="tab" href="#pic-6"><img src="assets/images/products/watermelon.png"
+                                            class="hrh" /></a>
+                                </li>
+                                <li class="card">
+                                    <a data-toggle="tab" href="#pic-7"><img
+                                            src="assets/images/products/elephant yam.jpg" class="hrh" /></a>
+                                </li>
+                            </ul>
+                        </div> -->
+
+
+                        <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner" role="listbox">
+                                <div class="carousel-item active">
+                                    <div class="col-md-3">
+                                        <!-- <div class="card"> -->
+                                        <div class="card-img active">
+                                            <a data-toggle="tab" href="#pic-1">
+                                                <img src="./assets/images/products/turmeric.jpg" class="hrh">
+                                            </a>
+                                        </div>
+                                        <!-- </div> -->
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-md-3">
+                                        <!-- <div class="card"> -->
+                                        <div class="card-img">
+                                            <a data-toggle="tab" href="#pic-2">
+                                                <img src="./assets/images/products/banana.jpg" class=" hrh">
+                                            </a>
+                                        </div>
+
+                                        <!-- </div> -->
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-md-3">
+                                        <!-- <div class="card"> -->
+                                        <div class="card-img">
+                                            <a data-toggle="tab" href="#pic-3">
+                                                <img src="./assets/images/products/lomon.png" class="hrh ">
+                                            </a>
+                                        </div>
+
+                                        <!-- </div> -->
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-md-3">
+                                        <!-- <div class="card"> -->
+                                        <div class="card-img">
+                                            <a data-toggle="tab" href="#pic-4">
+                                                <img src="./assets/images/products/ginger.jpg" class=" hrh">
+                                            </a>
+                                        </div>
+
+                                        <!-- </div> -->
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-md-3">
+                                        <!-- <div class="card"> -->
+                                        <div class="card-img">
+                                            <a data-toggle="tab" href="#pic-5">
+                                                <img src="./assets/images/products/drumstick.jpg" class="hrh ">
+                                            </a>
+                                        </div>
+                                        <!-- </div> -->
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-md-3">
+                                        <!-- <div class="card"> -->
+                                        <div class="card-img">
+                                            <a data-toggle="tab" href="#pic-6">
+                                                <img src="./assets/images/products/green chilli.jpg" class="hrh">
+                                            </a>
+                                        </div>
+
+                                        <!-- </div> -->
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-md-3">
+                                        <!-- <div class="card"> -->
+                                        <div class="card-img">
+                                            <a data-toggle="tab" href="#pic-7">
+                                                <img src="./assets/images/products/elephant yam.jpg" class="hrh ">
+                                            </a>
+                                        </div>
+
+                                        <!-- </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button"
+                                data-bs-slide="prev">
+                                <i class="fa-solid fa-angle-left text-white rounded fs-2 bg-black"
+                                    aria-hidden="true"></i>
+                            </a>
+                            <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button"
+                                data-bs-slide="next">
+                                <i class="fa-solid fa-angle-right text-white rounded fs-2 bg-black"
+                                    aria-hidden="true"></i>
+                            </a>
+                        </div>
+
+
+                        <!-- <div class="card-group flex-col ">
+                            <ul class="preview-thumbnail nav nav-tabs bg-black ">
+                                <li class="active"><a data-toggle="tab" href="#pic-1"><img
+                                            src="assets/images/products/turmeric.jpg" class="hrh" /></a></li>
+                                <li><a data-toggle="tab" href="#pic-2"><img src="assets/images/products/banana.jpg"
+                                            class="hrh" /></a>
+                                </li>
+                                <li><a data-toggle="tab" href="#pic-3"><img src="assets/images/products/lomon.png"
+                                            class="hrh" /></a>
+                                </li>
+                                <li><a data-toggle="tab" href="#pic-4"><img src="assets/images/products/ginger.jpg"
+                                            class="hrh" /></a>
+                                </li>
+                                <li><a data-toggle="tab" href="#pic-5"><img src="assets/images/products/drumstick.jpg"
+                                            class="hrh" /></a>
+                                </li>
+                                <li><a data-toggle="tab" href="#pic-6"><img src="assets/images/products/watermelon.png"
+                                            class="hrh" /></a>
+                                </li>
+                                <li><a data-toggle="tab" href="#pic-7"><img
+                                            src="assets/images/products/elephant yam.jpg" class="hrh" /></a>
+                                </li>
+                            </ul>
+                        </div> -->
                     </div>
-                    <!-- <div class="details col-md-6">
-                        
-                    </div>
-                </div> -->
                 </div>
             </div>
         </div>
     </div>
+
     <!-- Footer START -->
 
     <footer class="pt-5 bg-body-secondary">
@@ -1697,14 +1979,50 @@
 
 
     <!-- Template Functions -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script> -->
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script src="assets/js/functions.js"></script>
+    <script src="assets/js/script.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+
+    <script>
+        let items = document.querySelectorAll('.carousel .carousel-item')
+
+        items.forEach((el) => {
+            const minPerSlide = 4
+            let next = el.nextElementSibling
+            for (var i = 1; i < minPerSlide; i++) {
+                if (!next) {
+                    // wrap carousel by using first child
+                    next = items[0]
+                }
+                let cloneChild = next.cloneNode(true)
+                el.appendChild(cloneChild.children[0])
+                next = next.nextElementSibling
+            }
+        })
+    </script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script> -->
+
+
 </body>
 
 </html>
