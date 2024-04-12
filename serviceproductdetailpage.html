@@ -2,8 +2,12 @@
 <html lang="en">
 
 <head>
-
-    <title>Eduport - LMS, Education and Course Theme</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>eCommerce Product Detail</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet"> -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
@@ -12,9 +16,6 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css" rel="stylesheet" />
 
-
-    <!-- Meta Tags -->
-
     <meta charset="utf-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,8 +23,6 @@
     <meta name="author" content="Webestica.com">
 
     <meta name="description" content="Eduport- LMS, Education and Course Theme">
-
-    <!-- Dark mode -->
 
     <script>
 
@@ -125,6 +124,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
+        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
 
     <!-- Google Font -->
 
@@ -149,6 +158,55 @@
 
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
+    <style>
+        @media (max-width: 767px) {
+            .carousel-inner .carousel-item>div {
+                display: none;
+            }
+
+            .carousel-inner .carousel-item>div:first-child {
+                display: block;
+            }
+        }
+
+        .carousel-inner .carousel-item.active,
+        .carousel-inner .carousel-item-next,
+        .carousel-inner .carousel-item-prev {
+            display: flex;
+        }
+
+        /* medium and up screens */
+        @media (min-width: 768px) {
+
+            .carousel-inner .carousel-item-end.active,
+            .carousel-inner .carousel-item-next {
+                transform: translateX(25%);
+            }
+
+            .carousel-inner .carousel-item-start.active,
+            .carousel-inner .carousel-item-prev {
+                transform: translateX(-25%);
+            }
+        }
+
+        .carousel-inner .carousel-item-end,
+        .carousel-inner .carousel-item-start {
+            transform: translateX(0);
+        }
+
+        .hrh {
+            aspect-ratio: 3/2;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .hrh1 {
+            aspect-ratio: 3/2;
+            width: 100%;
+            object-fit: cover;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -162,7 +220,8 @@
                 <!-- Left links -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa-regular fa-envelope"></i> info@gfebusiness.org</a>
+                        <a class="nav-link text-white font-bold" href="#"><i class="fa-regular fa-envelope"></i>
+                            info@gfebusiness.org</a>
                     </li>
                 </ul>
                 <!-- Left links -->
@@ -227,13 +286,9 @@
                     aria-label="Toggle navigation">
 
                     <span class="navbar-toggler-animation">
-
                         <span></span>
-
                         <span></span>
-
                         <span></span>
-
                     </span>
 
                 </button>
@@ -242,164 +297,77 @@
 
                 <div class="navbar-collapse w-100 collapse ronni" id="navbarCollapse">
 
-                    <!-- Nav category menu START -->
-
-                    <!-- <ul class="navbar-nav navbar-nav-scroll me-auto">
-
-
-                        <li class="nav-item dropdown dropdown-menu-shadow-stacked">
-
-                            <a class="nav-link bg-primary bg-opacity-10 rounded-3 text-primary px-3 py-3 py-xl-0"
-                                href="#" id="categoryMenu" data-bs-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false"><i class="bi bi-ui-radios-grid me-2"></i><span>Category</span></a>
-
-                            <ul class="dropdown-menu" aria-labelledby="categoryMenu">
-
-
-                                <li class="dropdown-submenu dropend">
-
-                                    <a class="dropdown-item" href="#">Online Business University</a>
-
-                                    <ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
-
-
-                                        <li class="dropdown-submenu dropend">
-
-                                            <a class="dropdown-item" href="#">Export Import Training</a>
-
-                                        </li>
-
-                                        <li> <a class="dropdown-item" href="#">ECommerce Online Training</a> </li>
-
-                                        <li> <a class="dropdown-item" href="#">India’s Top 10 EXIM Products</a> </li>
-
-                                        <li> <a class="dropdown-item" href="#">Prepare Governments Documents</a> </li>
-
-                                    </ul>
-
-                                </li>
-
-                                <li class="dropdown-submenu dropend">
-
-                                    <a class="dropdown-item" href="#">International Buyers-Sellers Network</a>
-
-                                    <ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
-
-
-                                        <li class="dropdown-submenu dropend">
-
-                                            <a class="dropdown-item" href="#">Trade Activities</a>
-
-                                        </li>
-
-                                        <li> <a class="dropdown-item" href="#">Buy any Products</a> </li>
-
-                                        <li> <a class="dropdown-item" href="#">Become International Seller/Supplier</a>
-                                        </li>
-
-                                    </ul>
-
-                                </li>
-
-                            </ul>
-
-                        </li>
-
-                    </ul> -->
-
-                    <!-- Nav category menu END -->
 
                     <!-- Nav Main menu START -->
 
-                    <ul class="navbar-nav navbar-nav-scroll mx-auto">
+                    <ul class="navbar-nav navbar-nav-scroll mx-auto ">
 
                         <!-- Nav item 1 Demos -->
 
+                        <li class="nav-item dropdown ">
+                            <a class="nav-link font-bold text-black" href="index.html" id="demoMenu"
+                                aria-haspopup="true" aria-expanded="false">Home</a>
+                        </li>
+
                         <li class="nav-item dropdown">
-
-                            <a class="nav-link" href="index.html" id="demoMenu" aria-haspopup="true"
-                                aria-expanded="false">Home</a>
-
+                            <a class="nav-link font-bold text-black" href="about.html" id="demoMenu"
+                                aria-haspopup="true" aria-expanded="false">About Us</a>
                         </li>
 
                         <li class="nav-item dropdown">
 
-                            <a class="nav-link" href="about.html" id="demoMenu" aria-haspopup="true"
-                                aria-expanded="false">About Us</a>
-
-                        </li>
-
-                        <li class="nav-item dropdown">
-
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="gallery.html"
+                            <a class="nav-link dropdown-toggle text-black" data-bs-toggle="dropdown" href="gallery.html"
                                 id="demoMenu" aria-haspopup="true" aria-expanded="false">Gallery</a>
 
                             <ul class="dropdown-menu" aria-labelledby="demoMenu">
-
-                                <li> <a class="dropdown-item" href="team.html">Team</a></li>
-
-                                <li> <a class="dropdown-item" href="clients.html">Clients</a></li>
-
-                                <li> <a class="dropdown-item" href="events.html">Events</a></li>
-
-                                <li> <a class="dropdown-item " href="awards.html">Awards</a></li>
-
-                                <li> <a class="dropdown-item " href="media.html">Media Coverage</a></li>
-
+                                <li> <a class="dropdown-item text-black" href="team.html">Team</a></li>
+                                <li> <a class="dropdown-item text-black" href="clients.html">Clients</a></li>
+                                <li> <a class="dropdown-item text-black" href="events.html">Events</a></li>
+                                <li> <a class="dropdown-item text-black " href="awards.html">Awards</a></li>
+                                <li> <a class="dropdown-item text-black " href="media.html">Media Coverage</a></li>
                             </ul>
 
                         </li>
 
                         <li class="nav-item dropdown">
 
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="download.html"
-                                id="demoMenu" aria-haspopup="true" aria-expanded="false">Download</a>
+                            <a class="nav-link dropdown-toggle text-black" data-bs-toggle="dropdown"
+                                href="download.html" id="demoMenu" aria-haspopup="true"
+                                aria-expanded="false">Download</a>
 
                             <ul class="dropdown-menu" aria-labelledby="demoMenu">
-                                <li> <a class="dropdown-item" id="mbtn" data-bs-toggle="modal" data-bs-target="#boby"
-                                        data-whatever="@mdo" href="#">Product Research Report</a></li>
-
-                                <li> <a class="dropdown-item" id="mBtn" data-bs-toggle="modal" data-bs-target="#ronak"
-                                        data-whatever="@mdo" href="#">Genuine International Buyers-Sellers Data</a></li>
-
+                                <li> <a class="dropdown-item text-black" id="mbtn" data-bs-toggle="modal"
+                                        data-bs-target="#boby" data-whatever="@mdo" href="#">Product Research Report</a>
+                                </li>
+                                <li> <a class="dropdown-item text-black" id="mBtn" data-bs-toggle="modal"
+                                        data-bs-target="#ronak" data-whatever="@mdo" href="#">Genuine International
+                                        Buyers-Sellers Data</a></li>
                             </ul>
-
                         </li>
-
 
                         <li class="nav-item dropdown">
 
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="resources.html"
-                                id="demoMenu" aria-haspopup="true" aria-expanded="false">Resources</a>
-
+                            <a class="nav-link dropdown-toggle text-black" data-bs-toggle="dropdown"
+                                href="resources.html" id="demoMenu" aria-haspopup="true"
+                                aria-expanded="false">Resources</a>
                             <ul class="dropdown-menu" aria-labelledby="demoMenu">
-
-                                <li> <a class="dropdown-item" href="https://www.indiantradeportal.in/"
+                                <li> <a class="dropdown-item text-black" href="https://www.indiantradeportal.in/"
                                         target="_blank">HSN Code
                                         Search</a></li>
-
-                                <li> <a class="dropdown-item" href="https://www.xe.com/currencyconverter/"
+                                <li> <a class="dropdown-item text-black" href="https://www.xe.com/currencyconverter/"
                                         target="_blank">Currency
                                         Converter</a></li>
-
-                                <!-- <li> <a class="dropdown-item" href="countryviceproduct.html">Country vice Product Demand</a></li> -->
-
                             </ul>
-
                         </li>
 
                         <li class="nav-item dropdown">
-
-                            <a class="nav-link" href="career.html" id="demoMenu" aria-haspopup="true"
+                            <a class="nav-link text-black" href="career.html" id="demoMenu" aria-haspopup="true"
                                 aria-expanded="false">Career</a>
-
                         </li>
 
-                        <li class="nav-item dropdown">
-
-                            <a class="nav-link" href="contact-us.html" id="demoMenu" aria-haspopup="true"
+                        <li class="nav-item dropdown ">
+                            <a class="nav-link text-black" href="contact-us.html" id="demoMenu" aria-haspopup="true"
                                 aria-expanded="false">Contact Us</a>
-
                         </li>
 
                         <!-- Nav Main menu END -->
@@ -428,9 +396,7 @@
                             </div>
 
                         </div>
-
                         <!-- Nav Search END -->
-
                 </div>
 
                 <!-- Main navbar END -->
@@ -571,7 +537,6 @@
 
     <!-- Header END -->
 
-
     <!-- ----------------Enquairy form----------------- -->
 
 
@@ -644,329 +609,446 @@
         </div>
     </div>
 
-    <!-- START section -->
-
-    <style>
-        .preview {
-            display: -webkit-box;
-            display: -webkit-flex;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            -webkit-flex-direction: column;
-            -ms-flex-direction: column;
-            flex-direction: column;
-        }
-
-        @media screen and (max-width: 996px) {
-            .preview {
-                margin-bottom: 20px;
-            }
-        }
-
-        .preview-pic {
-            -webkit-box-flex: 1;
-            -webkit-flex-grow: 1;
-            -ms-flex-positive: 1;
-            flex-grow: 1;
-        }
-
-        .preview-thumbnail.nav-tabs {
-            border: none;
-            margin-top: 15px;
-        }
-
-        .preview-thumbnail.nav-tabs li {
-            width: 18%;
-            margin-right: 2.5%;
-        }
-
-        .preview-thumbnail.nav-tabs li img {
-            max-width: 100%;
-            display: block;
-        }
-
-        .preview-thumbnail.nav-tabs li a {
-            padding: 0;
-            margin: 0;
-        }
-
-        .preview-thumbnail.nav-tabs li:last-of-type {
-            margin-right: 0;
-        }
-
-        .tab-content {
-            overflow: hidden;
-        }
-
-        .tab-content img {
-            width: 100%;
-            -webkit-animation-name: opacity;
-            animation-name: opacity;
-            -webkit-animation-duration: .3s;
-            animation-duration: .3s;
-        }
-
-        .card {
-            margin-top: 50px;
-            background: #eee;
-            padding: 3em;
-            line-height: 1.5em;
-        }
-
-        @media screen and (min-width: 997px) {
-            .wrapper {
-                display: -webkit-box;
-                display: -webkit-flex;
-                display: -ms-flexbox;
-                display: flex;
-            }
-        }
-
-        .details {
-            display: -webkit-box;
-            display: -webkit-flex;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            -webkit-flex-direction: column;
-            -ms-flex-direction: column;
-            flex-direction: column;
-        }
-
-        .colors {
-            -webkit-box-flex: 1;
-            -webkit-flex-grow: 1;
-            -ms-flex-positive: 1;
-            flex-grow: 1;
-        }
-
-        .product-title,
-        .price,
-        .sizes,
-        .colors {
-            text-transform: UPPERCASE;
-            font-weight: bold;
-        }
-
-        .checked,
-        .price span {
-            color: #ff9f1a;
-        }
-
-        .product-title,
-        .rating,
-        .product-description,
-        .price,
-        .vote,
-        .sizes {
-            margin-bottom: 15px;
-        }
-
-        .product-title {
-            margin-top: 0;
-        }
-
-        .size {
-            margin-right: 10px;
-        }
-
-        .size:first-of-type {
-            margin-left: 40px;
-        }
-
-        .color {
-            display: inline-block;
-            vertical-align: middle;
-            margin-right: 10px;
-            height: 2em;
-            width: 2em;
-            border-radius: 2px;
-        }
-
-        .color:first-of-type {
-            margin-left: 20px;
-        }
-
-        .add-to-cart,
-        .like {
-            background: #ff9f1a;
-            padding: 1.2em 1.5em;
-            border: none;
-            text-transform: UPPERCASE;
-            font-weight: bold;
-            color: #fff;
-            -webkit-transition: background .3s ease;
-            transition: background .3s ease;
-        }
-
-        .add-to-cart:hover,
-        .like:hover {
-            background: #b36800;
-            color: #fff;
-        }
-
-        .not-available {
-            text-align: center;
-            line-height: 2em;
-        }
-
-        .not-available:before {
-            font-family: fontawesome;
-            content: "\f00d";
-            color: #fff;
-        }
-
-        .orange {
-            background: #ff9f1a;
-        }
-
-        .green {
-            background: #85ad00;
-        }
-
-        .blue {
-            background: #0076ad;
-        }
-
-        .tooltip-inner {
-            padding: 1.3em;
-        }
-
-        @-webkit-keyframes opacity {
-            0% {
-                opacity: 0;
-                -webkit-transform: scale(3);
-                transform: scale(3);
-            }
-
-            100% {
-                opacity: 1;
-                -webkit-transform: scale(1);
-                transform: scale(1);
-            }
-        }
-
-        @keyframes opacity {
-            0% {
-                opacity: 0;
-                -webkit-transform: scale(3);
-                transform: scale(3);
-            }
-
-            100% {
-                opacity: 1;
-                -webkit-transform: scale(1);
-                transform: scale(1);
-            }
-        }
-
-        .hrh {
-            aspect-ratio: 3/2;
-            width: 100%;
-            object-fit: cover;
-        }
-    </style>
-
-
-
-
-    <main class="">
-        <div class="container">
-            <div class="card">
-                <div class="container-fluid">
-                    <div class="wrapper row">
-                        <div class="preview col-md-6">
-                            <div class="preview-pic tab-content">
-                                <div class="tab-pane active" id="pic-1">
-                                    <img src="assets/images/products/ginger.jpg" alt="Ginger">
-                                </div>
-                                <div class="tab-pane" id="pic-2">
-                                    <img src="assets/images/products/elephant yam.jpg" alt="Elephant Yam">
-                                </div>
-                                <div class="tab-pane" id="pic-3">
-                                    <img src="assets/images/products/drumstick.jpg" alt="Drumstick">
-                                </div>
-                                <div class="tab-pane" id="pic-4">
-                                    <img src="assets/images/products/banana.jpg" alt="Banana">
-                                </div>
-                                <div class="tab-pane" id="pic-5">
-                                    <img src="assets/images/products/turmeric.jpg" alt="Turmeric">
+    <div class="container">
+        <div class="card my-5 p-4">
+            <div class="container-fliud">
+                <div class="wrapper row">
+                    <div class="preview ">
+                        <div class="preview-pic tab-content row flex-col flex">
+                            <!-- <div class="row flex-col "> -->
+                            <div class="tab-pane active flex flex-col " id="pic-1">
+                                <div class="row flex-col">
+                                    <div class="col-md-6">
+                                        <img src="assets/images/products/turmeric.jpg" class="d-inline-block hrh1" />
+                                    </div>
+                                    <div class="details col-md-6">
+                                        <h3 class="product-title">Turmeric</h3>
+                                        <!-- <div class="rating">
+                                            <div class="stars">
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star "></span>
+                                                <span class="fa fa-star "></span>
+                                                <span class="fa fa-star "></span>
+                                                <span class="fa fa-star"></span>
+                                            </div>
+                                            <span class="review-no">41 reviews</span>
+                                        </div> -->
+                                        <p class="product-description pe-5">Suspendisse quos? Tempus
+                                            cras iure
+                                            temporibus? Eu
+                                            laudantium
+                                            cubilia sem sem! Repudiandae et! Massa senectus enim minim sociosqu delectus
+                                            posuere.</p>
+                                        <h4 class="price">current price: <span>$180</span></h4>
+                                        <!-- <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87
+                                                votes)</strong>
+                                        </p>
+                                        <h5 class="sizes">sizes:
+                                            <span class="size" data-toggle="tooltip" title="small">s</span>
+                                            <span class="size" data-toggle="tooltip" title="medium">m</span>
+                                            <span class="size" data-toggle="tooltip" title="large">l</span>
+                                            <span class="size" data-toggle="tooltip" title="xtra large">xl</span>
+                                        </h5>
+                                        <h5 class="colors">colors:
+                                            <span class="color orange not-available" data-toggle="tooltip"
+                                                title="Not In store"></span>
+                                            <span class="color green"></span>
+                                            <span class="color blue"></span>
+                                        </h5>
+                                        <div class="action">
+                                            <button class="add-to-cart btn btn-default" type="button">add to
+                                                cart</button>
+                                            <button class="like btn btn-default" type="button"><span
+                                                    class="fa fa-heart"></span></button>
+                                        </div> -->
+                                    </div>
                                 </div>
                             </div>
-                            <ul class="preview-thumbnail nav nav-tabs">
-                                <li class="active"><a data-bs-toggle="tab" href="#pic-1"><img
-                                            src="assets/images/products/ginger.jpg" alt="Ginger"></a></li>
-                                <li><a data-bs-toggle="tab" href="#pic-2"><img
-                                            src="assets/images/products/elephant yam.jpg" alt="Elephant Yam"></a></li>
-                                <li><a data-bs-toggle="tab" href="#pic-3"><img
-                                            src="assets/images/products/drumstick.jpg" alt="Drumstick"></a></li>
-                                <li><a data-bs-toggle="tab" href="#pic-4"><img src="assets/images/products/banana.jpg"
-                                            alt="Banana"></a></li>
-                                <li><a data-bs-toggle="tab" href="#pic-5"><img src="assets/images/products/turmeric.jpg"
-                                            alt="Turmeric"></a></li>
-                            </ul>
+                            <!-- </div> -->
+                            <div class="tab-pane" id="pic-2">
+                                <div class="row flex-col">
+                                    <div class="col-md-6 ">
+                                        <img src="assets/images/products/banana.jpg" class="hrh1" />
+                                    </div>
+                                    <div class="details col-md-6">
+                                        <h3 class="product-title">Banana</h3>
+                                        <!-- <div class="rating">
+                                            <div class="stars">
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star "></span>
+                                                <span class="fa fa-star"></span>
+                                                <span class="fa fa-star"></span>
+                                            </div>
+                                            <span class="review-no">41 reviews</span>
+                                        </div> -->
+                                        <p class="product-description pe-5">Suspendisse quos? Tempus cras iure
+                                            temporibus? Eu
+                                            laudantium
+                                            cubilia sem sem! Repudiandae et! Massa senectus enim minim sociosqu delectus
+                                            posuere.</p>
+                                        <h4 class="price">current price: <span>$190</span></h4>
+                                        <!-- <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87
+                                                votes)</strong>
+                                        </p>
+                                        <h5 class="sizes">sizes:
+                                            <span class="size" data-toggle="tooltip" title="small">s</span>
+                                            <span class="size" data-toggle="tooltip" title="medium">m</span>
+                                            <span class="size" data-toggle="tooltip" title="large">l</span>
+                                            <span class="size" data-toggle="tooltip" title="xtra large">xl</span>
+                                        </h5>
+                                        <h5 class="colors">colors:
+                                            <span class="color orange not-available" data-toggle="tooltip"
+                                                title="Not In store"></span>
+                                            <span class="color green"></span>
+                                            <span class="color blue"></span>
+                                        </h5>
+                                        <div class="action">
+                                            <button class="add-to-cart btn btn-default" type="button">add to
+                                                cart</button>
+                                            <button class="like btn btn-default" type="button"><span
+                                                    class="fa fa-heart"></span></button>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="pic-3">
+                                <div class="row flex-col">
+                                    <div class="col-md-6 ">
+                                        <img src="assets/images/products/lomon.png" class="hrh1" />
+                                    </div>
+                                    <div class="details col-md-6">
+                                        <h3 class="product-title">Lemon</h3>
+                                        <!-- <div class="rating">
+                                            <div class="stars">
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star "></span>
+                                                <span class="fa fa-star"></span>
+                                            </div>
+                                            <span class="review-no">41 reviews</span>
+                                        </div> -->
+                                        <p class="product-description pe-5">Suspendisse quos? Tempus cras iure
+                                            temporibus? Eu
+                                            laudantium
+                                            cubilia sem sem! Repudiandae et! Massa senectus enim minim sociosqu delectus
+                                            posuere.</p>
+                                        <h4 class="price">current price: <span>$170</span></h4>
+                                        <!-- <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87
+                                                votes)</strong>
+                                        </p>
+                                        <h5 class="sizes">sizes:
+                                            <span class="size" data-toggle="tooltip" title="small">s</span>
+                                            <span class="size" data-toggle="tooltip" title="medium">m</span>
+                                            <span class="size" data-toggle="tooltip" title="large">l</span>
+                                            <span class="size" data-toggle="tooltip" title="xtra large">xl</span>
+                                        </h5>
+                                        <h5 class="colors">colors:
+                                            <span class="color orange not-available" data-toggle="tooltip"
+                                                title="Not In store"></span>
+                                            <span class="color green"></span>
+                                            <span class="color blue"></span>
+                                        </h5>
+                                        <div class="action">
+                                            <button class="add-to-cart btn btn-default" type="button">add to
+                                                cart</button>
+                                            <button class="like btn btn-default" type="button"><span
+                                                    class="fa fa-heart"></span></button>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="pic-4">
+                                <div class="row flex-col">
+                                    <div class="col-md-6 ">
+                                        <img src="assets/images/products/ginger.jpg" class="hrh1" />
+                                    </div>
+                                    <div class="details col-md-6">
+                                        <h3 class="product-title">Ginger</h3>
+                                        <!-- <div class="rating">
+                                            <div class="stars">
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star "></span>
+                                            </div>
+                                            <span class="review-no">41 reviews</span>
+                                        </div> -->
+                                        <p class="product-description pe-5">Suspendisse quos? Tempus cras iure
+                                            temporibus? Eu
+                                            laudantium
+                                            cubilia sem sem! Repudiandae et! Massa senectus enim minim sociosqu delectus
+                                            posuere.</p>
+                                        <h4 class="price">current price: <span>$150</span></h4>
+                                        <!-- <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87
+                                                votes)</strong>
+                                        </p>
+                                        <h5 class="sizes">sizes:
+                                            <span class="size" data-toggle="tooltip" title="small">s</span>
+                                            <span class="size" data-toggle="tooltip" title="medium">m</span>
+                                            <span class="size" data-toggle="tooltip" title="large">l</span>
+                                            <span class="size" data-toggle="tooltip" title="xtra large">xl</span>
+                                        </h5>
+                                        <h5 class="colors">colors:
+                                            <span class="color orange not-available" data-toggle="tooltip"
+                                                title="Not In store"></span>
+                                            <span class="color green"></span>
+                                            <span class="color blue"></span>
+                                        </h5>
+                                        <div class="action">
+                                            <button class="add-to-cart btn btn-default" type="button">add to
+                                                cart</button>
+                                            <button class="like btn btn-default" type="button"><span
+                                                    class="fa fa-heart"></span></button>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="pic-5">
+                                <div class="row flex-col">
+                                    <div class="col-md-6 ">
+                                        <img src="assets/images/products/drumstick.jpg" class="hrh1" />
+                                    </div>
+                                    <div class="details col-md-6">
+                                        <h3 class="product-title">Drumstick</h3>
+                                        <!-- <div class="rating">
+                                            <div class="stars">
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                            </div>
+                                            <span class="review-no">41 reviews</span>
+                                        </div> -->
+                                        <p class="product-description pe-5">Suspendisse quos? Tempus cras iure
+                                            temporibus? Eu
+                                            laudantium
+                                            cubilia sem sem! Repudiandae et! Massa senectus enim minim sociosqu delectus
+                                            posuere.</p>
+                                        <h4 class="price">current price: <span>$160</span></h4>
+                                        <!-- <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87
+                                                votes)</strong>
+                                        </p>
+                                        <h5 class="sizes">sizes:
+                                            <span class="size" data-toggle="tooltip" title="small">s</span>
+                                            <span class="size" data-toggle="tooltip" title="medium">m</span>
+                                            <span class="size" data-toggle="tooltip" title="large">l</span>
+                                            <span class="size" data-toggle="tooltip" title="xtra large">xl</span>
+                                        </h5>
+                                        <h5 class="colors">colors:
+                                            <span class="color orange not-available" data-toggle="tooltip"
+                                                title="Not In store"></span>
+                                            <span class="color green"></span>
+                                            <span class="color blue"></span>
+                                        </h5>
+                                        <div class="action">
+                                            <button class="add-to-cart btn btn-default" type="button">add to
+                                                cart</button>
+                                            <button class="like btn btn-default" type="button"><span
+                                                    class="fa fa-heart"></span></button>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="pic-6">
+                                <div class="row flex-col">
+                                    <div class="col-md-6 ">
+                                        <img src="assets/images/products/green chilli.jpg" class="hrh1" />
+                                    </div>
+                                    <div class="details col-md-6">
+                                        <h3 class="product-title">Green chilli</h3>
+                                        <!-- <div class="rating">
+                                            <div class="stars">
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                            </div>
+                                            <span class="review-no">41 reviews</span>
+                                        </div> -->
+                                        <p class="product-description pe-5">Suspendisse quos? Tempus cras iure
+                                            temporibus? Eu
+                                            laudantium
+                                            cubilia sem sem! Repudiandae et! Massa senectus enim minim sociosqu delectus
+                                            posuere.</p>
+                                        <h4 class="price">current price: <span>$160</span></h4>
+                                        <!-- <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87
+                                                votes)</strong>
+                                        </p>
+                                        <h5 class="sizes">sizes:
+                                            <span class="size" data-toggle="tooltip" title="small">s</span>
+                                            <span class="size" data-toggle="tooltip" title="medium">m</span>
+                                            <span class="size" data-toggle="tooltip" title="large">l</span>
+                                            <span class="size" data-toggle="tooltip" title="xtra large">xl</span>
+                                        </h5>
+                                        <h5 class="colors">colors:
+                                            <span class="color orange not-available" data-toggle="tooltip"
+                                                title="Not In store"></span>
+                                            <span class="color green"></span>
+                                            <span class="color blue"></span>
+                                        </h5>
+                                        <div class="action">
+                                            <button class="add-to-cart btn btn-default" type="button">add to
+                                                cart</button>
+                                            <button class="like btn btn-default" type="button"><span
+                                                    class="fa fa-heart"></span></button>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="pic-7">
+                                <div class="row flex-col">
+                                    <div class="col-md-6 ">
+                                        <img src="assets/images/products/elephant yam.jpg" class="hrh1" />
+                                    </div>
+                                    <div class="details col-md-6">
+                                        <h3 class="product-title">Elephant yam</h3>
+                                        <!-- <div class="rating">
+                                            <div class="stars">
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                            </div>
+                                            <span class="review-no">41 reviews</span>
+                                        </div> -->
+                                        <p class="product-description pe-5">Suspendisse quos? Tempus cras iure
+                                            temporibus? Eu
+                                            laudantium
+                                            cubilia sem sem! Repudiandae et! Massa senectus enim minim sociosqu delectus
+                                            posuere.</p>
+                                        <h4 class="price">current price: <span>$160</span></h4>
+                                        <!-- <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87
+                                                votes)</strong>
+                                        </p>
+                                        <h5 class="sizes">sizes:
+                                            <span class="size" data-toggle="tooltip" title="small">s</span>
+                                            <span class="size" data-toggle="tooltip" title="medium">m</span>
+                                            <span class="size" data-toggle="tooltip" title="large">l</span>
+                                            <span class="size" data-toggle="tooltip" title="xtra large">xl</span>
+                                        </h5>
+                                        <h5 class="colors">colors:
+                                            <span class="color orange not-available" data-toggle="tooltip"
+                                                title="Not In store"></span>
+                                            <span class="color green"></span>
+                                            <span class="color blue"></span>
+                                        </h5>
+                                        <div class="action">
+                                            <button class="add-to-cart btn btn-default" type="button">add to
+                                                cart</button>
+                                            <button class="like btn btn-default" type="button"><span
+                                                    class="fa fa-heart"></span></button>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                            <h3 class="product-title">Men's Shoes Fashion</h3>
-                            <div class="rating">
-                                <div class="stars">
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
+
+                        <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner" role="listbox">
+                                <div class="carousel-item active">
+                                    <div class="col-md-3">
+                                        <!-- <div class="card"> -->
+                                        <div class="card-img active">
+                                            <a data-toggle="tab" href="#pic-1">
+                                                <img src="./assets/images/products/turmeric.jpg" class="hrh">
+                                            </a>
+                                        </div>
+                                        <!-- </div> -->
+                                    </div>
                                 </div>
-                                <span class="review-no">41 reviews</span>
+                                <div class="carousel-item">
+                                    <div class="col-md-3">
+                                        <!-- <div class="card"> -->
+                                        <div class="card-img">
+                                            <a data-toggle="tab" href="#pic-2">
+                                                <img src="./assets/images/products/banana.jpg" class=" hrh">
+                                            </a>
+                                        </div>
+
+                                        <!-- </div> -->
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-md-3">
+                                        <!-- <div class="card"> -->
+                                        <div class="card-img">
+                                            <a data-toggle="tab" href="#pic-3">
+                                                <img src="./assets/images/products/lomon.png" class="hrh ">
+                                            </a>
+                                        </div>
+
+                                        <!-- </div> -->
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-md-3">
+                                        <!-- <div class="card"> -->
+                                        <div class="card-img">
+                                            <a data-toggle="tab" href="#pic-4">
+                                                <img src="./assets/images/products/ginger.jpg" class=" hrh">
+                                            </a>
+                                        </div>
+
+                                        <!-- </div> -->
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-md-3">
+                                        <!-- <div class="card"> -->
+                                        <div class="card-img">
+                                            <a data-toggle="tab" href="#pic-5">
+                                                <img src="./assets/images/products/drumstick.jpg" class="hrh ">
+                                            </a>
+                                        </div>
+                                        <!-- </div> -->
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-md-3">
+                                        <!-- <div class="card"> -->
+                                        <div class="card-img">
+                                            <a data-toggle="tab" href="#pic-6">
+                                                <img src="./assets/images/products/green chilli.jpg" class="hrh">
+                                            </a>
+                                        </div>
+
+                                        <!-- </div> -->
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-md-3">
+                                        <!-- <div class="card"> -->
+                                        <div class="card-img">
+                                            <a data-toggle="tab" href="#pic-7">
+                                                <img src="./assets/images/products/elephant yam.jpg" class="hrh ">
+                                            </a>
+                                        </div>
+
+                                        <!-- </div> -->
+                                    </div>
+                                </div>
                             </div>
-                            <p class="product-description">Suspendisse quos? Tempus cras iure temporibus? Eu laudantium
-                                cubilia sem sem! Repudiandae et! Massa senectus enim minim sociosqu delectus posuere.
-                            </p>
-                            <h4 class="price">Current Price: <span>$180</span></h4>
-                            <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87
-                                    votes)</strong></p>
-                            <h5 class="sizes">Sizes:
-                                <span class="size" data-toggle="tooltip" title="Small">S</span>
-                                <span class="size" data-toggle="tooltip" title="Medium">M</span>
-                                <span class="size" data-toggle="tooltip" title="Large">L</span>
-                                <span class="size" data-toggle="tooltip" title="Xtra Large">XL</span>
-                            </h5>
-                            <h5 class="colors">Colors:
-                                <span class="color orange not-available" data-toggle="tooltip"
-                                    title="Not In Store"></span>
-                                <span class="color green"></span>
-                                <span class="color blue"></span>
-                            </h5>
-                            <div class="action">
-                                <button class="add-to-cart btn btn-default" type="button">Add to Cart</button>
-                                <button class="like btn btn-default" type="button"><span
-                                        class="fa fa-heart"></span></button>
-                            </div>
+                            <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button"
+                                data-bs-slide="prev">
+                                <i class="fa-solid fa-angle-left text-white rounded fs-2 bg-black"
+                                    aria-hidden="true"></i>
+                            </a>
+                            <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button"
+                                data-bs-slide="next">
+                                <i class="fa-solid fa-angle-right text-white rounded fs-2 bg-black"
+                                    aria-hidden="true"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
-
-    </main>
-
-
-    <!-- **************** MAIN CONTENT END **************** -->
-
-    <div class="rounded-social-buttons d-block d-sm-none fixed-bottom bg-blur border border-opacity-10 border-black ">
-        <a class="social-button facebook rounded-circle" href="#" target="_blank" rel="noopener"><i
-                class="fa-solid fa-phone-volume"></i></a>
-        <a class="social-button twitter rounded-circle" href="#" target="_blank" rel="noopener"><i
-                class="fa-brands fa-whatsapp"></i></a>
-        <!-- <a class="social-button linkedin" href="https://www.linkedin.com/" target="_blank" rel="noopener"><i class="fab fa-linkedin fs-6"></i></a> -->
-        <a class="social-button youtube rounded-circle" id="mBtn" data-bs-toggle="modal" data-bs-target="#ronak"
-            data-whatever="@mdo"><i class="fa-solid fa-file-export"></i></a>
-        <a class="social-button instagram rounded-circle m-0" id="myBtn" data-bs-toggle="modal"
-            data-bs-target="#exampleModal" data-whatever="@mdo"><i class="fa-solid fa-file-signature"></i></a>
     </div>
 
     <!-- Footer START -->
@@ -1045,7 +1127,9 @@
 
                             <li class="nav-item fs-5"><a class="nav-link" href="./about.html">About us</a></li>
 
-                            <li class="nav-item fs-5"><a class="nav-link" href="./contact-us.html">Contact us</a></li>
+                            <li class="nav-item fs-5"><a class="nav-link" href="./contact-us.html">Contact
+                                    us</a>
+                            </li>
 
                             <li class="nav-item fs-5"><a class="nav-link"
                                     href="https://www.gfebusiness.org/blog/">Blogs</a></li>
@@ -1057,8 +1141,6 @@
                 </div>
 
                 <!-- Widget 2 END -->
-
-
 
                 <!-- Widget 3 START -->
 
@@ -1072,17 +1154,16 @@
                         Boardline No.: <a href="#"><span class="h6 fw-light ms-2">+91 9211066888</span></a>
                     </p>
 
-                    <p class="mb-0 fs-5">Email:<span class="h6 fw-light ms-2 fs-5">info@gfebusiness.org</span></p>
+                    <p class="mb-0 fs-5">Email:<span class="h6 fw-light ms-2 fs-5">info@gfebusiness.org</span>
+                    </p>
 
                     <div class="row g-2 mt-2">
 
                         <!-- Google play store button -->
 
                         <div class="col-6 col-sm-4 col-md-3 col-lg-6 mx-auto">
-
                             <a href="https://play.google.com/store/apps/details?id=crm.ani.com&pcampaignid=web_share">
                                 <img src="assets/images/client/google-play.svg" alt=""> </a>
-
                         </div>
 
                     </div> <!-- Row END -->
@@ -1143,7 +1224,8 @@
 
                                 </li>
 
-                                <li class="list-inline-item"><a class="nav-link" href="terms-conditions.html">Terms &
+                                <li class="list-inline-item"><a class="nav-link" href="terms-conditions.html">Terms
+                                        &
                                         Conditions</a></li>
 
                                 <li class="list-inline-item"><a class="nav-link pe-0"
@@ -1164,8 +1246,6 @@
     </footer>
 
     <!-- -------------Footer END------------- -->
-
-
 
     <!-- -------------START Popup Button------------- -->
     <a href="https://wa.me/91123-456-7878"
@@ -1292,7 +1372,9 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content gfe-color">
                 <div class="modal-header">
-                    <h5 class="modal-title fs-2 font-bold honey text-white" id="exampleModalLabel">Get Buyer Data</h5>
+                    <h5 class="modal-title fs-2 font-bold honey text-white" id="exampleModalLabel">Get Buyer
+                        Data
+                    </h5>
                     <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -1389,7 +1471,6 @@
             </div>
         </div>
     </div>
-
     <style>
         .gfe-color {
             background: radial-gradient(circle at 20% 130%, #003f8cb5 0%, #005b8ca8 45%);
@@ -1432,7 +1513,8 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content gf-color">
                 <div class="modal-header">
-                    <h5 class="modal-title fs-4 font-bold honey text-white" id="exampleModalLabel">Get Your Product
+                    <h5 class="modal-title fs-4 font-bold honey text-white" id="exampleModalLabel">Get Your
+                        Product
                         Research
                         Report</h5>
                     <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
@@ -1574,7 +1656,8 @@
 
     <!-- Back to top -->
 
-    <div class="back-top"><i class="bi bi-arrow-up-short position-absolute top-50 start-50 translate-middle"></i></div>
+    <div class="back-top"><i class="bi bi-arrow-up-short position-absolute top-50 start-50 translate-middle"></i>
+    </div>
 
 
     <!-- Bootstrap JS -->
@@ -1598,12 +1681,50 @@
 
 
     <!-- Template Functions -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script> -->
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script src="assets/js/functions.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+
+    <script>
+        let items = document.querySelectorAll('.carousel .carousel-item')
+
+        items.forEach((el) => {
+            const minPerSlide = 4
+            let next = el.nextElementSibling
+            for (var i = 1; i < minPerSlide; i++) {
+                if (!next) {
+                    // wrap carousel by using first child
+                    next = items[0]
+                }
+                let cloneChild = next.cloneNode(true)
+                el.appendChild(cloneChild.children[0])
+                next = next.nextElementSibling
+            }
+        })
+    </script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script> -->
+
+
 </body>
 
 </html>
