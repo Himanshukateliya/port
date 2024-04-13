@@ -26976,7 +26976,6 @@ html[dir=rtl] .choices__input {
 }
 
 
-
 @keyframes glowingbn5 {
   0% {
     background-position: 0 0;
@@ -27003,20 +27002,6 @@ html[dir=rtl] .choices__input {
   opacity: 1;
 }
 
-/* .bn5:after {
-  z-index: -1;
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #191919;
-  left: 0;
-  top: 0;
-  border-radius: 10px;
-} */
-
-
-
 
 .GFE {
   clip-path: ellipse(100% 50% at 49% 50%);
@@ -27028,8 +27013,6 @@ html[dir=rtl] .choices__input {
   background-color: #fbfff896;
   /* background-color: #F6FFDE; */
 }
-
-
 
 
 .truck {
@@ -27082,15 +27065,6 @@ html[dir=rtl] .choices__input {
 }
 
 
-/* @keyframes flightMove {
-  0% {
-    left: -100px;
-  }
-
-  100% {
-    left: calc(100% + 100px);
-  }
-} */
 @keyframes flightTakeoff {
   0% {
     transform: translate(-100%, 0) rotate(0) scale(1);
@@ -27109,4 +27083,75 @@ html[dir=rtl] .choices__input {
     transform: translate(100%, -150%) rotate(0deg) scale(1.5);
     left: calc(100% + 100px);
   }
+}
+
+
+.cont-hov:hover {
+  background: linear-gradient(#FF671F, #FFFFFF, #046A38);
+}
+
+.cont-hov1:hover {
+  /* background: linear-gradient(to right, #FF0000, #FF0000 25%, ), (to top, #FFFFFF 25%, #FFFFFF 50%, #008000 50%, #008000 75%, #000000 75%, #000000); */
+  background: linear-gradient(125deg,
+      hsl(0deg 100% 50%) 0%,
+      hsl(0deg 100% 65%) 10%,
+      hsl(0deg 100% 80%) 20%,
+      hsl(0deg 100% 95%) 30%,
+      hsl(120deg 59% 89%) 40%,
+      hsl(120deg 58% 74%) 50%,
+      hsl(120deg 56% 60%) 60%,
+      hsl(120deg 43% 49%) 70%,
+      hsl(120deg 25% 37%) 80%,
+      hsl(120deg 11% 21%) 90%,
+      hsl(0deg 0% 0%) 100%);
+}
+
+
+.cont-hov2:hover {
+  background-image: linear-gradient(130deg,
+      hsl(2deg 63% 48%) 0%,
+      hsl(10deg 67% 48%) 6%,
+      hsl(18deg 70% 48%) 12%,
+      hsl(25deg 73% 48%) 18%,
+      hsl(33deg 77% 48%) 24%,
+      hsl(41deg 80% 48%) 29%,
+      hsl(48deg 83% 48%) 34%,
+      hsl(48deg 83% 48%) 39%,
+      hsl(48deg 83% 48%) 44%,
+      hsl(48deg 83% 48%) 50%,
+      hsl(48deg 83% 48%) 55%,
+      hsl(48deg 83% 48%) 60%,
+      hsl(48deg 83% 48%) 65%,
+      hsl(41deg 80% 48%) 70%,
+      hsl(33deg 77% 48%) 76%,
+      hsl(25deg 73% 48%) 81%,
+      hsl(18deg 70% 48%) 87%,
+      hsl(10deg 67% 48%) 93%,
+      hsl(2deg 63% 48%) 100%);
+}
+
+.cont-hov3:hover {
+  background: linear-gradient(130deg,
+      hsl(240deg 69% 43%) 0%,
+      hsl(266deg 48% 45%) 6%,
+      hsl(293deg 28% 46%) 12%,
+      hsl(342deg 27% 56%) 17%,
+      hsl(22deg 43% 60%) 23%,
+      hsl(38deg 66% 59%) 29%,
+      hsl(48deg 86% 54%) 34%,
+      hsl(46deg 89% 65%) 40%,
+      hsl(45deg 93% 73%) 45%,
+      hsl(43deg 98% 80%) 51%,
+      hsl(43deg 100% 87%) 56%,
+      hsl(42deg 100% 93%) 62%,
+      hsl(0deg 0% 100%) 67%,
+      hsl(9deg 98% 92%) 73%,
+      hsl(8deg 90% 84%) 78%,
+      hsl(8deg 82% 76%) 84%,
+      hsl(7deg 75% 67%) 89%,
+      hsl(5deg 69% 58%) 94%,
+      hsl(360deg 66% 49%) 100%);
+  /* White stripes */
+  /* To position the blue rectangle */
+
 }
