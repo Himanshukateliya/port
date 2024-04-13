@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background: black;
+            overflow: hidden;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .loop-wrapper {
+            margin: 0 auto;
+            position: relative;
+            display: block;
+            /* width: 600px; */
+            height: 250px;
+            overflow: hidden;
+            border-bottom: 3px solid #fff;
+            color: #fff;
+        }
+
+        .rock {
+            margin-top: -17%;
+            height: 3%;
+            width: 1%;
+            bottom: -2px;
+            border-radius: 20px;
+            position: absolute;
+            background: #ddd;
+        }
+
+        .truck {
+            transition: all ease;
+            width: 85px;
+            margin-right: -60px;
+            bottom: -32px;
+            right: -100px;
+            position: absolute;
+            background: green;
+            animation: truckMove 4s linear infinite;
+            /* Add animation */
+        }
+
+        .truck {
+            background: url('assets/images/truck-svgrepo-com.svg') no-repeat;
+            background-size: contain;
+            height: 100px;
+        }
+
+        .rock {
+            animation: rock 4s -0.530s linear infinite;
+        }
+
+        /* .truck {
+            animation: truck 4s 0.080s ease infinite;
+        } */
+
+        @keyframes truckMove {
+            0% {
+                left: -100px;
+                /* Initial position */
+            }
+
+            100% {
+                left: calc(100% + 100px);
+                /* Move the truck to the right */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="loop-wrapper">
+        <div class="rock"></div>
+        <div class="truck"></div>
+    </div>
+
+
+</body>
+
+</html>
