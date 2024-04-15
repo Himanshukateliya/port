@@ -9,8 +9,6 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 		integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
 		crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
 	<!-- Meta Tags -->
 
 	<meta charset="utf-8">
@@ -21,15 +19,11 @@
 
 	<meta name="description" content="Eduport- LMS, Education and Course Theme">
 
-
-
 	<!-- Dark mode -->
 
 	<script>
 
 		const storedTheme = localStorage.getItem('theme')
-
-
 
 		const getPreferredTheme = () => {
 
@@ -42,8 +36,6 @@
 			return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'light'
 
 		}
-
-
 
 		const setTheme = function (theme) {
 
@@ -59,11 +51,7 @@
 
 		}
 
-
-
 		setTheme(getPreferredTheme())
-
-
 
 		window.addEventListener('DOMContentLoaded', () => {
 
@@ -79,23 +67,17 @@
 
 					const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
 
-
-
 					document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
 
 						element.classList.remove('active')
 
 					})
 
-
-
 					btnToActive.classList.add('active')
 
 					activeThemeIcon.setAttribute('href', svgOfActiveBtn)
 
 				}
-
-
 
 				window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
 
@@ -107,11 +89,7 @@
 
 				})
 
-
-
 				showActiveTheme(getPreferredTheme())
-
-
 
 				document.querySelectorAll('[data-bs-theme-value]')
 
@@ -131,23 +109,15 @@
 
 					})
 
-
-
 			}
 
 		})
 
-
-
 	</script>
-
-
 
 	<!-- Favicon -->
 
 	<link rel="shortcut icon" href="assets/images/favicon.ico">
-
-
 
 	<!-- Google Font -->
 
@@ -157,8 +127,6 @@
 
 	<link rel="stylesheet"
 		href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
-
-
 
 	<!-- Plugins CSS -->
 
@@ -238,10 +206,8 @@
 				<!-- Logo START -->
 
 				<a class="navbar-brand" href="index.html">
-
 					<img class="light-mode-item navbar-brand-item" src="assets/images/Gfe Business.png" alt="logo"
 						style="height:55px;width:180px;">
-
 					<img class="dark-mode-item navbar-brand-item" src="assets/images/Gfe Business.png" alt="logo"
 						style="height:55px;width:180px;">
 				</a>
@@ -253,17 +219,11 @@
 				<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
 					data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
 					aria-label="Toggle navigation">
-
 					<span class="navbar-toggler-animation">
-
 						<span></span>
-
 						<span></span>
-
 						<span></span>
-
 					</span>
-
 				</button>
 
 				<!-- Main navbar START -->
@@ -325,9 +285,7 @@
 								<li> <a class="dropdown-item" id="mBtn" data-bs-toggle="modal" data-bs-target="#ronak"
 										data-whatever="@mdo" href="#">Genuine International Buyers-Sellers
 										Data</a></li>
-
 							</ul>
-
 						</li>
 
 						<li class="nav-item dropdown">
@@ -340,14 +298,9 @@
 								<li> <a class="dropdown-item" href="https://www.indiantradeportal.in/"
 										target="_blank">HSN Code
 										Search</a></li>
-
 								<li> <a class="dropdown-item" href="https://www.xe.com/currencyconverter/"
 										target="_blank">Currency
 										Converter</a></li>
-
-								<!-- <li> <a class="dropdown-item" href="countryviceproduct.html">Country vice Product
-										Demand</a></li> -->
-
 							</ul>
 
 						</li>
@@ -402,9 +355,7 @@
 					<a class="avatar avatar-sm p-0" href="#" id="profileDropdown" role="button"
 						data-bs-auto-close="outside" data-bs-display="static" data-bs-toggle="dropdown"
 						aria-expanded="false">
-
 						<img class="avatar-img rounded-circle" src="assets/images/avatar/01.jpg" alt="avatar">
-
 					</a>
 
 					<ul class="dropdown-menu dropdown-animation dropdown-menu-end shadow pt-3"
@@ -426,11 +377,8 @@
 								</div>
 
 								<div>
-
 									<a class="h6" href="#">Lori Ferguson</a>
-
 									<p class="small m-0">example@gmail.com</p>
-
 								</div>
 
 							</div>
@@ -445,15 +393,12 @@
 
 						<li><a class="dropdown-item" href="#"><i class="bi bi-person fa-fw me-2"></i>Edit Profile</a>
 						</li>
-
 						<li><a class="dropdown-item" href="#"><i class="bi bi-gear fa-fw me-2"></i>Account Settings</a>
 						</li>
-
 						<li><a class="dropdown-item" href="#"><i class="bi bi-info-circle fa-fw me-2"></i>Help</a></li>
 
 						<li><a class="dropdown-item bg-danger-soft-hover" href="#"><i
 									class="bi bi-power fa-fw me-2"></i>Sign Out</a></li>
-
 						<li>
 							<hr class="dropdown-divider">
 						</li>
@@ -461,72 +406,44 @@
 						<!-- Dark mode options START -->
 
 						<li>
-
 							<div
 								class="bg-light dark-mode-switch theme-icon-active d-flex align-items-center p-1 rounded mt-2">
-
 								<button type="button" class="btn btn-sm mb-0" data-bs-theme-value="light">
-
 									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
 										class="bi bi-sun fa-fw mode-switch" viewBox="0 0 16 16">
-
 										<path
 											d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
-
 										<use href="#"></use>
-
 									</svg> Light
-
 								</button>
 
 								<button type="button" class="btn btn-sm mb-0" data-bs-theme-value="dark">
-
 									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
 										class="bi bi-moon-stars fa-fw mode-switch" viewBox="0 0 16 16">
-
 										<path
 											d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z" />
-
 										<path
 											d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
-
 										<use href="#"></use>
-
 									</svg> Dark
-
 								</button>
 
 								<button type="button" class="btn btn-sm mb-0 active" data-bs-theme-value="auto">
-
 									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
 										class="bi bi-circle-half fa-fw mode-switch" viewBox="0 0 16 16">
-
 										<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
-
 										<use href="#"></use>
-
 									</svg> Auto
-
 								</button>
-
 							</div>
-
 						</li>
-
 						<!-- Dark mode options END-->
-
 					</ul>
-
 				</div>
-
 				<!-- Profile START -->
-
 			</div>
-
 		</nav>
-
 		<!-- Logo Nav END -->
-
 	</header>
 
 	<!-- Header END -->
@@ -800,63 +717,63 @@
 
 						<!-- List -->
 
-						<ul class="list-group list-group-borderless mt-0">
+						<ul class="list-group list-group-borderless mt-0 ">
 
-							<li class="list-group-item d-flex">
+							<li class="list-group-item d-flex text-black">
 
-								<i class="bi bi-patch-check-fill text-success me-2"></i>IEC License
+								<i class="bi bi-patch-check-fill text-success me-2 "></i>IEC License
 
 							</li>
 
-							<li class="list-group-item d-flex">
+							<li class="list-group-item d-flex text-black">
 
 								<i class="bi bi-patch-check-fill text-success me-2"></i>Ad Code Format
 
 							</li>
 
-							<li class="list-group-item d-flex">
+							<li class="list-group-item d-flex text-black">
 
 								<i class="bi bi-patch-check-fill text-success me-2"></i>Trade Portal_3
 
 							</li>
 
-							<li class="list-group-item d-flex">
+							<li class="list-group-item d-flex text-black">
 
 								<i class="bi bi-patch-check-fill text-success me-2"></i>Website
 
 							</li>
 
-							<li class="list-group-item d-flex">
+							<li class="list-group-item d-flex text-black">
 
 								<i class="bi bi-patch-check-fill text-success me-2"></i>Product Analysis Report
 
 							</li>
 
-							<li class="list-group-item d-flex">
+							<li class="list-group-item d-flex text-black">
 
 								<i class="bi bi-patch-check-fill text-success me-2"></i>Market Analysis Report
 
 							</li>
 
-							<li class="list-group-item d-flex">
+							<li class="list-group-item d-flex text-black">
 
 								<i class="bi bi-patch-check-fill text-success me-2"></i>Potential Buyer List/Data
 
 							</li>
 
-							<li class="list-group-item d-flex">
+							<li class="list-group-item d-flex text-black">
 
 								<i class="bi bi-patch-check-fill text-success me-2"></i>CHA Assistance
 
 							</li>
 
-							<li class="list-group-item d-flex">
+							<li class="list-group-item d-flex text-black">
 
 								<i class="bi bi-patch-check-fill text-success me-2"></i>A-Z guidance
 
 							</li>
 
-							<li class="list-group-item d-flex">
+							<li class="list-group-item d-flex text-black">
 
 								<i class="bi bi-patch-check-fill text-success me-2"></i>Social Media (Top 5)
 								<br />
@@ -871,20 +788,20 @@
 								- LinkedIn
 							</li>
 
-							<li class="list-group-item d-flex">
+							<li class="list-group-item d-flex text-black">
 
 								<i class="bi bi-patch-check-fill text-success me-2"></i>Business Communication Formats
 
 							</li>
 
-							<li class="list-group-item d-flex">
+							<li class="list-group-item d-flex text-black">
 
 								<i class="bi bi-patch-check-fill text-success me-2"></i>Soft Copy Material for
 								Self-Learning
 
 							</li>
 
-							<li class="list-group-item d-flex">
+							<li class="list-group-item d-flex text-black">
 
 								<i class="bi bi-patch-check-fill text-success me-2"></i>Lifetime Support
 
@@ -898,9 +815,7 @@
 					<!-- Right side START -->
 
 					<div class="col-lg-6 position-relative">
-
 						<!-- Image -->
-
 						<img src="assets/images/about/24.jpg" class="rounded-2" alt="">
 					</div>
 				</div>
@@ -924,7 +839,7 @@
 
 					<!--Right side	-->
 
-					<div class="col-lg-6 position-relative">
+					<div class="col-lg-6 position-relative text-black">
 
 						<!-- Title -->
 
@@ -938,35 +853,35 @@
 
 						<ul class="list-group list-group-borderless mt-0">
 
-							<li class="list-group-item d-flex">
+							<li class="list-group-item d-flex text-black">
 
 								<i class="bi bi-patch-check-fill text-success me-2"></i>Specific Allotted department for
 								setting up your own business.
 
 							</li>
 
-							<li class="list-group-item d-flex">
+							<li class="list-group-item d-flex text-black">
 
 								<i class="bi bi-patch-check-fill text-success me-2"></i>Every Wednesday a special Expert
 								zone will be there to guide you for shipment.
 
 							</li>
 
-							<li class="list-group-item d-flex">
+							<li class="list-group-item d-flex text-black">
 
 								<i class="bi bi-patch-check-fill text-success me-2"></i>Potential Buyer and
 								communication format will be provided so that you can crack the deal as soon as
 								possible.
 							</li>
 
-							<li class="list-group-item d-flex">
+							<li class="list-group-item d-flex text-black">
 
 								<i class="bi bi-patch-check-fill text-success me-2"></i>You can use our supplier and CHA
 								networking.
 
 							</li>
 
-							<li class="list-group-item d-flex">
+							<li class="list-group-item d-flex text-black">
 
 								<i class="bi bi-patch-check-fill text-success me-2"></i>Practical trade opportunities
 								will also be given.
@@ -987,7 +902,7 @@
 
 		<section class="py-0 py-xl-5">
 
-			<div class="container" align="center">
+			<div class="container  text-black" align="center">
 
 				<h4 class="h4 mb-4">Empowering Entrepreneurs Globally</h4>
 
@@ -1130,11 +1045,7 @@
 				<div class="row mb-4">
 
 					<div class="col-lg-8 mx-auto text-center">
-
 						<h2>Amazing Reviews</h2>
-
-						<!-- <p class="mb-0">Perceived end knowledge certainly day sweetness why cordially</p> -->
-
 					</div>
 
 				</div>
@@ -1142,7 +1053,11 @@
 				<!-- Feedback START -->
 
 				<div class="row">
-
+					<style>
+						.m-y {
+							padding: 4px 0;
+						}
+					</style>
 					<!-- Slider START -->
 
 					<div class="tiny-slider arrow-round arrow-creative arrow-dark arrow-hover">
@@ -1159,10 +1074,8 @@
 									<!-- Avatar -->
 
 									<div class="avatar avatar-lg mb-3">
-
 										<img class="avatar-img rounded-circle" src="assets/images/pages/3.png"
 											alt="avatar">
-
 									</div>
 
 									<!-- Title -->
@@ -1171,8 +1084,7 @@
 
 									<!-- Content -->
 
-									<blockquote class="mt-1">
-
+									<blockquote class="mt-1 text-black">
 										<p>
 											<span class="me-1 small"><i class="fas fa-quote-left"></i></span>
 											I had an excellent experience with GFE group. Took GSP Plan service , All
@@ -1181,7 +1093,6 @@
 											staff are lovely
 											<span class="ms-1 small"><i class="fas fa-quote-right"></i></span>
 										</p>
-
 									</blockquote>
 
 								</div>
@@ -1197,10 +1108,8 @@
 									<!-- Avatar -->
 
 									<div class="avatar avatar-lg mb-3">
-
 										<img class="avatar-img rounded-circle" src="assets/images/pages/4.png"
 											alt="avatar">
-
 									</div>
 
 									<!-- Title -->
@@ -1209,18 +1118,13 @@
 
 									<!-- Content -->
 
-									<blockquote class="mt-1">
-
+									<blockquote class="mt-1 m-y text-black">
 										<p>
-
 											<span class="me-1 small"><i class="fas fa-quote-left"></i></span>
-
 											The training the faculties imparting are really helpful with detail coverage
 											on each subject......I am getting real idea on EXIM after attending their
 											session.... Simply Great GFE...
-
 											<span class="ms-1 small"><i class="fas fa-quote-right"></i></span>
-
 										</p>
 
 									</blockquote>
@@ -1238,10 +1142,8 @@
 									<!-- Avatar -->
 
 									<div class="avatar avatar-lg mb-3">
-
 										<img class="avatar-img rounded-circle" src="assets/images/pages/P 1.jpg"
 											alt="avatar">
-
 									</div>
 
 									<!-- Title -->
@@ -1250,18 +1152,14 @@
 
 									<!-- Content -->
 
-									<blockquote class="mt-1">
+									<blockquote class="mt-1 text-black">
 
 										<p>
-
 											<span class="me-1 small"><i class="fas fa-quote-left"></i></span>
-
 											It's really wonderful telling that problem solving part by GFE is awesome
 											... GFE staff is well equipped with both theoretical and practical solutions
 											relating to Import/Export and once again thanks for supporting..
-
 											<span class="ms-1 small"><i class="fas fa-quote-right"></i></span>
-
 										</p>
 
 									</blockquote>
@@ -1279,10 +1177,8 @@
 									<!-- Avatar -->
 
 									<div class="avatar avatar-lg mb-3">
-
 										<img class="avatar-img rounded-circle" src="assets/images/pages/2.png"
 											alt="avatar">
-
 									</div>
 
 									<!-- Title -->
@@ -1291,19 +1187,15 @@
 
 									<!-- Content -->
 
-									<blockquote class="mt-1">
+									<blockquote class="mt-1 text-black">
 
 										<p>
-
 											<span class="me-1 small"><i class="fas fa-quote-left"></i></span>
-
 											attended all sessions, All sessions are helpful to do business at
 											international level . All gfe staff members are cooperative and thanks to
 											all staff member who give directly or indirectly support in business set
 											up and guidence.
-
 											<span class="ms-1 small"><i class="fas fa-quote-right"></i></span>
-
 										</p>
 
 									</blockquote>
@@ -1319,10 +1211,8 @@
 									<!-- Avatar -->
 
 									<div class="avatar avatar-lg mb-3">
-
 										<img class="avatar-img rounded-circle" src="assets/images/pages/5.png"
 											alt="avatar">
-
 									</div>
 
 									<!-- Title -->
@@ -1331,7 +1221,7 @@
 
 									<!-- Content -->
 
-									<blockquote class="mt-1">
+									<blockquote class="mt-1 m-y text-black">
 
 										<p>
 											<span class="me-1 small"><i class="fas fa-quote-left"></i></span>
@@ -1354,10 +1244,8 @@
 									<!-- Avatar -->
 
 									<div class="avatar avatar-lg mb-3">
-
 										<img class="avatar-img rounded-circle" src="assets/images/pages/6.png"
 											alt="avatar">
-
 									</div>
 
 									<!-- Title -->
@@ -1366,36 +1254,24 @@
 
 									<!-- Content -->
 
-									<blockquote class="mt-1">
+									<blockquote class="mt-1 m-y text-black">
 
 										<p>
-
 											<span class="me-1 small"><i class="fas fa-quote-left"></i></span>
-
 											Shipping our first full container with the support of GFE team to Dubai. It
 											contains mixed variety of fruits and vegetables like Chili, Pomegranate,
 											Lemon, Red Pumpkin, Turmeric, etc.
-
 											<span class="ms-1 small"><i class="fas fa-quote-right"></i></span>
-
 										</p>
 
 									</blockquote>
-
 								</div>
-
 							</div>
-
 						</div>
-
 					</div>
-
 					<!-- Slider START -->
-
 				</div>
-
 				<!-- Feedback END -->
-
 			</div>
 
 		</section>
@@ -1508,27 +1384,17 @@
 									Quality Products
 
 								</li>
-
 								<li class="list-group-item d-flex text-white">
-
 									<i class="bi bi-patch-check-fill text-success me-2"></i>Ready Deals from UAE,
 									Bangladesh, Nepal, UK, USA and many other Countries
-
 								</li>
-
 							</ul>
-
 						</div>
-
 					</div>
-
 				</div> <!-- Row END -->
-
 			</div>
 
 		</section>
-
-
 		<!-- USPs end -->
 
 		<!-- Success start-->
@@ -1544,7 +1410,6 @@
 					<h2 class="mb-0">Entrepreneurs <span class="text-success">Success </span>Story</h2>
 
 				</div>
-
 				<div class="row">
 
 					<!-- Slider START -->
@@ -1631,34 +1496,21 @@
 									<!-- Overlay -->
 
 									<div class="position-absolute top-50 start-50 translate-middle">
-
 										<!-- Video link -->
-
 										<a href="https://youtube.com/shorts/1hinlUm2kNA?si=T5hOGkGS5p11egVQ"
 											class="btn text-danger btn-round btn-white-shadow btn-lg mb-0"
 											data-glightbox data-gallery="video-tour" target="_blank" rel="noopener">
 
 											<i class="fas fa-play"></i>
-
 										</a>
-
 									</div>
-
-
 								</div>
-
 							</div>
-
 							<!-- Card item END -->
-
 						</div>
-
 					</div>
-
 					<!-- Slider END -->
-
 				</div>
-
 			</div>
 
 		</section>
@@ -1682,23 +1534,19 @@
 
 						<!-- List -->
 
-						<ul class="list-inline vstack gap-4 flex-wrap mb-4">
+						<ul class="list-inline vstack gap-4 flex-wrap mb-4 text-black">
 
 							<!-- Item -->
 
-							<li class="list-inline-item d-sm-flex">
+							<li class="list-inline-item d-sm-flex ">
 
 								<div class="ms-0 ms-sm-3 mt-2 mt-sm-0">
 
 									<h5 class="mb-0">Unveiling Your Dream Business:</h5>
-
 									<br />
-
 									<p class="mb-0"><strong>1. Evergreen & Global: </strong>Tap into a resilient
 										business opportunity operating in 190+ countries.</p>
-
 									<br />
-
 									<p class="mb-0"><strong>2. Pandemic-Proof:</strong>Stay unaffected by market
 										fluctuations and thrive even during challenging times.</p>
 
@@ -1711,14 +1559,10 @@
 								<div class="ms-0 ms-sm-3 mt-2 mt-sm-0">
 
 									<h5 class="mb-0">Low Investment, High Reward:</h5>
-
 									<br />
-
 									<p class="mb-0"><strong>1. Start Smart:</strong> Minimize your initial investment
 										and maximize your earning potential.</p>
-
 									<br />
-
 									<p class="mb-0"><strong>2. Lucrative Margins:</strong> Enjoy superior profit margins
 										compared to other industries.</p>
 
@@ -1731,14 +1575,10 @@
 								<div class="ms-0 ms-sm-3 mt-2 mt-sm-0">
 
 									<h5 class="mb-0">Flexible & Scalable:</h5>
-
 									<br />
-
 									<p class="mb-0"><strong>1. Consultancy Option:</strong> Choose to be a consultant or
 										build your own export empire.</p>
-
 									<br />
-
 									<p class="mb-0"><strong>2. Minimal Operations:</strong> Manage your business
 										efficiently with minimal operational costs.</p>
 
@@ -1751,9 +1591,7 @@
 								<div class="ms-0 ms-sm-3 mt-2 mt-sm-0">
 
 									<h5 class="mb-0">Earning Potential Unlocked:</h5>
-
 									<br />
-
 									<p class="mb-0"><strong>1. Life-Changing Income:</strong> Achieve financial freedom
 										with earnings ranging from 25k PM to 5 Lakhs PM.</p>
 
@@ -1764,38 +1602,25 @@
 							<li class="list-inline-item d-sm-flex">
 
 								<div class="ms-0 ms-sm-3 mt-2 mt-sm-0">
-
 									<h5 class="mb-0">Expert-Driven Success:</h5>
-
 									<br />
-
 									<p class="mb-0"><strong>1. Adani Advantage:</strong> Learn from the proven
 										strategies of the Adani Exports team.</p>
-
 								</div>
 
 							</li>
 
 							<li class="list-inline-item d-sm-flex">
-
 								<div class="ms-0 ms-sm-3 mt-2 mt-sm-0">
-
 									<h5 class="mb-0">Lifelong Support:</h5>
-
 									<br />
-
 									<p class="mb-0"><strong>1. Continuous Improvement:</strong> Benefit from free
 										lifetime upgrades to stay ahead of the curve.</p>
-
 									<br />
-
 									<p class="mb-0"><strong>2. Global Network Access:</strong> Gain exclusive access to
 										our extensive network of buyers and suppliers.</p>
-
 								</div>
-
 							</li>
-
 						</ul>
 					</div>
 
@@ -1830,7 +1655,7 @@
 					<div class="col-sm-6 col-md-4 col-xl-3">
 
 						<div
-							class="bg-primary bg-opacity-10 rounded-3 text-center p-3 position-relative btn-transition">
+							class="bg-primary bg-opacity-10 rounded-3 text-center p-3  text-black position-relative btn-transition">
 
 							<!-- Image -->
 
@@ -1855,7 +1680,7 @@
 					<div class="col-sm-6 col-md-4 col-xl-3">
 
 						<div
-							class="bg-primary bg-opacity-10 rounded-3 text-center p-3 position-relative btn-transition">
+							class="bg-primary bg-opacity-10 rounded-3 text-center p-3 text-black position-relative btn-transition">
 
 							<!-- Image -->
 
@@ -1880,7 +1705,7 @@
 					<div class="col-sm-6 col-md-4 col-xl-3">
 
 						<div
-							class="bg-primary bg-opacity-10 rounded-3 text-center p-3 position-relative btn-transition">
+							class="bg-primary bg-opacity-10 rounded-3 text-center p-3 text-black position-relative btn-transition">
 
 							<!-- Image -->
 
@@ -1905,28 +1730,21 @@
 					<div class="col-sm-6 col-md-4 col-xl-3">
 
 						<div
-							class="bg-primary bg-opacity-10 rounded-3 text-center p-3 position-relative btn-transition">
+							class="bg-primary bg-opacity-10 rounded-3 text-center p-3 text-black position-relative btn-transition">
 
 							<!-- Image -->
 
 							<div class="icon-xl bg-body mx-auto rounded-circle mb-3">
-
 								<img src="assets/images/element/coding.svg" alt="">
-
 							</div>
 
 							<!-- Title -->
 
 							<h5 class="mb-1"><a href="#" class="stretched-link">31000</a></h5>
-
 							<span class="mb-0">Followers</span>
-
 						</div>
-
 					</div>
-
 				</div>
-
 			</div>
 
 		</section>
@@ -1960,10 +1778,8 @@
 						<figure class="position-absolute top-0 start-0 translate-middle ms-8">
 
 							<svg style="enable-background:new 0 0 141.7 143.9;">
-
 								<path class="fill-success"
 									d="M137.7,53.1c9.6,29.3,1.8,64.7-20.2,80.7s-58.1,12.6-83.5-5.8C8.6,109.5-6.1,76.1,2.4,48.7 C10.8,21.1,42.2-0.7,71.5,0S128.1,23.8,137.7,53.1z" />
-
 							</svg>
 
 						</figure>
@@ -1977,7 +1793,6 @@
 								<path stroke="#F99D2B" fill="none" stroke-width="13"
 									d="M286.2,165.5c-9.8,74.9-78.8,128.9-153.9,120.4c-76-8.6-131.4-78.2-122.8-154.2C18.2,55.8,87.8,0.3,163.7,9">
 								</path>
-
 							</svg>
 
 						</figure>
@@ -1986,9 +1801,7 @@
 
 						<div class="accordion accordion-icon accordion-shadow mt-4 text-start position-relative"
 							id="accordionExample2">
-
 							<!-- Item -->
-
 							<div class="accordion-item mb-3">
 
 								<h6 class="accordion-header font-base" id="heading-1">
@@ -1996,25 +1809,18 @@
 									<button class="accordion-button fw-bold rounded collapsed pe-5" type="button"
 										data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true"
 										aria-controls="collapse-1">
-
 										Why to do Export Import Business?
-
 									</button>
-
 								</h6>
 
 								<!-- Body -->
 
 								<div id="collapse-1" class="accordion-collapse collapse show"
 									aria-labelledby="heading-1" data-bs-parent="#accordionExample2">
-
-									<div class="accordion-body mt-3">
-
+									<div class="accordion-body mt-3 text-black">
 										This is biggest and Best opportunity with less investment, global reach in 190+
 										Countries with Uniform System.
-
 									</div>
-
 								</div>
 
 							</div>
@@ -2024,29 +1830,21 @@
 							<div class="accordion-item mb-3">
 
 								<h6 class="accordion-header font-base" id="heading-2">
-
 									<button class="accordion-button fw-bold rounded collapsed pe-5" type="button"
 										data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false"
 										aria-controls="collapse-2">
-
 										Why come for Export Import with GFE?
-
 									</button>
-
 								</h6>
 
 								<!-- Body -->
 
 								<div id="collapse-2" class="accordion-collapse collapse" aria-labelledby="heading-2"
 									data-bs-parent="#accordionExample2">
-
-									<div class="accordion-body mt-3">
-
+									<div class="accordion-body mt-3 text-black">
 										GFE is world’s Biggest Business Support Platform with Best brains from Industry,
 										we have 15,000+ success stories, presence in 30+ Countries and 50+ Cities.
-
 									</div>
-
 								</div>
 
 							</div>
@@ -2056,29 +1854,21 @@
 							<div class="accordion-item mb-3">
 
 								<h6 class="accordion-header font-base" id="heading-3">
-
 									<button class="accordion-button fw-bold collapsed rounded pe-5" type="button"
 										data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="false"
 										aria-controls="collapse-3">
-
 										I already have documents, IEC, but got no orders?
-
 									</button>
-
 								</h6>
 
 								<!-- Body -->
 
 								<div id="collapse-3" class="accordion-collapse collapse" aria-labelledby="heading-3"
 									data-bs-parent="#accordionExample2">
-
-									<div class="accordion-body mt-3">
-
+									<div class="accordion-body mt-3 text-black">
 										We have big network and Ready Deals from UAE, Bangladesh, Nepal, UK, USA and
 										many other Countries.
-
 									</div>
-
 								</div>
 
 							</div>
@@ -2088,29 +1878,21 @@
 							<div class="accordion-item mb-3">
 
 								<h6 class="accordion-header font-base" id="heading-4">
-
 									<button class="accordion-button fw-bold collapsed rounded pe-5" type="button"
 										data-bs-toggle="collapse" data-bs-target="#collapse-4" aria-expanded="false"
 										aria-controls="collapse-4">
-
 										I have very less investment?
-
 									</button>
-
 								</h6>
 
 								<!-- Body -->
 
 								<div id="collapse-4" class="accordion-collapse collapse" aria-labelledby="heading-4"
 									data-bs-parent="#accordionExample2">
-
-									<div class="accordion-body mt-3">
-
+									<div class="accordion-body mt-3 text-black">
 										<p>This is a low investment Business model which you can scale up later
 											gradually.</p>
-
 									</div>
-
 								</div>
 
 							</div>
@@ -2120,30 +1902,22 @@
 							<div class="accordion-item mb-3">
 
 								<h6 class="accordion-header font-base" id="heading-5">
-
 									<button class="accordion-button fw-bold collapsed rounded pe-5" type="button"
 										data-bs-toggle="collapse" data-bs-target="#collapse-5" aria-expanded="false"
 										aria-controls="collapse-5">
-
 										How will I get support?
-
 									</button>
-
 								</h6>
 
 								<!-- Body -->
 
 								<div id="collapse-5" class="accordion-collapse collapse" aria-labelledby="heading-5"
 									data-bs-parent="#accordionExample2">
-
-									<div class="accordion-body mt-3">
-
+									<div class="accordion-body mt-3 text-black">
 										One to one support by team, Helpline IVR, GFE Biz Application, weekly Growth &
 										Training sessions for any query, doubts , knowledge upgrade ( No other Company
 										in world have this kind of support system).
-
 									</div>
-
 								</div>
 
 							</div>
@@ -2153,28 +1927,20 @@
 							<div class="accordion-item mb-3">
 
 								<h6 class="accordion-header font-base" id="heading-6">
-
 									<button class="accordion-button fw-bold collapsed rounded pe-5" type="button"
 										data-bs-toggle="collapse" data-bs-target="#collapse-6" aria-expanded="false"
 										aria-controls="collapse-6">
-
 										How to Enroll?
-
 									</button>
-
 								</h6>
 
 								<!-- Body -->
 
 								<div id="collapse-6" class="accordion-collapse collapse" aria-labelledby="heading-6"
 									data-bs-parent="#accordionExample2">
-
-									<div class="accordion-body mt-3">
-
+									<div class="accordion-body mt-3 text-black">
 										you may apply on this page – our team contact you for profiling and enroll!
-
 									</div>
-
 								</div>
 
 							</div>
@@ -2182,43 +1948,28 @@
 							<!-- Item -->
 
 							<div class="accordion-item mb-3">
-
 								<h6 class="accordion-header font-base" id="heading-7">
-
 									<button class="accordion-button fw-bold rounded collapsed pe-5" type="button"
 										data-bs-toggle="collapse" data-bs-target="#collapse-7" aria-expanded="false"
 										aria-controls="collapse-7">
-
 										Why come for Export Import with GFE?
-
 									</button>
-
 								</h6>
 
 								<!-- Body -->
 
 								<div id="collapse-7" class="accordion-collapse collapse" aria-labelledby="heading-7"
 									data-bs-parent="#accordionExample2">
-
-									<div class="accordion-body mt-3">
-
+									<div class="accordion-body mt-3 text-black">
 										GFE is world’s Biggest Business Support Platform with Best brains from Industry,
 										we have 15,000+ success stories, presence in 30+ Countries and 50+ Cities.
-
 									</div>
-
 								</div>
-
 							</div>
-
 						</div>
-
 						<!-- FAQ END -->
-
 					</div>
-
 				</div>
-
 			</div>
 
 		</section>
@@ -2228,52 +1979,35 @@
 		<!--Contact form start-->
 
 		<section id="contact-form" class="position-relative overflow-hidden pt-0 pt-md-5">
-
 			<div class="container">
-
 				<!-- Contact form START -->
-
 				<div class="row position-relative z-index-6">
-
 					<div class="col-12 col-md-6  mx-auto">
-
 						<div class="card card-body shadow p-4 position-relative bg-primary">
-
 							<h4 style="padding-bottom:10px;color:white">Register Now</h4>
-
 							<form class="row g-3 position-relative bg-primary">
 
 								<!-- Name -->
 
 								<div class="col-12">
-
 									<label class="form-label text-white">Name *</label>
-
 									<input type="text" class="form-control" aria-label="Name"
 										placeholder="Enter your Name">
-
 								</div>
 
 								<!-- Phone number -->
 
 								<div class="col-12">
-
 									<label class="form-label text-white">Phone number *</label>
-
 									<input type="text" class="form-control" placeholder="number">
-
 								</div>
 
 								<!-- Email -->
 
 								<div class="col-12">
-
 									<label class="form-label text-white">Email *</label>
-
 									<input type="email" class="form-control" placeholder="email">
-
 								</div>
-
 								<div class="col-12 col-md-6">
 									<label for="state" class="form-label text-white">State *</label>
 									<input type="text" class="form-control" name="State" value="" list="state"
@@ -2290,7 +2024,6 @@
 									<label for="city" class="form-label text-white">City *</label>
 									<input type="text" class="form-control" name="City" value="" list="city"
 										placeholder="City" required>
-									<!-- <input id="color" list="suggestions"> -->
 									<datalist id="city">
 										<option value="Patan">
 										<option value="Ahmedabad">
@@ -2299,37 +2032,26 @@
 										<option value="Chennai">
 									</datalist>
 								</div>
-
 								<div class="col-12">
 
 									<button type="submit" class="btn btn-success mb-0">Send Inquiry</button>
 
 								</div>
-
 							</form>
-
 							<!-- Form END -->
-
 						</div>
-
 					</div>
-
 					<!-- Contact form END -->
-
 				</div>
-
 			</div>
-
 		</section>
-
 		<!-- Contact form END -->
-
 	</main>
 
 	<!-- **************** MAIN CONTENT END **************** -->
 
-
-	<div class="rounded-social-buttons d-block d-sm-none fixed-bottom bg-blur border border-opacity-10 border-black ">
+	<div
+		class="rounded-social-buttons d-block d-sm-none fixed-bottom bg-blur border border-opacity-10 border-black pt-1">
 		<a class="social-button facebook rounded-circle" href="#" target="_blank" rel="noopener"><i
 				class="fa-solid fa-phone-volume"></i></a>
 		<a class="social-button twitter rounded-circle" href="#" target="_blank" rel="noopener"><i
@@ -2341,63 +2063,52 @@
 			data-bs-target="#exampleModal" data-whatever="@mdo"><i class="fa-solid fa-file-signature"></i></a>
 	</div>
 
-
 	<!-- Footer START -->
 
 	<footer class="pt-5 bg-body-secondary">
-
 		<div class="container pb-3">
-
 			<!-- Row START -->
-
 			<div class="row g-4 justify-content-between align-items-center text-center">
-
 				<!-- Widget 1 START -->
-
 				<div class="col-lg-3">
-
 					<!-- logo -->
-
 					<a class="me-0" href="index.html">
-
 						<img class="light-mode-item navbar-brand-item" src="assets/images/gfe.png" alt="logo"
 							style="height:65px;width:257px;">
 
 						<img class="dark-mode-item navbar-brand-item" src="assets/images/gfe.png" alt="logo"
 							style="height:65px;width:257px;">
-
 					</a>
-
 					<br />
-
-					<p class="fs-5 my-3">
+					<p class="fs-5 my-3 text-black">
 						Let your Business dreams come true with World’s Fastest growing & India’s Biggest Unique
 						Organization.</p>
 
 					<!-- Social media icon -->
 
 					<ul class="list-inline mb-0 mt-3 d-flex justify-content-center gap-3">
-
 						<li class="list-inline-item"> <a href="https://twitter.com/gfebusiness" target="_blank"
 								rel="noopener"><i
 									class="fa-brands fa-twitter fs-5 bg-light-subtle twi-color p-2 rounded-circle"></i></a>
-						</li>
-						<li class="list-inline-item"> <a href="https://www.facebook.com/GFEbusiness" target="_blank"
-								rel="noopener"><i
-									class="fa-brands fa-facebook-f fs-5 bg-light-subtle face-color p-2 rounded-circle"></i></a>
 						</li>
 						<li class="list-inline-item"> <a href="https://www.instagram.com/gfe.business/" target="_blank"
 								rel="noopener"><i
 									class="fa-brands fa-instagram fs-5 bg-light-subtle insta-color p-2 rounded-circle"></i></a>
 						</li>
-						<li class="list-inline-item"> <a
-								href="https://www.linkedin.com/company/13249941/admin/feed/posts/" target="_blank"
+						<li class="list-inline-item"> <a href="https://www.facebook.com/GFEbusiness" target="_blank"
+								rel="noopener"><i
+									class="fa-brands fa-facebook-f fs-5 bg-light-subtle face-color p-2 rounded-circle"></i></a>
+						</li>
+						<li class="list-inline-item"> <a href="https://www.youtube.com/@gfebusiness" target="_blank"
 								rel="noopener"><i
 									class="fa-brands fa-youtube fs-5 bg-light-subtle Youtube-color p-2 rounded-circle"></i></a>
 						</li>
-
+						<li class="list-inline-item"> <a
+								href="https://www.linkedin.com/company/13249941/admin/feed/posts/" target="_blank"
+								rel="noopener"><i
+									class="fa-brands fa-linkedin fs-5 bg-light-subtle linkdin-color p-2 rounded-circle"></i></a>
+						</li>
 					</ul>
-
 				</div>
 
 				<!-- Widget 1 END -->
@@ -2405,28 +2116,17 @@
 				<!-- Widget 2 START -->
 
 				<div class="col-lg-3">
-
 					<div class="row gx-0 text-center">
-
 						<!-- Link block -->
-
 						<h5 class="mb-3 fs-4">Company</h5>
-
-						<ul class="nav flex-column p-0">
-
-							<li class="nav-item fs-5"><a class="nav-link" href="./career.html">Career</a></li>
-
+						<ul class="nav flex-column p-0 ">
+							<li class="nav-item fs-5 "><a class="nav-link" href="./career.html">Career</a></li>
 							<li class="nav-item fs-5"><a class="nav-link" href="./about.html">About us</a></li>
-
 							<li class="nav-item fs-5"><a class="nav-link" href="./contact-us.html">Contact us</a></li>
-
 							<li class="nav-item fs-5"><a class="nav-link"
 									href="https://www.gfebusiness.org/blog/">Blogs</a></li>
-
 						</ul>
-
 					</div>
-
 				</div>
 
 				<!-- Widget 2 END -->
@@ -2434,109 +2134,61 @@
 				<!-- Widget 3 START -->
 
 				<div class="col-lg-3">
-
 					<h5 class="mb-2 mb-md-4 fs-4">Contact</h5>
-
 					<!-- Time -->
-
-					<p class="mb-2  fs-5">
-
-						Boardline No.: <a href="#"><span class="h6 fw-light ms-2">+91 9211066888</span></a>
-
+					<p class="mb-2  fs-5 text-black">
+						Boardline No.: <a href="#"><span class="h6 fw-light ms-2 ">+91 9211066888</span></a>
 					</p>
-
-					<p class="mb-0 fs-5">Email:<span class="h6 fw-light ms-2 fs-5">info@gfebusiness.org</span></p>
-
+					<p class="mb-0 fs-5 text-black">Email: <a href="#"><span
+								class="h6 fw-light ms-2 fs-5">info@gfebusiness.org</span></a></p>
 					<div class="row g-2 mt-2">
-
 						<!-- Google play store button -->
-
 						<div class="col-6 col-sm-4 col-md-3 col-lg-6 mx-auto">
-
 							<a href="https://play.google.com/store/apps/details?id=crm.ani.com&pcampaignid=web_share">
 								<img src="assets/images/client/google-play.svg" alt=""> </a>
-
 						</div>
-
 					</div> <!-- Row END -->
-
 				</div>
-
-				<!-- Widget 3 END -->
-
 			</div><!-- Row END -->
-
 			<!-- Divider -->
-
 			<hr class="mt-4 mb-0">
-
 			<!-- Bottom footer -->
-
 			<div class="py-3">
-
 				<div class="container px-0">
-
 					<div class="d-lg-flex justify-content-between align-items-center py-3 text-center text-md-left">
-
 						<!-- copyright text -->
-
 						<div class="text-body text-primary-hover"> Copyrights 2024 <a href="#" target="_blank"
 								class="text-body">@ GFE Group</a></div>
-
 						<!-- copyright links-->
-
 						<div class="justify-content-center mt-3 mt-lg-0">
-
 							<ul class="nav list-inline justify-content-center mb-0">
-
 								<li class="list-inline-item">
-
 									<!-- Language selector -->
-
 									<div class="dropup mt-0 text-center text-sm-end">
-
 										<a class="dropdown-toggle nav-link" href="#" role="button" id="languageSwitcher"
 											data-bs-toggle="dropdown" aria-expanded="false">
-
 											<i class="fas fa-globe me-2"></i>Language
-
 										</a>
-
 										<ul class="dropdown-menu min-w-auto" aria-labelledby="languageSwitcher">
-
 											<li><a class="dropdown-item me-4" href="#"><img class="fa-fw me-2"
 														src="assets/images/flags/uk.svg" alt="">English</a></li>
-
 											<li><a class="dropdown-item me-4" href="#"><img class="fa-fw me-2"
 														src="assets/images/flags/gr.svg" alt="">German </a></li>
-
 											<li><a class="dropdown-item me-4" href="#"><img class="fa-fw me-2"
 														src="assets/images/flags/sp.svg" alt="">French</a></li>
-
 										</ul>
-
 									</div>
-
 								</li>
-
 								<li class="list-inline-item"><a class="nav-link" href="terms-conditions.html">Terms &
 										Conditions</a></li>
-
 								<li class="list-inline-item"><a class="nav-link pe-0"
 										href="terms-conditions.html">Privacy & policy</a></li>
-
 							</ul>
-
 						</div>
-
 					</div>
-
 				</div>
-
 			</div>
-
 		</div>
-
 	</footer>
 
 	<!-- Footer END -->
@@ -2629,7 +2281,6 @@
 						</div>
 					</form>
 				</div>
-
 			</div>
 		</div>
 	</div>
@@ -2767,7 +2418,6 @@
 	<style>
 		.gfe-color {
 			background: radial-gradient(circle at 20% 130%, #003f8cb5 0%, #005b8ca8 45%);
-			/* background: -webkit-radial-gradient( #73D81C 0%, #2786ED 5%, #01228D 45%, #E9FF8D 60%, #85B4B8 90%); */
 		}
 	</style>
 

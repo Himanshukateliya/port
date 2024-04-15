@@ -26357,7 +26357,7 @@ html[dir=rtl] .choices__input {
   /* line-height: 1rem; */
   /* border-radius: 1.6875rem; */
   transition: all 0.5s ease;
-  margin-right: 1.5rem;
+  margin-right: 2rem;
   /* margin: 0 auto; */
   margin-bottom: 0.25rem;
 }
@@ -27010,8 +27010,8 @@ html[dir=rtl] .choices__input {
 }
 
 .main-GFE {
-  background-color: #fbfff896;
-  /* background-color: #F6FFDE; */
+  /* background-color: #fbfff896; */
+  background-color: #F4FFF1;
 }
 
 
@@ -27023,36 +27023,68 @@ html[dir=rtl] .choices__input {
   right: -100px;
   position: absolute;
   background: green;
-  animation: truckMove 5s linear infinite;
+  animation: truckMove 6s linear infinite;
+  background: url('../images/Group\ 164.png') no-repeat;
+  background-size: cover;
+  padding: 0 100px;
+  height: 100px;
   /* Add animation */
 }
 
 .flight {
   transition: all ease;
-  width: 85px;
+  width: 90px;
   margin-right: -60px;
   bottom: -32px;
   right: -100px;
   position: absolute;
   /* background: green; */
   animation: flightTakeoff 4s linear infinite;
+  background: url('../images/Group_163-removebg-preview.png') no-repeat;
+  background-size: contain;
+  height: 100px;
   /* Add animation */
 }
 
-.truck {
+/* .ship {
+  transition: all ease;
+  width: 18%;
+  margin-right: -60px;
+  bottom: -10px;
+  right: -100px;
+  position: absolute;
+  animation: shipMove 8s linear infinite;
+  background: url('../images/ship.png') no-repeat;
+  background-size: contain;
+  height: 100px;
+} */
+
+/* .truck {
   background: url('../images/Group\ 164.png') no-repeat;
   background-size: cover;
   padding: 0 100px;
   height: 100px;
-}
+} */
 
-.flight {
+/* .flight {
   background: url('../images/Group_163-removebg-preview.png') no-repeat;
   background-size: contain;
   height: 100px;
-}
+} */
 
 @keyframes truckMove {
+  0% {
+    left: -100px;
+    /* Initial position */
+  }
+
+  100% {
+    left: calc(100% + 100px);
+    /* Move the truck to the right */
+  }
+}
+
+@keyframes shipMove {
   0% {
     left: -100px;
     /* Initial position */
@@ -27084,6 +27116,17 @@ html[dir=rtl] .choices__input {
     left: calc(100% + 100px);
   }
 }
+
+/* --------START Truck and flight Media Query--------- */
+
+@media only screen and (max-width: 600px) {
+  .truck {
+    background-size: contain;
+    padding: 33px 60px;
+  }
+}
+
+/* --------END Truck and flight Media Query--------- */
 
 
 .cont-hov:hover {
