@@ -26933,6 +26933,10 @@ html[dir=rtl] .choices__input {
     width: 30%;
     margin-bottom: 5px;
   }
+
+  .Heena {
+    padding: 8px 12px !important;
+  }
 }
 
 /* <button class="button-62" role="button">Button 62</button */
@@ -27023,7 +27027,7 @@ html[dir=rtl] .choices__input {
   right: -100px;
   position: absolute;
   background: green;
-  animation: truckMove 6s linear infinite;
+  animation: truckMove 7s linear infinite;
   background: url('../images/Group\ 164.png') no-repeat;
   background-size: cover;
   padding: 0 100px;
@@ -27039,7 +27043,7 @@ html[dir=rtl] .choices__input {
   right: -100px;
   position: absolute;
   /* background: green; */
-  animation: flightTakeoff 4s linear infinite;
+  animation: flightTakeoff 8s linear infinite;
   background: url('../images/Group_163-removebg-preview.png') no-repeat;
   background-size: contain;
   height: 100px;
@@ -27124,6 +27128,21 @@ html[dir=rtl] .choices__input {
     background-size: contain;
     padding: 33px 60px;
   }
+
+  /* ----------START Social icon Size--------- */
+  .Heena {
+    font-size: 20px !important;
+    padding: 8px 12px !important;
+  }
+
+  .Heena1 {
+    font-size: 20px !important;
+    padding: 8px 8px !important;
+  }
+
+  /* ----------END Social icon Size--------- */
+
+
 }
 
 /* --------END Truck and flight Media Query--------- */

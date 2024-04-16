@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Enquiry Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <form action="/submit_form" method="post">
+            <h2 class="text-center mb-4">Student Personal Details:</h2>
+            <div class="form-group">
+                <label for="fullname">Full Name:</label>
+                <input type="text" class="form-control" id="fullname" name="fullname" required>
+            </div>
+            <div class="form-group">
+                <label for="phonenumber">Phone Number:</label>
+                <input type="tel" class="form-control" id="phonenumber" name="phonenumber" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea class="form-control" id="address" name="address" required></textarea>
+            </div>
+
+            <h2 class="text-center mb-4">Academic Details:</h2>
+            <div class="form-group">
+                <label for="qualification">Qualification:</label>
+                <select class="form-control" id="qualification" name="qualification" required>
+                    <option value="">Select Qualification</option>
+                    <option value="SSC">SSC</option>
+                    <option value="HSC">HSC</option>
+                    <option value="Diploma">Diploma</option>
+                    <option value="PG Diploma">PG Diploma</option>
+                    <option value="Bachelor">Bachelor</option>
+                    <option value="Masters">Masters</option>
+                    <option value="PhD">PhD</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" class="form-control" id="dob" name="dob" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="parentcontactno">Parents Contact No:</label>
+                <input type="tel" class="form-control" id="parentcontactno" name="parentcontactno" required>
+            </div>
+
+            <h2 class="text-center mb-4">Steam:</h2>
+            <div class="form-group">
+                <label for="steam-year">Passing Year:</label>
+                <input type="number" class="form-control" id="steam-year" name="steam-year" required>
+            </div>
+            <div class="form-group">
+                <label for="steam-board">Board/university:</label>
+                <input type="text" class="form-control" id="steam-board" name="steam-board" required>
+            </div>
+            <div class="form-group">
+                <label for="steam-percentage">Percentage (%):</label>
+                <input type="number" class="form-control" id="steam-percentage" name="steam-percentage" required>
+            </div>
+            <div class="form-group">
+                <label for="backlogs">Backlogs:</label>
+                <input type="number" class="form-control" id="backlogs" name="backlogs" required>
+            </div>
+
+            <h2 class="text-center mb-4">Applying for:</h2>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="true" id="applying-diploma"
+                    name="applying-diploma">
+                <label class="form-check-label" for="applying-diploma">
+                    Diploma</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="true" id="applying-bachelor"
+                    name="applying-bachelor">
+                <label class="form-check-label" for="applying-bachelor">
+                    Bachelor
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="true" id="applying-masters"
+                    name="applying-masters">
+                <label class="form-check-label" for="applying-masters">
+                    Masters
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="true" id="applying-phd" name="applying-phd">
+                <label class="form-check-label" for="applying-phd">
+                    PhD
+                </label>
+            </div>
+
+            <h2 class="text-center mb-4">Institute Information:</h2>
+            <div class="form-group">
+                <label for="counselor-remarks">Counselor Remarks:</label>
+                <textarea class="form-control" id="counselor-remarks" name="counselor-remarks" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="bachelors-choice">Bachelors Choice:</label>
+                <input type="text" class="form-control" id="bachelors-choice" name="bachelors-choice" required>
+            </div>
+            <div class="form-group">
+                <label for="masters-choice">Masters Choice:</label>
+                <input type="text" class="form-control" id="masters-choice" name="masters-choice" required>
+            </div>
+            <div class="form-group">
+                <label for="phd-choice">PhD Choice:</label>
+                <input type="text" class="form-control" id="phd-choice" name="phd-choice" required>
+            </div>
+            <div class="form-group">
+                <label for="duration">Duration:</label>
+                <input type="text" class="form-control" id="duration" name="duration" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
