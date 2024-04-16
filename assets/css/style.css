@@ -27135,6 +27135,11 @@ html[dir=rtl] .choices__input {
     padding: 8px 12px !important;
   }
 
+  .close {
+    position: absolute !important;
+    left: 4% !important;
+  }
+
   .Heena1 {
     font-size: 20px !important;
     padding: 8px 8px !important;
