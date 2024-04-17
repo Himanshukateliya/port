@@ -1133,7 +1133,7 @@
 
 		<!-- Counter START -->
 
-		<section class="py-0 py-xl-5">
+		<section class="py-4 py-xl-5">
 
 			<div class="container">
 
@@ -1771,8 +1771,53 @@
 
 		</section>
 
+		<style>
+			.su-sa {
+				object-fit: contain;
+				width: 100%;
+				aspect-ratio: 3/2;
+			}
+		</style>
 		<!-- Daily price -->
+		<!-- <section class="py-4 py-xl-5">
 
+			<div class="container">
+
+				<div class="row text-center">
+					<div class="col">
+						<div class="counter">
+							<i class="fa fa-code fa-2x"></i>
+							<h2 class="timer count-title count-number" data-to="100" data-speed="1500"></h2>
+							<p class="count-text ">Our Customer</p>
+						</div>
+					</div>
+					<div class="col">
+						<div class="counter">
+							<i class="fa fa-coffee fa-2x"></i>
+							<h2 class="timer count-title count-number" data-to="1700" data-speed="1500"></h2>
+							<p class="count-text ">Happy Clients</p>
+						</div>
+					</div>
+					<div class="col">
+						<div class="counter">
+							<i class="fa fa-lightbulb-o fa-2x"></i>
+							<h2 class="timer count-title count-number" data-to="11900" data-speed="1500"></h2>
+							<p class="count-text ">Project Complete</p>
+						</div>
+					</div>
+					<div class="col">
+						<div class="counter">
+							<i class="fa fa-bug fa-2x"></i>
+							<h2 class="timer count-title count-number" data-to="157" data-speed="1500"></h2>
+							<p class="count-text ">Coffee With Clients</p>
+						</div>
+					</div>
+				</div>
+			</div> -->
+
+		<!-- </div> -->
+
+		<!-- </section> -->
 		<!--Trending courses START -->
 
 		<section class="pb-5 pt-0 pt-lg-5">
@@ -3563,9 +3608,11 @@
 	<div class="popup-overlay" id="popup" style="display: none;">
 		<div class="popup-content">
 			<!-- <h2>Welcome to our website!</h2> -->
-			<button class="close" onclick="closePopup()">&times;</button>
-			<img src="assets/images/popup.png" class="sm:w-100 " alt="">
+			<button class="close1 rounded-circle" onclick="closePopup()">&times;</button>
+			<a href="https://www.google.com/" target="_blank"><img src="assets/images/popup.png" class="sm:w-100 "
+					alt=""></a>
 			<!-- <p>This is a pop-up message that appears after 15 seconds.</p> -->
+			<!-- <a href="#" class="pop-register">Ragister now</a> -->
 		</div>
 	</div>
 
@@ -3585,6 +3632,7 @@
 		}
 
 		.popup-content {
+			background-color: rgba(248, 248, 233, 0.521);
 			padding: 20px;
 			margin: 0 auto;
 			border-radius: 8px;
@@ -3593,7 +3641,7 @@
 		}
 
 		/* The Close Button */
-		.close {
+		.close1 {
 			border: none;
 			position: absolute;
 			left: 27%;
@@ -3602,12 +3650,17 @@
 			font-weight: bold;
 		}
 
-		.close:hover,
-		.close:focus {
+		.close1:hover,
+		.close1:focus {
 			color: black;
 			text-decoration: none;
 			cursor: pointer;
 		}
+
+		/* .pop-register {
+			position: absolute;
+			bottom: 0;
+		} */
 	</style>
 
 	<script>

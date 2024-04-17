@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargo Details</title>
+    <!-- Add Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl7/1L_dstPt3HV5HzF6Gvk/e3s4Wz6iJgD/+ub2oU" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="my-4">Cargo Details</h1>
+        <form id="cargoForm">
+            <div class="row">
+                <div class="col">
+                    <fieldset class="border p-3">
+                        <legend class="float-none w-auto">Shipping Details</legend>
+                        <div class="form-group">
+                            <label for="transportationMethod">Transportation Method:</label>
+                            <input type="text" id="transportationMethod" value="Full Container Load (FCL)" readonly
+                                class="form-control" aria-readonly="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="containerCount">Container Count:</label>
+                            <input type="number" id="containerCount" value="1" min="1" readonly class="form-control"
+                                aria-readonly="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="containerType">Container Type:</label>
+                            <input type="text" id="containerType" value="20 Standard" readonly class="form-control"
+                                aria-readonly="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="origin">Origin:</label>
+                            <input type="text" id="origin" value="Warehouse" readonly class="form-control"
+                                aria-readonly="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="destination">Destination:</label>
+                            <select id="destination" class="form-control"></select>
+                        </div>
+                        <div class="form-group">
+                            <label for="additionalServices">Additional Services:</label>
+                            <ul id="additionalServices" class="list-unstyled"></ul>
+                        </div>
+                        <div class="form-group">
+                            <label for="cargoReadyDate">Cargo Ready Date:</label>
+                            <input type="date" id="cargoReadyDate" class="form-control">
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="col">
+                    <fieldset class="border p-3">
+                        <legend class="float-none w-auto">Product Details</legend>
+                        <div class="form-group">
+                            <label for="productDetails">Product Details:</label>
+                            <textarea id="productDetails" class="form-control"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="photosAndDocuments">Photos and Documents:</label>
+                            <ul id="photosAndDocuments" class="list-unstyled"></ul>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <fieldset class="border p-3">
+                        <legend class="float-none w-auto">Shipping Basis</legend>
+                        <div class="form-group">
+                            <label for="freightBasis">Freight Basis:</label>
+                            <input type="text" id="freightBasis" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="customsClearance">Customs Clearance:</label>
+                            <input type="text" id="customsClearance" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="hsCodes">HS Codes:</label>
+                            <input type="text" id="hsCodes" class="form-control">
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">Submit</button>
+        </form>
+    </div>
+    <!-- Add jQuery (required for Bootstrap Tooltips and Popovers) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl7/1L_dstPt3HV5HzF6Gvk/e3s4Wz6iJgD/+ub2oU"
+        crossorigin="anonymous"></script>
+    <!-- Add Bootstrap JS -->
+    </script>
+</body>
