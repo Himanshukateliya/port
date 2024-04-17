@@ -26492,8 +26492,8 @@ html[dir=rtl] .choices__input {
 }
 
 .product-card:hover img {
-  scale: 1.1;
-  transition: 0.3s;
+  transform: scale(1.1);
+  transition: all 0.4s ease-in-out;
 }
 
 .main-btn {
