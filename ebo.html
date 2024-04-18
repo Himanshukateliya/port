@@ -194,13 +194,13 @@
 
 	<!-- Header START -->
 
-	<header class="navbar-light navbar-sticky main-GFE">
+	<header class="navbar-light navbar-sticky header-static main-GFE">
 
-		<!-- Logo Nav START -->
+		<!-- Nav START -->
 
 		<nav class="navbar navbar-expand-xl">
 
-			<div class="container">
+			<div class="container-fluid px-3 px-xl-5">
 
 				<!-- Logo START -->
 
@@ -208,6 +208,7 @@
 
 					<img class="light-mode-item navbar-brand-item" src="assets/images/Gfe Business.png" alt="logo"
 						style="height:55px;width:180px;">
+
 					<img class="dark-mode-item navbar-brand-item" src="assets/images/Gfe Business.png" alt="logo"
 						style="height:55px;width:180px;">
 
@@ -217,7 +218,7 @@
 
 				<!-- Responsive navbar toggler -->
 
-				<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+				<button class="navbar-toggler ms-auto " type="button" data-bs-toggle="collapse"
 					data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
 					aria-label="Toggle navigation">
 
@@ -233,9 +234,75 @@
 
 				<!-- Main navbar START -->
 
-				<div class="navbar-collapse w-100 collapse ronni" id="navbarCollapse">
+				<div class="navbar-collapse collapse ronni row " id="navbarCollapse">
 
-					<ul class="navbar-nav navbar-nav-scroll me-auto">
+					<!-- Nav category menu START -->
+
+					<!-- <ul class="navbar-nav navbar-nav-scroll me-auto">
+
+
+						<li class="nav-item dropdown dropdown-menu-shadow-stacked">
+
+							<a class="nav-link bg-primary bg-opacity-10 rounded-3 text-primary px-3 py-3 py-xl-0"
+								href="#" id="categoryMenu" data-bs-toggle="dropdown" aria-haspopup="true"
+								aria-expanded="false"><i class="bi bi-ui-radios-grid me-2"></i><span>Category</span></a>
+
+							<ul class="dropdown-menu" aria-labelledby="categoryMenu">
+
+								<li class="dropdown-submenu dropend">
+
+									<a class="dropdown-item" href="#">Online Business University</a>
+
+									<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+
+										<li class="dropdown-submenu dropend">
+
+											<a class="dropdown-item" href="#">Export Import Training</a>
+
+										</li>
+
+										<li> <a class="dropdown-item" href="#">ECommerce Online Training</a> </li>
+
+										<li> <a class="dropdown-item" href="#">India’s Top 10 EXIM Products</a> </li>
+
+										<li> <a class="dropdown-item" href="#">Prepare Governments Documents</a> </li>
+
+									</ul>
+
+								</li>
+
+								<li class="dropdown-submenu dropend">
+
+									<a class="dropdown-item" href="#">International Buyers-Sellers Network</a>
+
+									<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+
+										<li class="dropdown-submenu dropend">
+
+											<a class="dropdown-item" href="#">Trade Activities</a>
+
+										</li>
+
+										<li> <a class="dropdown-item" href="#">Buy any Products</a> </li>
+
+										<li> <a class="dropdown-item" href="#">Become International Seller/Supplier</a>
+										</li>
+
+									</ul>
+
+								</li>
+
+							</ul>
+
+						</li>
+
+					</ul> -->
+
+					<!-- Nav category menu END -->
+
+					<!-- Nav Main menu START -->
+
+					<ul class="navbar-nav navbar-nav-scroll gap-3 justify-content-center">
 
 						<!-- Nav item 1 Demos -->
 
@@ -252,10 +319,11 @@
 								aria-expanded="false">About Us</a>
 
 						</li>
+
 						<li class="nav-item dropdown">
 
-							<a class="nav-link dropdown-toggle" href="gallery.html" id="demoMenu"
-								data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gallery</a>
+							<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="gallery.html"
+								id="demoMenu" aria-haspopup="true" aria-expanded="false">Gallery</a>
 
 							<ul class="dropdown-menu" aria-labelledby="demoMenu">
 
@@ -268,7 +336,6 @@
 								<li> <a class="dropdown-item " href="awards.html">Awards</a></li>
 
 								<li> <a class="dropdown-item " href="media.html">Media Coverage</a></li>
-								<li> <a class="dropdown-item " href="serviceproduct.html">Services</a></li>
 
 							</ul>
 
@@ -276,33 +343,41 @@
 
 						<li class="nav-item dropdown">
 
-							<a class="nav-link dropdown-toggle" href="download.html" id="demoMenu"
-								data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Download</a>
+							<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="download.html"
+								id="demoMenu" aria-haspopup="true" aria-expanded="false">Download</a>
 
 							<ul class="dropdown-menu" aria-labelledby="demoMenu">
-
 								<li> <a class="dropdown-item" id="mbtn" data-bs-toggle="modal" data-bs-target="#boby"
 										data-whatever="@mdo" href="#">Product Research Report</a></li>
 
-								<li> <a class="dropdown-item" href="#" id="mBtn" data-bs-toggle="modal"
-										data-bs-target="#ronak" data-whatever="@mdo" href="#">Genuine International
-										Buyers-Sellers Data</a></li>
+								<li> <a class="dropdown-item" id="mBtn" data-bs-toggle="modal" data-bs-target="#ronak"
+										data-whatever="@mdo" href="#">Genuine International Buyers-Sellers Data</a></li>
+
 							</ul>
 
 						</li>
 
 						<li class="nav-item dropdown">
 
-							<a class="nav-link dropdown-toggle" href="resources.html" id="demoMenu"
-								data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources</a>
+							<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="resources.html"
+								id="demoMenu" aria-haspopup="true" aria-expanded="false">Resources</a>
 
 							<ul class="dropdown-menu" aria-labelledby="demoMenu">
 
-								<li> <a class="dropdown-item" href="https://www.indiantradeportal.in/" target="_blank"
-										rel="noopener">HSN Code Search</a></li>
+								<li> <a class="dropdown-item" href="https://www.indiantradeportal.in/"
+										target="_blank">HSN Code
+										Search</a></li>
 
 								<li> <a class="dropdown-item" href="https://www.xe.com/currencyconverter/"
-										target="_blank" rel="noopener">Currency Converter</a></li>
+										target="_blank">Currency
+										Converter</a></li>
+
+								<li> <a class="dropdown-item" target="_blank"
+										href="https://www.searates.com/shipping/request?utm_source=google&utm_medium=cpc&utm_campaign=17499343658&utm_content=142980297292&utm_term=freight%20calculator&gad_source=1&gclid=CjwKCAjw5v2wBhBrEiwAXDDoJU_Pim9FfTNBF0az3bh9ZV8KRj1PosCr5fYmnDEyrt1ukw5-V0vNYBoCvT8QAvD_BwE">Freight
+										Calculator</a></li>
+
+								<li> <a class="dropdown-item" href="serviceproduct.html">Services</a></li>
+								<!-- <li> <a class="dropdown-item" href="countryviceproduct.html">Country vice Product Demand</a></li> -->
 
 							</ul>
 
@@ -321,36 +396,37 @@
 								aria-expanded="false">Contact Us</a>
 
 						</li>
-					</ul>
 
-					<!-- Nav Search START -->
+						<!-- Nav Main menu END -->
 
-					<div class="nav my-3 my-xl-0 px-4 flex-nowrap align-items-center">
-
-						<div class="nav-item w-100">
-
-							<form class="position-relative">
-
-								<input class="form-control pe-5 bg-transparent" type="search" placeholder="Search"
-									aria-label="Search">
-
-								<button
-									class="bg-transparent p-2 position-absolute top-50 end-0 translate-middle-y border-0 text-primary-hover text-reset"
-									type="submit">
-
-									<i class="fas fa-search fs-6 "></i>
-
-								</button>
-
-							</form>
-
-						</div>
-
-					</div>
-
-					<!-- Nav Search END -->
-
+						<!-- Nav Search START -->
 				</div>
+
+				<!-- --------START Live Trade Button------------- -->
+				<div class="nav my-3 my-xl-0 px-4 flex-nowrap align-items-center">
+
+					<div class="nav-item w-100 ">
+
+						<a href="https://www.google.com/maps/place/GFE+Business+Services+Pvt.+Ltd.+%7C+Import+Export+Course+%26+Setup+in+Ahmedabad,+Gujarat/@23.0214483,72.5553116,15z/data=!4m8!3m7!1s0x395e849102e1c673:0x62a43c9f85aeadbf!8m2!3d23.0214483!4d72.5553116!9m1!1b1!16s%2Fg%2F1pv5wjtbn?hl=en-GB&entry=ttu"
+							target="_blank" class="btn btn-primary mb-0" rel="noopener"><span class="blink">Live
+								Trade</span></a>
+						<!-- <form class="position-relative">
+
+									<input class="form-control pe-5 bg-transparent" type="search" placeholder="Search"
+										aria-label="Search">
+
+									<button
+										class="bg-transparent p-2 position-absolute top-50 end-0 translate-middle-y border-0 text-primary-hover text-reset"
+										aria-label="submit" type="submit">
+
+										<i class="fas fa-search fs-6 "></i>
+
+									</button>
+
+								</form> -->
+					</div>
+				</div>
+				<!-- --------END Live Trade Button------------- -->
 
 				<!-- Main navbar END -->
 
@@ -420,7 +496,6 @@
 						<!-- Dark mode options START -->
 
 						<li>
-
 							<div
 								class="bg-light dark-mode-switch theme-icon-active d-flex align-items-center p-1 rounded mt-2">
 
@@ -428,62 +503,38 @@
 
 									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
 										class="bi bi-sun fa-fw mode-switch" viewBox="0 0 16 16">
-
 										<path
 											d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
-
 										<use href="#"></use>
-
 									</svg> Light
-
 								</button>
 
 								<button type="button" class="btn btn-sm mb-0" data-bs-theme-value="dark">
-
 									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
 										class="bi bi-moon-stars fa-fw mode-switch" viewBox="0 0 16 16">
-
 										<path
 											d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z" />
-
 										<path
 											d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
-
 										<use href="#"></use>
-
 									</svg> Dark
-
 								</button>
-
 								<button type="button" class="btn btn-sm mb-0 active" data-bs-theme-value="auto">
-
 									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
 										class="bi bi-circle-half fa-fw mode-switch" viewBox="0 0 16 16">
-
 										<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
-
 										<use href="#"></use>
-
 									</svg> Auto
-
 								</button>
-
 							</div>
-
 						</li>
-
 						<!-- Dark mode options END-->
-
 					</ul>
-
 				</div>
 				<!-- Profile START -->
 			</div>
-
 		</nav>
-
-		<!-- Logo Nav END -->
-
+		<!-- Nav END -->
 	</header>
 
 	<!-- Header END -->
