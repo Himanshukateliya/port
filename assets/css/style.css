@@ -26798,6 +26798,10 @@ html[dir=rtl] .choices__input {
   .ro {
     height: 150px;
   }
+
+  .sociality-mar {
+    margin: 15px 0;
+  }
 }
 
 @media only screen and (min-width: 600px) {
@@ -27240,19 +27244,3 @@ html[dir=rtl] .choices__input {
     visibility: hidden;
   }
 }
-
-/* .blink {
-  color: #EEE;
-
-  animation: bounce 0.4s ease infinite;
-}
-
-@keyframes bounce {
-  0% {
-    transform: translateY(0);
-  }
-
-  100% {
-    transform: translateY(-30px);
-  }
-} */

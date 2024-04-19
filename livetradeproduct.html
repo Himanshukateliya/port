@@ -65,7 +65,7 @@
 
                     const activeThemeIcon = document.querySelector('.theme-icon-active use')
 
-                    const btnToActive = document.querySelector([data - bs - theme - value="${theme}"])
+                    const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
 
                     const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
 
@@ -236,7 +236,7 @@
 
                 <!-- Main navbar START -->
 
-                <div class="navbar-collapse collapse ronni row " id="navbarCollapse">
+                <div class="navbar-collapse collapse ronni row align-items-center " id="navbarCollapse">
 
                     <!-- Nav category menu START -->
 
@@ -304,7 +304,7 @@
 
                     <!-- Nav Main menu START -->
 
-                    <ul class="navbar-nav navbar-nav-scroll gap-3 justify-content-center">
+                    <ul class="navbar-nav navbar-nav-scroll" style="justify-content: center;">
 
                         <!-- Nav item 1 Demos -->
 
@@ -403,18 +403,18 @@
                         <!-- Nav Main menu END -->
 
                         <!-- Nav Search START -->
-             
 
-                <!-- --------START Live Trade Button------------- -->
-                
-                <div class="nav my-3 my-xl-0 px-4 flex-nowrap align-items-center">
 
-                    <div class="nav-item w-100 ">
+                        <!-- --------START Live Trade Button------------- -->
 
-                        <a href="livetradeproduct.html" class="btn text-white mb-0" rel="noopener" style="background-color: #41B06E;"><span
-                                class="blink">Live
-                                Trade</span></a>
-                        <!-- <form class="position-relative">
+                        <div class="nav my-3 my-xl-0 px-4 flex-nowrap align-items-center">
+
+                            <div class="nav-item w-100 ">
+
+                                <a href="livetradeproduct.html" class="btn text-white mb-0" rel="noopener"
+                                    style="background-color: #41B06E;"><span class="blink">Live
+                                        Trade</span></a>
+                                <!-- <form class="position-relative">
 
 									<input class="form-control pe-5 bg-transparent" type="search" placeholder="Search"
 										aria-label="Search">
@@ -429,9 +429,10 @@
 
 								</form> -->
 
-                    </div>
+                            </div>
+                        </div>
+                    </ul>
                 </div>
-            </div>
                 <!-- --------END Live Trade Button------------- -->
                 <!-- Main navbar END -->
 
@@ -570,17 +571,18 @@
     <!-- asdadffsfv -->
 
     <style>
-        .box-bg{
+        .box-bg {
             /* background-color: #F2FFE9; */
             background-color: #ecfae0e3;
         }
+
         .text-weig {
             font-weight: bold;
         }
-        
+
         .btn-success:hover {
-          box-shadow: rgba(0, 0, 0, .35) 1px 1px 9px 1px;
-          transform: translateY(-3px);
+            box-shadow: rgba(0, 0, 0, .35) 1px 1px 9px 1px;
+            transform: translateY(-3px);
         }
     </style>
 
@@ -588,21 +590,21 @@
         <div class="container-fluid">
             <div class="row justify-content-around gap-3">
                 <div class=" col-md-3">
-                    <div class="card-body  box-bg p-4 rounded " >
-                        <h4 class="text-black card-title text-center" >BANANA</h4>
+                    <div class="card-body  box-bg p-4 rounded ">
+                        <h4 class="text-black card-title text-center">BANANA</h4>
                         <div class="Pogram-line mx-auto mb-4"></div>
                         <p class="card-text text-black fs-5 text-weig">Weight :- 13kg, 14kg Gros Hands - 4,5,6 </p>
                         <p class="card-text text-black fs-5 text-weig">Packing :- Box </p>
                         <p class="card-text text-black fs-5 text-weig">Country :- UAE </p>
                         <div class="text-center">
-                            <a href="#" target="_blank"><button
-								class="btn btn-success mb-0 slide_right">Book Now</button></a>
+                            <a href="#" target="_blank"><button class="btn btn-success mb-0 slide_right">Book
+                                    Now</button></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="card-body  box-bg p-4 rounded" >
-                        <h4 class="text-black card-title text-center" >Green Chilli</h4>
+                    <div class="card-body  box-bg p-4 rounded">
+                        <h4 class="text-black card-title text-center">Green Chilli</h4>
                         <div class="Pogram-line mx-auto mb-4"></div>
                         <p class="card-text text-black fs-5 text-weig">Weight :- 13kg, 14kg Gros Hands - 4,5,6 </p>
                         <p class="card-text text-black fs-5 text-weig">Packing :- Box </p>
@@ -614,22 +616,22 @@
                 </div>
                 <div class=" col-md-3">
                     <div class="card-body  box-bg p-4 rounded">
-                        <h4 class="text-black card-title text-center" >Drumstick</h4>
+                        <h4 class="text-black card-title text-center">Drumstick</h4>
                         <div class="Pogram-line mx-auto mb-4"></div>
                         <p class="card-text text-black fs-5 text-weig">Weight :- 13kg, 14kg Gros Hands - 4,5,6 </p>
                         <p class="card-text text-black fs-5 text-weig">Packing :- Box </p>
                         <p class="card-text text-black fs-5 text-weig">Country :- UAE </p>
                         <div class="text-center">
                             <a href="#" target="_blank" class="btn btn-success mb-0" rel="noopener" id="myBtn"
-                            data-bs-toggle="modal" data-bs-target="#exampleModal" data-whatever="@mdo">Book Now</a>
+                                data-bs-toggle="modal" data-bs-target="#exampleModal" data-whatever="@mdo">Book Now</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row justify-content-around gap-3 my-3">
                 <div class=" col-md-3">
-                    <div class="card-body  box-bg p-4 rounded" >
-                        <h4 class="text-black card-title text-center" >Elephant Yam</h4>
+                    <div class="card-body  box-bg p-4 rounded">
+                        <h4 class="text-black card-title text-center">Elephant Yam</h4>
                         <div class="Pogram-line mx-auto mb-4"></div>
                         <p class="card-text text-black fs-5 text-weig">Weight :- 13kg, 14kg Gros Hands - 4,5,6 </p>
                         <p class="card-text text-black fs-5 text-weig">Packing :- Box </p>
@@ -640,8 +642,8 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="card-body  box-bg p-4 rounded" >
-                        <h4 class="text-black card-title text-center" >Ginger</h4>
+                    <div class="card-body  box-bg p-4 rounded">
+                        <h4 class="text-black card-title text-center">Ginger</h4>
                         <div class="Pogram-line mx-auto mb-4"></div>
                         <p class="card-text text-black fs-5 text-weig">Weight :- 13kg, 14kg Gros Hands - 4,5,6 </p>
                         <p class="card-text text-black fs-5 text-weig">Packing :- Box </p>
@@ -652,8 +654,8 @@
                     </div>
                 </div>
                 <div class=" col-md-3">
-                    <div class="card-body  box-bg p-4 rounded" >
-                        <h4 class="text-black card-title text-center" >Lomon</h4>
+                    <div class="card-body  box-bg p-4 rounded">
+                        <h4 class="text-black card-title text-center">Lomon</h4>
                         <div class="Pogram-line mx-auto mb-4"></div>
                         <p class="card-text text-black fs-5 text-weig">Weight :- 13kg, 14kg Gros Hands - 4,5,6 </p>
                         <p class="card-text text-black fs-5 text-weig">Packing :- Box </p>
@@ -666,8 +668,8 @@
             </div>
             <div class="row justify-content-around gap-3">
                 <div class=" col-md-3">
-                    <div class="card-body  box-bg p-4 rounded" >
-                        <h4 class="text-black card-title text-center" >Semi Husk Coconut</h4>
+                    <div class="card-body  box-bg p-4 rounded">
+                        <h4 class="text-black card-title text-center">Semi Husk Coconut</h4>
                         <div class="Pogram-line mx-auto mb-4"></div>
                         <p class="card-text text-black fs-5 text-weig">Weight :- 13kg, 14kg Gros Hands - 4,5,6 </p>
                         <p class="card-text text-black fs-5 text-weig">Packing :- Box </p>
@@ -678,8 +680,8 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="card-body  box-bg p-4 rounded" >
-                        <h4 class="text-black card-title text-center" >Tutmeric</h4>
+                    <div class="card-body  box-bg p-4 rounded">
+                        <h4 class="text-black card-title text-center">Tutmeric</h4>
                         <div class="Pogram-line mx-auto mb-4"></div>
                         <p class="card-text text-black fs-5 text-weig">Weight :- 13kg, 14kg Gros Hands - 4,5,6 </p>
                         <p class="card-text text-black fs-5 text-weig">Packing :- Box </p>
@@ -690,8 +692,8 @@
                     </div>
                 </div>
                 <div class=" col-md-3">
-                    <div class="card-body  box-bg p-4 rounded" >
-                        <h4 class="text-black card-title text-center" >Pomegranate</h4>
+                    <div class="card-body  box-bg p-4 rounded">
+                        <h4 class="text-black card-title text-center">Pomegranate</h4>
                         <div class="Pogram-line mx-auto mb-4"></div>
                         <p class="card-text text-black fs-5 text-weig">Weight :- 13kg, 14kg Gros Hands - 4,5,6 </p>
                         <p class="card-text text-black fs-5 text-weig">Packing :- Box </p>
@@ -791,11 +793,14 @@
 
                         <ul class="nav flex-column p-0">
 
-                            <li class="nav-item fs-5 text-weig"><a class="nav-link text-black" href="./career.html">Career</a></li>
+                            <li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+                                    href="./career.html">Career</a></li>
 
-                            <li class="nav-item fs-5 text-weig"><a class="nav-link text-black" href="./about.html">About us</a></li>
+                            <li class="nav-item fs-5 text-weig"><a class="nav-link text-black" href="./about.html">About
+                                    us</a></li>
 
-                            <li class="nav-item fs-5 text-weig"><a class="nav-link text-black" href="./contact-us.html">Contact us</a></li>
+                            <li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+                                    href="./contact-us.html">Contact us</a></li>
 
                             <li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
                                     href="https://www.gfebusiness.org/blog/">Blogs</a></li>
@@ -811,7 +816,7 @@
                 <!-- Widget 3 START -->
 
                 <style>
-                    .andro-App{
+                    .andro-App {
                         aspect-ratio: 6/2;
                         width: 100%;
                         object-fit: cover;
@@ -829,7 +834,7 @@
                     </p>
 
                     <p class="mb-0 fs-5 text-black text-weig">Email: <a href="#"
-                                class="text-black text-weig ms-2 fs-5">info@gfebusiness.org</a></p>
+                            class="text-black text-weig ms-2 fs-5">info@gfebusiness.org</a></p>
 
                     <div class="row g-2 mt-2 align-items-start mx-auto justify-content-center">
 
@@ -839,7 +844,7 @@
                             <a href="https://play.google.com/store/apps/details?id=crm.ani.com&pcampaignid=web_share">
                                 <img src="assets/images/client/google-play.svg" class="mb-2 andro-App" alt=""> </a>
                         </div>
-                                <div class="col-6 col-sm-12 col-md-3 col-lg-6">
+                        <div class="col-6 col-sm-12 col-md-3 col-lg-6">
                             <a href="https://play.google.com/store/apps/details?id=crm.ani.com&pcampaignid=web_share">
                                 <img src="assets/images/client/ios-store.png" class="andro-App" alt="">
                             </a>
@@ -879,8 +884,8 @@
 
                                     <div class="dropup mt-0 text-center text-sm-end">
 
-                                        <a class="dropdown-toggle nav-link text-black" href="#" role="button" id="languageSwitcher"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                        <a class="dropdown-toggle nav-link text-black" href="#" role="button"
+                                            id="languageSwitcher" data-bs-toggle="dropdown" aria-expanded="false">
 
                                             <i class="fas fa-globe me-2"></i>Language
 
@@ -888,14 +893,17 @@
 
                                         <ul class="dropdown-menu min-w-auto" aria-labelledby="languageSwitcher">
 
-                                            <li><a class="dropdown-item me-4 text-black" href="#"><img class="fa-fw me-2"
-                                                        src="assets/images/flags/uk.svg" alt="">English</a></li>
+                                            <li><a class="dropdown-item me-4 text-black" href="#"><img
+                                                        class="fa-fw me-2" src="assets/images/flags/uk.svg"
+                                                        alt="">English</a></li>
 
-                                            <li><a class="dropdown-item me-4 text-black" href="#"><img class="fa-fw me-2"
-                                                        src="assets/images/flags/gr.svg" alt="">German </a></li>
+                                            <li><a class="dropdown-item me-4 text-black" href="#"><img
+                                                        class="fa-fw me-2" src="assets/images/flags/gr.svg"
+                                                        alt="">German </a></li>
 
-                                            <li><a class="dropdown-item me-4 text-black" href="#"><img class="fa-fw me-2"
-                                                        src="assets/images/flags/sp.svg" alt="">French</a></li>
+                                            <li><a class="dropdown-item me-4 text-black" href="#"><img
+                                                        class="fa-fw me-2" src="assets/images/flags/sp.svg"
+                                                        alt="">French</a></li>
 
                                         </ul>
 
@@ -903,7 +911,8 @@
 
                                 </li>
 
-                                <li class="list-inline-item"><a class="nav-link text-black" href="terms-conditions.html">Terms &
+                                <li class="list-inline-item"><a class="nav-link text-black"
+                                        href="terms-conditions.html">Terms &
                                         Conditions</a></li>
 
                                 <li class="list-inline-item"><a class="nav-link pe-0 text-black"
