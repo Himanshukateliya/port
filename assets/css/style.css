@@ -26802,6 +26802,10 @@ html[dir=rtl] .choices__input {
   .sociality-mar {
     margin: 15px 0;
   }
+
+  .tred-marg {
+    margin-top: 7px;
+  }
 }
 
 @media only screen and (min-width: 600px) {
