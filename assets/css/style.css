@@ -25637,55 +25637,6 @@ html[dir=rtl] .choices__input {
   right: 0;
 }
 
-/* ---------High Demanding Programs-------- */
-
-/* .ron-controls [data-controls] {
-  position: absolute;
-  top: 22%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  border-radius: 0.325rem;
-  display: block;
-  z-index: 9;
-  text-align: center;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  background: rgba(var(--bs-white-rgb), 0.3);
-  color: var(--bs-white);
-  border: none;
-  margin: 0 10px;
-}
-.ron-controls [data-controls]:hover {
-  background-color: var(--bs-primary);
-  color: var(--bs-white);
-}
-.ron-controls [data-controls] i {
-  line-height: inherit;
-}
-
-.ron-controls [data-controls=prev] {
-  left: 6%;
-}
-
-.ron-controls [data-controls=next] {
-  right: 6%;
-} */
-
-/* rtl:raw:
-.tiny-slider .tns-controls [data-controls]{
-  transform: scaleX(-1) translateY(-50%);
-}
-.tiny-slider.arrow-creative .tns-controls [data-controls]{
-  transform: scaleX(1) translateY(-50%);
-}
-.tns-visually-hidden {
-  right: -10000em !important;
-  left: 0 !important;
-}
-*/
 .arrow-dark [data-controls] {
   background: var(--bs-dark);
   color: var(--bs-white);
@@ -26597,37 +26548,28 @@ html[dir=rtl] .choices__input {
   position: absolute;
   bottom: 10px;
   right: 35px;
-  /* padding: 10px 0; */
   background-color: #066ac9;
   overflow: hidden !important;
   clip-path: polygon(100% 0, 81% 49%, 100% 100%, 0% 100%, 20% 49%, 0% 0%);
   transition: clip-path 0.5s;
-  /* Transition for smooth effect */
   opacity: 0;
-  /* Initially hide the content */
 }
 
 .grid-item:hover .clip {
   clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
   border-radius: 10px;
-  /* Modify the clip-path to reveal content */
   opacity: 1;
-  /* Show the content on hover */
 }
 
 .clip1 {
   position: absolute;
   bottom: 10px;
   right: 30px;
-  /* padding: 10px 20px; */
-  /* width: 80%; */
   background-color: #066ac9;
   overflow: hidden !important;
   clip-path: polygon(100% 0, 81% 49%, 100% 100%, 0% 100%, 20% 49%, 0% 0%);
   transition: clip-path 0.5s;
-  /* Transition for smooth effect */
   opacity: 0;
-  /* Initially hide the content */
 }
 
 
@@ -26705,7 +26647,6 @@ html[dir=rtl] .choices__input {
 
   .t-whit {
     color: var(--bs-black);
-    /* font-style: var(--bs-black); */
     font-weight: bolder;
   }
 
@@ -26754,22 +26695,17 @@ html[dir=rtl] .choices__input {
     bottom: 0px;
     right: 13px;
     font-size: 11px;
-    /* padding: 10px 20px; */
     background-color: #066ac9;
     overflow: hidden !important;
     clip-path: polygon(100% 0, 81% 49%, 100% 100%, 0% 100%, 20% 49%, 0% 0%);
     transition: clip-path 0.5s;
-    /* Transition for smooth effect */
     opacity: 0;
-    /* Initially hide the content */
   }
 
   .grid-item:hover .clip {
     clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
     border-radius: 10px;
-    /* Modify the clip-path to reveal content */
     opacity: 1;
-    /* Show the content on hover */
   }
 
   .clip1 {
@@ -26777,15 +26713,11 @@ html[dir=rtl] .choices__input {
     bottom: 0px;
     right: 13px;
     font-size: 10px;
-    /* padding: 10px 20px; */
-    /* width: 80%; */
     background-color: #066ac9;
     overflow: hidden !important;
     clip-path: polygon(100% 0, 81% 49%, 100% 100%, 0% 100%, 20% 49%, 0% 0%);
     transition: clip-path 0.5s;
-    /* Transition for smooth effect */
     opacity: 0;
-    /* Initially hide the content */
   }
 
 
@@ -26816,7 +26748,6 @@ html[dir=rtl] .choices__input {
 
   .t-whit {
     color: var(--bs-black);
-    /* font-style: var(--bs-black); */
     font-weight: bolder;
   }
 
@@ -26852,22 +26783,17 @@ html[dir=rtl] .choices__input {
     bottom: 0px;
     right: 20px;
     font-size: 12px;
-    /* padding: 10px 20px; */
     background-color: #066ac9;
     overflow: hidden !important;
     clip-path: polygon(100% 0, 81% 49%, 100% 100%, 0% 100%, 20% 49%, 0% 0%);
     transition: clip-path 0.5s;
-    /* Transition for smooth effect */
     opacity: 0;
-    /* Initially hide the content */
   }
 
   .grid-item:hover .clip {
     clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
     border-radius: 10px;
-    /* Modify the clip-path to reveal content */
     opacity: 1;
-    /* Show the content on hover */
   }
 
 }
@@ -26911,22 +26837,17 @@ html[dir=rtl] .choices__input {
     bottom: 0px;
     right: 20px;
     font-size: 13px;
-    /* padding: 10px 20px; */
     background-color: #066ac9;
     overflow: hidden !important;
     clip-path: polygon(100% 0, 81% 49%, 100% 100%, 0% 100%, 20% 49%, 0% 0%);
     transition: clip-path 0.5s;
-    /* Transition for smooth effect */
     opacity: 0;
-    /* Initially hide the content */
   }
 
   .grid-item:hover .clip {
     clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
     border-radius: 10px;
-    /* Modify the clip-path to reveal content */
     opacity: 1;
-    /* Show the content on hover */
   }
 
 }
@@ -26949,7 +26870,6 @@ html[dir=rtl] .choices__input {
 
 /* <button class="button-62" role="button">Button 62</button */
 
-/* CSS */
 .button-62 {
   background: linear-gradient(to bottom right, #9BCF53, #FFF67E);
   border: 0;
@@ -26980,8 +26900,6 @@ html[dir=rtl] .choices__input {
   box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
   background-size: 400%;
   z-index: -1;
-  /* width: calc(100% + 4px); */
-  /* height: calc(100% + 4px); */
   animation: glowingbn5 20s linear infinite;
   transition: opacity 0.3s ease-in-out;
   border-radius: 10px;
@@ -27058,31 +26976,6 @@ html[dir=rtl] .choices__input {
   /* Add animation */
 }
 
-/* .ship {
-  transition: all ease;
-  width: 18%;
-  margin-right: -60px;
-  bottom: -10px;
-  right: -100px;
-  position: absolute;
-  animation: shipMove 8s linear infinite;
-  background: url('../images/ship.png') no-repeat;
-  background-size: contain;
-  height: 100px;
-} */
-
-/* .truck {
-  background: url('../images/Group\ 164.png') no-repeat;
-  background-size: cover;
-  padding: 0 100px;
-  height: 100px;
-} */
-
-/* .flight {
-  background: url('../images/Group_163-removebg-preview.png') no-repeat;
-  background-size: contain;
-  height: 100px;
-} */
 
 @keyframes truckMove {
   0% {
