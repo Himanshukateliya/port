@@ -26741,7 +26741,7 @@ html[dir=rtl] .choices__input {
 
   .close1 {
     position: absolute !important;
-    right: 41px !important;
+    right: 39px !important;
     /* padding: 5px !important; */
     /* font-size: 10px !important; */
   }
@@ -27064,10 +27064,7 @@ html[dir=rtl] .choices__input {
     padding: 8px 12px !important;
   }
 
-  .close1 {
-    position: absolute !important;
-    right: 36px !important;
-  }
+
 
   .Heena1 {
     font-size: 20px !important;
