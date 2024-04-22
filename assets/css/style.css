@@ -26738,6 +26738,13 @@ html[dir=rtl] .choices__input {
   .tred-marg {
     margin-top: 7px;
   }
+
+  .close1 {
+    position: absolute !important;
+    right: 41px !important;
+    /* padding: 5px !important; */
+    /* font-size: 10px !important; */
+  }
 }
 
 @media only screen and (min-width: 600px) {
@@ -26796,6 +26803,13 @@ html[dir=rtl] .choices__input {
     opacity: 1;
   }
 
+  .close1 {
+    position: absolute !important;
+    right: 63px !important;
+    /* padding: 5px !important; */
+    /* font-size: 10px !important; */
+  }
+
 }
 
 @media only screen and (min-width: 992px) {
@@ -26850,6 +26864,13 @@ html[dir=rtl] .choices__input {
     opacity: 1;
   }
 
+  .close1 {
+    position: absolute !important;
+    right: 191px !important;
+    /* padding: 5px !important; */
+    /* font-size: 10px !important; */
+  }
+
 }
 
 @media only screen and (min-width: 1200px) {
@@ -26861,6 +26882,13 @@ html[dir=rtl] .choices__input {
   .goog-im {
     width: 30%;
     margin-bottom: 5px;
+  }
+
+  .close1 {
+    position: absolute !important;
+    right: 429px !important;
+    /* padding: 5px !important; */
+    /* font-size: 10px !important; */
   }
 
   .Heena {
@@ -27038,7 +27066,7 @@ html[dir=rtl] .choices__input {
 
   .close1 {
     position: absolute !important;
-    left: 4% !important;
+    right: 36px !important;
   }
 
   .Heena1 {

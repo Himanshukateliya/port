@@ -3474,7 +3474,7 @@
 	<div class="popup-overlay" id="popup" style="display: none;">
 		<div class="popup-content">
 			<!-- <h2>Welcome to our website!</h2> -->
-			<button class="close1 rounded-circle" onclick="closePopup()">&times;</button>
+			<button class="close1 bg-blur" onclick="closePopup()">&times;</button>
 			<a href="https://www.google.com/" target="_blank"><img src="assets/images/popup.png" class="sm:w-100 "
 					alt=""></a>
 		</div>
@@ -3508,7 +3508,7 @@
 		.close1 {
 			border: none;
 			position: absolute;
-			left: 27%;
+			right: 430px;
 			/* float: left; */
 			font-size: 20px;
 			font-weight: bold;
@@ -3530,7 +3530,7 @@
 
 			// Show the pop-up
 			popup.style.display = "block";
-		}, 15000); // 15 seconds in milliseconds
+		}, 1000); // 15 seconds in milliseconds
 
 		function closePopup() {
 			var popup = document.getElementById("popup");
