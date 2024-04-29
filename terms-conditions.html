@@ -353,7 +353,7 @@
 
                         <li><a class="dropdown-item" href="#"><i class="bi bi-gear fa-fw me-2"></i>Account Settings</a>
                         </li>
-                        <li><a class="dropdown-item" href="test2.html"><i
+                        <li><a class="dropdown-item" href="MyService.html"><i
                                     class="fa-solid fa-money-bill-1-wave me-2"></i>Payment
                                 Service </a>
                         </li>
@@ -611,7 +611,7 @@
 
             <!-- Row START -->
 
-            <div class="row g-4 justify-content-between align-items-center text-center">
+            <div class="row g-4 justify-content-between align-items-baseline  text-center">
 
                 <!-- Widget 1 START -->
 
@@ -665,7 +665,7 @@
 
                 <!-- Widget 2 START -->
 
-                <div class="col-lg-3">
+                <div class="col-lg-2">
 
                     <div class="row gx-0 text-center">
 
@@ -694,9 +694,68 @@
                 </div>
 
                 <!-- Widget 2 END -->
+                <div class="col-lg-3 ">
+                    <h4 class="mb-3 fs-4 text-weig text-black">Quick Links</h4>
+                    <div class="row gx-0 text-center justify-content-around ">
+
+                        <!-- Link block -->
+                        <div class="col-lg-5">
+                            <div class="row gx-0 text-center">
+
+
+                                <ul class="nav flex-column p-0">
+
+                                    <li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+                                            href="#">Mumbai</a></li>
+
+                                    <li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+                                            href="#">Surat</a></li>
+
+                                    <li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+                                            href="#">Nashik</a></li>
+
+                                    <li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+                                            href="#">Nagpur</a></li>
+
+                                    <li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+                                            href="#">Hyderabad</a></li>
+                                    <li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+                                            href="#">Delhi</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 ">
+                            <div class="row gx-0 text-center">
+                                <ul class="nav flex-column p-0">
+
+                                    <li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+                                            href="#">Ahmedabad</a></li>
+
+                                    <li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+                                            href="#">Rajkot</a></li>
+
+                                    <li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+                                            href="#">Vadodara</a></li>
+
+                                    <li class="nav-item fs-5 text-weig"><a class="nav-link text-black" href="#">Pune</a>
+                                    </li>
+
+                                    <li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+                                            href="#">Indore</a></li>
+
+                                    <li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+                                            href="#">Kolkata</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
 
                 <!-- Widget 3 START -->
-
                 <style>
                     .andro-App {
                         aspect-ratio: 6/2;
@@ -847,7 +906,7 @@
                 </div>
                 <div class="modal-body">
                     <form action="#!">
-                        <div class="row gy-4 p-2">
+                        <div class="row gy-1">
                             <div class="col-12">
                                 <label for="fullname" class="form-label">Full Name <span
                                         class="text-danger">*</span></label>
@@ -879,6 +938,33 @@
                                     </span>
                                     <input type="tel" class="form-control" id="phone" name="phone" value="">
                                 </div>
+                            </div>
+                            <div class="col-12 col-md-6 ">
+                                <label for="state" class="form-label text-black ">State <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" name="State" value="" list="state"
+                                    placeholder="State" required>
+                                <datalist id="state">
+                                    <option value="Gujarat">
+                                    <option value="Goa">
+                                    <option value="Maharashtra">
+                                    <option value="West Bengal">
+                                    <option value="Punjab">
+                                </datalist>
+                            </div>
+                            <div class="col-12 col-md-6 ">
+                                <label for="city" class="form-label text-black ">City <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" name="City" value="" list="city"
+                                    placeholder="City" required>
+                                <!-- <input id="color" list="suggestions"> -->
+                                <datalist id="city">
+                                    <option value="Patan">
+                                    <option value="Ahmedabad">
+                                    <option value="Hyderabad">
+                                    <option value="Kolkata">
+                                    <option value="Chennai">
+                                </datalist>
                             </div>
                             <div class="col-12">
                                 <label for="subject" class="form-label">Subject <span
@@ -932,6 +1018,7 @@
     </script>
 
     <!-- ----------------END Enquairy Form------------------- -->
+
     <div class="modal fade overflow-y-hidden" id="ronak" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">

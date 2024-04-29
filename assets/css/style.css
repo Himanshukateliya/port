@@ -26456,6 +26456,16 @@ html[dir=rtl] .choices__input {
   font-weight: 600;
 }
 
+.main-btn1 {
+  border-radius: 10px;
+  padding: 0.5rem 1.3rem;
+  border: none;
+  background-color: #066ac9;
+  color: white;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
 .btn10 {
   font-size: 1.2rem;
   position: relative;
@@ -27230,4 +27240,17 @@ html[dir=rtl] .choices__input {
 .live-trade-bt:hover i {
   -webkit-transform: translateX(4px);
   transform: translateX(4px);
+}
+
+.callout {
+  padding-left: 1.5rem;
+  border-left: .25rem solid #766df4;
+  font-size: 20px;
+  line-height: 33px;
+}
+
+.fo-bo {
+  font-weight: bold;
+  color: black;
+  font-size: 21px;
 }
