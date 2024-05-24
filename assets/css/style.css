@@ -26404,6 +26404,10 @@ html[dir=rtl] .choices__input {
   background-color: #FF0000 !important;
   color: white;
 }
+.pinterest-color {
+  background-color: #bd081c !important;
+  color: white;
+}
 
 .linkdin-color {
   background-color: #0077b5 !important;
@@ -26755,6 +26759,14 @@ html[dir=rtl] .choices__input {
     /* padding: 5px !important; */
     /* font-size: 10px !important; */
   }
+
+  iframe{
+    width: 340px;
+  }
+  .playy{
+    right: 45%;
+    top: 32%;
+  }
 }
 
 @media only screen and (min-width: 600px) {
@@ -26820,6 +26832,11 @@ html[dir=rtl] .choices__input {
     /* font-size: 10px !important; */
   }
 
+  .playy{
+    right: 45%;
+    top: 44%;
+  }
+
 }
 
 @media only screen and (min-width: 992px) {
@@ -26881,6 +26898,10 @@ html[dir=rtl] .choices__input {
     /* font-size: 10px !important; */
   }
 
+  .playy{
+    right: 45.5%;
+    top: 42.5%;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -26904,6 +26925,10 @@ html[dir=rtl] .choices__input {
   .Heena {
     padding: 8px 12px !important;
   }
+  .playy{
+    right: 46.5%;
+    top: 41%;
+  }
 }
 
 @media only screen and (min-width: 1500px) {
@@ -26913,8 +26938,13 @@ html[dir=rtl] .choices__input {
     /* padding: 5px !important; */
     /* font-size: 10px !important; */
   }
-}
 
+  .playy{
+    right: 46.5%;
+    top: 41% ;
+  }
+
+}
 /* <button class="button-62" role="button">Button 62</button */
 
 .button-62 {
