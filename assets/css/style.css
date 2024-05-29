@@ -26145,9 +26145,6 @@ html[dir=rtl] .choices__input {
 /*User CSS*/
 /*# sourceMappingURL=style.css.map */
 
-
-
-
 .ali {
   align-items: center !important;
 }
@@ -26404,6 +26401,7 @@ html[dir=rtl] .choices__input {
   background-color: #FF0000 !important;
   color: white;
 }
+
 .pinterest-color {
   background-color: #bd081c !important;
   color: white;
@@ -26655,7 +26653,7 @@ html[dir=rtl] .choices__input {
   }
 
   .review-st {
-    right: 5% !important;
+    right: 2.5% !important;
     bottom: 40% !important;
   }
 
@@ -26760,10 +26758,11 @@ html[dir=rtl] .choices__input {
     /* font-size: 10px !important; */
   }
 
-  iframe{
+  iframe {
     width: 340px;
   }
-  .playy{
+
+  .playy {
     right: 45%;
     top: 32%;
   }
@@ -26832,7 +26831,7 @@ html[dir=rtl] .choices__input {
     /* font-size: 10px !important; */
   }
 
-  .playy{
+  .playy {
     right: 45%;
     top: 44%;
   }
@@ -26898,7 +26897,7 @@ html[dir=rtl] .choices__input {
     /* font-size: 10px !important; */
   }
 
-  .playy{
+  .playy {
     right: 45.5%;
     top: 42.5%;
   }
@@ -26925,7 +26924,8 @@ html[dir=rtl] .choices__input {
   .Heena {
     padding: 8px 12px !important;
   }
-  .playy{
+
+  .playy {
     right: 46.5%;
     top: 41%;
   }
@@ -26939,12 +26939,13 @@ html[dir=rtl] .choices__input {
     /* font-size: 10px !important; */
   }
 
-  .playy{
+  .playy {
     right: 46.5%;
-    top: 41% ;
+    top: 41%;
   }
 
 }
+
 /* <button class="button-62" role="button">Button 62</button */
 
 .button-62 {
@@ -27197,7 +27198,6 @@ html[dir=rtl] .choices__input {
   /* To position the blue rectangle */
 
 }
-
 
 .blink {
   animation: blink-animation 1s steps(5, start) infinite;
