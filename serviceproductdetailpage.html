@@ -5,154 +5,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>eCommerce Product Detail</title>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Webestica.com">
+    <meta name="description" content="Eduport- LMS, Education and Course Theme">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css" rel="stylesheet" />
 
-    <meta charset="utf-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <meta name="author" content="Webestica.com">
-
-    <meta name="description" content="Eduport- LMS, Education and Course Theme">
-
+    <!-- Dark mode -->
     <script>
-
         const storedTheme = localStorage.getItem('theme')
 
         const getPreferredTheme = () => {
-
             if (storedTheme) {
-
                 return storedTheme
-
             }
-
             return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'light'
-
         }
 
         const setTheme = function (theme) {
-
             if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-
                 document.documentElement.setAttribute('data-bs-theme', 'dark')
-
             } else {
-
                 document.documentElement.setAttribute('data-bs-theme', theme)
-
             }
-
         }
 
         setTheme(getPreferredTheme())
 
         window.addEventListener('DOMContentLoaded', () => {
-
             var el = document.querySelector('.theme-icon-active');
-
             if (el != 'undefined' && el != null) {
-
                 const showActiveTheme = theme => {
-
                     const activeThemeIcon = document.querySelector('.theme-icon-active use')
-
                     const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
-
                     const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
 
                     document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
-
                         element.classList.remove('active')
-
                     })
 
                     btnToActive.classList.add('active')
-
                     activeThemeIcon.setAttribute('href', svgOfActiveBtn)
-
                 }
 
                 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-
                     if (storedTheme !== 'light' || storedTheme !== 'dark') {
-
                         setTheme(getPreferredTheme())
-
                     }
-
                 })
 
                 showActiveTheme(getPreferredTheme())
 
                 document.querySelectorAll('[data-bs-theme-value]')
-
                     .forEach(toggle => {
-
                         toggle.addEventListener('click', () => {
-
                             const theme = toggle.getAttribute('data-bs-theme-value')
-
                             localStorage.setItem('theme', theme)
-
                             setTheme(theme)
-
                             showActiveTheme(theme)
-
                         })
-
                     })
 
             }
-
         })
 
     </script>
 
     <!-- Favicon -->
-
     <link rel="shortcut icon" href="assets/images/favicon.ico">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
-        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
-        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Google Font -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
 
     <!-- Plugins CSS -->
-
     <link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
-
     <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
-
-    <link rel="stylesheet" type="text/css" href="assets/vendor/tiny-slider/tiny-slider.css">
-
     <link rel="stylesheet" type="text/css" href="assets/vendor/glightbox/css/glightbox.css">
 
     <!-- Theme CSS -->
-
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
     <style>
         @media (max-width: 767px) {
             .carousel-inner .carousel-item>div {
@@ -215,8 +154,7 @@
                 <!-- Left links -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link text-white font-bold" href="#"><i class="fa-regular fa-envelope"></i>
-                            info@gfebusiness.org</a>
+                        <a class="nav-link" href="#"><i class="fa-regular fa-envelope"></i> info@gfebusiness.org</a>
                     </li>
                 </ul>
                 <!-- Left links -->
@@ -251,8 +189,10 @@
         </div>
         <!-- Container wrapper -->
     </nav>
-    <!-- Header START -->
+    <!-- Navbar -->
 
+
+    <!-- Header START -->
     <header class="navbar-light navbar-sticky header-static main-GFE">
 
         <!-- Nav START -->
@@ -371,7 +311,6 @@
                                 <li> <a class="dropdown-item" target="_blank"
                                         href="https://www.searates.com/shipping/request?utm_source=google&utm_medium=cpc&utm_campaign=17499343658&utm_content=142980297292&utm_term=freight%20calculator&gad_source=1&gclid=CjwKCAjw5v2wBhBrEiwAXDDoJU_Pim9FfTNBF0az3bh9ZV8KRj1PosCr5fYmnDEyrt1ukw5-V0vNYBoCvT8QAvD_BwE">Freight
                                         Calculator</a></li>
-
                                 <li> <a class="dropdown-item" href="serviceproduct.html">Services</a></li>
                             </ul>
 
@@ -470,6 +409,7 @@
                                 <div>
 
                                     <a class="h6" href="#">Lori Ferguson</a>
+
                                     <p class="small m-0">example@gmail.com</p>
 
                                 </div>
@@ -571,12 +511,9 @@
             </div>
 
         </nav>
-
         <!-- Nav END -->
     </header>
-
     <!-- Header END -->
-
     <!-- ----------------Enquairy form----------------- -->
 
     <div class="modal fade overflow-y-hidden" id="exampleModal" tabindex="-1" role="dialog"
