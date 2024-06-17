@@ -592,7 +592,6 @@
                 document.querySelectorAll('.product').forEach(product => {
                     const productCategory = product.getAttribute('data-category').toLowerCase();
                     const productKeywords = product.getAttribute('data-keywords').toLowerCase();
-
                     let matchesCategory = category === '' || productCategory.includes(category);
                     let matchesKeywords = keywords.every(keyword => productKeywords.includes(keyword));
 
