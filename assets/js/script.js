@@ -70,3 +70,26 @@ $(".sakshi").slick({
     // instead of a settings object
   ],
 });
+const choices = new Choices('[data-trigger]', {
+  searchEnabled: false,
+  itemSelectText: '',
+});
+
+function filterProducts() {
+  const category = document.getElementById('category').value.toLowerCase();
+  const keywords = document.getElementById('search').value.toLowerCase().split(' ');
+
+  document.querySelectorAll('.product').forEach(product => {
+    const productCategory = product.getAttribute('data-category').toLowerCase();
+    const productKeywords = product.getAttribute('data-keywords').toLowerCase();
+
+    let matchesCategory = category === '' || productCategory.includes(category);
+    let matchesKeywords = keywords.every(keyword => productKeywords.includes(keyword));
+
+    if (matchesCategory && matchesKeywords) {
+      product.style.display = 'block';
+    } else {
+      product.style.display = 'none';
+    }
+  });
+}
