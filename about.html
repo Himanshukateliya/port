@@ -151,66 +151,124 @@
 
 		<!-- Nav START -->
 
-		<nav class="navbar navbar-expand-xl">
+		<nav class="navbar navbar-expand-xl ">
 
 			<div class="container-fluid px-3 px-xl-5">
 
 				<!-- Logo START -->
 
 				<a class="navbar-brand" href="index.html">
-
 					<img class="light-mode-item navbar-brand-item" src="assets/images/Gfe Business.png" alt="logo"
 						style="height:68px;width:100px;">
-
 					<img class="dark-mode-item navbar-brand-item" src="assets/images/Gfe Business.png" alt="logo"
 						style="height:68px;width:100px;">
-
 				</a>
 
 				<!-- Logo END -->
 
-				<!-- Responsive navbar toggler -->
 
-				<button class="navbar-toggler ms-auto " type="button" data-bs-toggle="collapse"
-					data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
-					aria-label="Toggle navigation">
+				<div class="nav d-block d-sm-none ms-auto">
 
-					<span class="navbar-toggler-animation">
-						<span></span>
-						<span></span>
-						<span></span>
-					</span>
+					<button type="button" class="btn mb-0 p-0" data-bs-toggle="modal" data-bs-target="#example">
+						<i class="fa-solid fa-magnifying-glass  text-black-50 " style="font-size: 20px;"></i>
+					</button>
 
-				</button>
+					<!-- Responsive navbar toggler -->
+
+					<button class="navbar-toggler ms-auto " type="button" data-bs-toggle="collapse"
+						data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+						aria-label="Toggle navigation">
+						<span class="navbar-toggler-animation">
+							<span></span>
+							<span></span>
+							<span></span>
+						</span>
+
+					</button>
+				</div>
 
 				<!-- Main navbar START -->
 
 				<div class="navbar-collapse collapse ronni row align-items-center " id="navbarCollapse">
+
+					<!-- Nav category menu START -->
+
+					<!-- <ul class="navbar-nav navbar-nav-scroll me-auto">
+
+						<li class="nav-item dropdown dropdown-menu-shadow-stacked">
+
+							<a class="nav-link bg-primary bg-opacity-10 rounded-3 text-primary px-3 py-3 py-xl-0"
+								href="#" id="categoryMenu" data-bs-toggle="dropdown" aria-haspopup="true"
+								aria-expanded="false"><i class="bi bi-ui-radios-grid me-2"></i><span>Category</span></a>
+
+							<ul class="dropdown-menu" aria-labelledby="categoryMenu">
+
+								<li class="dropdown-submenu dropend">
+
+									<a class="dropdown-item" href="#">Online Business University</a>
+
+									<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+
+										<li class="dropdown-submenu dropend">
+											<a class="dropdown-item" href="#">Export Import Training</a>
+										</li>
+
+										<li> <a class="dropdown-item" href="#">ECommerce Online Training</a> </li>
+
+										<li> <a class="dropdown-item" href="#">India’s Top 10 EXIM Products</a> </li>
+
+										<li> <a class="dropdown-item" href="#">Prepare Governments Documents</a> </li>
+
+									</ul>
+
+								</li>
+
+								<li class="dropdown-submenu dropend">
+
+									<a class="dropdown-item" href="#">International Buyers-Sellers Network</a>
+
+									<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+
+										<li class="dropdown-submenu dropend">
+											<a class="dropdown-item" href="#">Trade Activities</a>
+										</li>
+
+										<li> <a class="dropdown-item" href="#">Buy any Products</a> </li>
+
+										<li> <a class="dropdown-item" href="#">Become International Seller/Supplier</a>
+										</li>
+
+									</ul>
+
+								</li>
+
+							</ul>
+
+						</li>
+
+					</ul> -->
+
+					<!-- Nav category menu END -->
+
 					<!-- Nav Main menu START -->
 
-					<ul class="navbar-nav navbar-nav-scroll" style="justify-content: center;">
+					<ul class="navbar-nav navbar-nav-scroll hi" style="justify-content: center;">
 
 						<!-- Nav item 1 Demos -->
 
 						<li class="nav-item dropdown">
-
 							<a class="nav-link" href="index.html" id="demoMenu" aria-haspopup="true"
 								aria-expanded="false">Home</a>
-
 						</li>
 
 						<li class="nav-item dropdown">
-
 							<a class="nav-link" href="about.html" id="demoMenu" aria-haspopup="true"
 								aria-expanded="false">About Us</a>
-
 						</li>
 
 						<li class="nav-item dropdown">
-
 							<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="gallery.html"
 								id="demoMenu" aria-haspopup="true" aria-expanded="false">Gallery</a>
-
 							<ul class="dropdown-menu" aria-labelledby="demoMenu">
 
 								<li> <a class="dropdown-item" href="team.html">Team</a></li>
@@ -258,7 +316,7 @@
 										target="_blank">Currency
 										Converter</a></li>
 
-								<li> <a class="dropdown-item" target="_blank"
+								<li> <a class="dropdown-item" target="_self"
 										href="https://www.searates.com/shipping/request?utm_source=google&utm_medium=cpc&utm_campaign=17499343658&utm_content=142980297292&utm_term=freight%20calculator&gad_source=1&gclid=CjwKCAjw5v2wBhBrEiwAXDDoJU_Pim9FfTNBF0az3bh9ZV8KRj1PosCr5fYmnDEyrt1ukw5-V0vNYBoCvT8QAvD_BwE">Freight
 										Calculator</a></li>
 
@@ -268,75 +326,54 @@
 						</li>
 
 						<li class="nav-item dropdown">
-
-							<a class="nav-link" href="career.html" id="demoMenu" aria-haspopup="true"
-								aria-expanded="false">Career</a>
-
+							<a class="nav-link" href="https://lms.gfebusiness.org/" id="demoMenu" aria-haspopup="true"
+								aria-expanded="false">Online Courses</a>
 						</li>
 						<li class="nav-item dropdown">
-
 							<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="demoMenu"
 								aria-haspopup="true" aria-expanded="false">Services</a>
 
 							<ul class="dropdown-menu" aria-labelledby="demoMenu">
-
 								<li> <a class="dropdown-item" href="training.html" target="_blank">Export Import
 										Training</a></li>
-
 								<li> <a class="dropdown-item" target="_blank" href="setup.html">Exim Business Setup</a>
 								</li>
-
 								<li> <a class="dropdown-item" href="gsp.html">GSP</a></li>
 								<li> <a class="dropdown-item" href="ecommerce.html">E-Commerce</a></li>
 								<li> <a class="dropdown-item" href="ebo.html">EBO</a></li>
 								<li> <a class="dropdown-item" href="CHA.html">CHA</a></li>
 								<li> <a class="dropdown-item" href="Domestic&InternationalTradeTours.html">Domestic &
-										International
-										Tour</a>
-								</li>
+										International Tour</a></li>
 							</ul>
 
 						</li>
 
 						<li class="nav-item dropdown">
-
 							<a class="nav-link" href="contact-us.html" id="demoMenu" aria-haspopup="true"
 								aria-expanded="false">Contact Us</a>
-
 						</li>
 
 						<!-- Nav Main menu END -->
-
-						<!-- Nav Search START -->
-
 
 						<!-- --------START Live Trade Button------------- -->
 
 						<div class="nav my-3 my-xl-0 px-4 flex-nowrap align-items-center">
 
 							<div class="nav-item w-100 ">
-
 								<a href="livetradeproduct.html" class="btn text-white mb-0" rel="noopener"
 									style="background-color: #41B06E;"><span class="blink">Live
 										Trade</span></a>
-								<!-- <form class="position-relative">
-
-									<input class="form-control pe-5 bg-transparent" type="search" placeholder="Search"
-										aria-label="Search">
-
-									<button
-										class="bg-transparent p-2 position-absolute top-50 end-0 translate-middle-y border-0 text-primary-hover text-reset"
-										aria-label="submit" type="submit">
-
-										<i class="fas fa-search fs-6 "></i>
-
-									</button>
-
-								</form> -->
-
 							</div>
 						</div>
+						<div class="nav my-3 my-xl-0 px-4 d-none d-sm-block flex-nowrap align-items-center">
+
+							<button type="button" class="btn mb-0" data-bs-toggle="modal" data-bs-target="#example">
+								<i class="fa-solid fa-magnifying-glass fs-4 text-black-50 "></i>
+							</button>
+						</div>
+
 					</ul>
+					<!--  -->
 				</div>
 				<!-- --------END Live Trade Button------------- -->
 				<!-- Main navbar END -->
@@ -344,14 +381,14 @@
 				<!-- Profile START -->
 
 				<div class="dropdown ms-1 ms-lg-0">
+
 					<a href="sign-in.html" class="btn text-white mb-0 d-none" style="background-color: #41B06E;">Sign
 						In</a>
+
 					<a class="avatar avatar-sm p-0" href="#" id="profileDropdown" role="button"
 						data-bs-auto-close="outside" data-bs-display="static" data-bs-toggle="dropdown"
 						aria-expanded="false">
-
 						<img class="avatar-img rounded-circle" src="assets/images/avatar/01.jpg" alt="avatar">
-
 					</a>
 
 					<ul class="dropdown-menu dropdown-animation dropdown-menu-end shadow pt-3"
@@ -362,11 +399,14 @@
 						<li class="px-3 mb-3">
 
 							<div class="d-flex align-items-center">
+
 								<!-- Avatar -->
+
 								<div class="avatar me-3">
 									<a href="admin-dashboard.html"><img class="avatar-img rounded-circle shadow"
 											src="assets/images/avatar/01.jpg" alt="avatar"></a>
 								</div>
+
 								<div>
 
 									<a class="h6" href="#">Lori Ferguson</a>
@@ -1843,6 +1883,70 @@
 
 	<!-- ---------------- product reserch end------------------- -->
 
+	<!-- serch bar pop up start  -->
+	<div class="modal fade overflow-y-hidden" id="example" tabindex="-1" role="dialog"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title fs-2 font-bold honey" id="exampleModalLabel">Search Here</h5>
+					<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="row g-3 justify-content-center">
+							<div class=" col-12 ">
+								<div class="input-group">
+									<select id="category" class="form-select" name="choices-single-defaul"
+										style="max-width: 130px; ">
+										<option value="">Category</option>
+										<option value="arrivals">New Arrivals</option>
+										<option value="ladies">Ladies</option>
+										<option value="men">Men</option>
+									</select>
+									<input id="search" type="text" class="form-control" placeholder="Enter Keywords?" />
+									<button class="btn btn-primary" type="button" onclick="filterProducts()">
+										<i class="fas fa-search"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		var modal = document.getElementById("myModal");
+
+		// Get the button that opens the modal
+		var btn = document.getElementById("myBtn");
+
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		// When the user clicks on the button, open the modal
+		btn.onclick = function () {
+			modal.style.display = "block";
+		}
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function () {
+			modal.style.display = "none";
+		}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function (event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+	<!-- serch bar pop up End  -->
 	<!-- Back to top -->
 	<div class="back-top"><i class="bi bi-arrow-up-short position-absolute top-50 start-50 translate-middle"></i></div>
 

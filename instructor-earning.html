@@ -202,7 +202,7 @@
 
 		<!-- Nav START -->
 
-		<nav class="navbar navbar-expand-xl">
+		<nav class="navbar navbar-expand-xl ">
 
 			<div class="container-fluid px-3 px-xl-5">
 
@@ -217,18 +217,26 @@
 
 				<!-- Logo END -->
 
-				<!-- Responsive navbar toggler -->
 
-				<button class="navbar-toggler ms-auto " type="button" data-bs-toggle="collapse"
-					data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
-					aria-label="Toggle navigation">
-					<span class="navbar-toggler-animation">
-						<span></span>
-						<span></span>
-						<span></span>
-					</span>
+				<div class="nav d-block d-sm-none ms-auto">
 
-				</button>
+					<button type="button" class="btn mb-0 p-0" data-bs-toggle="modal" data-bs-target="#example">
+						<i class="fa-solid fa-magnifying-glass  text-black-50 " style="font-size: 20px;"></i>
+					</button>
+
+					<!-- Responsive navbar toggler -->
+
+					<button class="navbar-toggler ms-auto " type="button" data-bs-toggle="collapse"
+						data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+						aria-label="Toggle navigation">
+						<span class="navbar-toggler-animation">
+							<span></span>
+							<span></span>
+							<span></span>
+						</span>
+
+					</button>
+				</div>
 
 				<!-- Main navbar START -->
 
@@ -295,7 +303,7 @@
 
 					<!-- Nav Main menu START -->
 
-					<ul class="navbar-nav navbar-nav-scroll" style="justify-content: center;">
+					<ul class="navbar-nav navbar-nav-scroll hi" style="justify-content: center;">
 
 						<!-- Nav item 1 Demos -->
 
@@ -369,8 +377,8 @@
 						</li>
 
 						<li class="nav-item dropdown">
-							<a class="nav-link" href="career.html" id="demoMenu" aria-haspopup="true"
-								aria-expanded="false">Career</a>
+							<a class="nav-link" href="https://lms.gfebusiness.org/" id="demoMenu" aria-haspopup="true"
+								aria-expanded="false">Online Courses</a>
 						</li>
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="demoMenu"
@@ -408,7 +416,15 @@
 										Trade</span></a>
 							</div>
 						</div>
+						<div class="nav my-3 my-xl-0 px-4 d-none d-sm-block flex-nowrap align-items-center">
+
+							<button type="button" class="btn mb-0" data-bs-toggle="modal" data-bs-target="#example">
+								<i class="fa-solid fa-magnifying-glass fs-4 text-black-50 "></i>
+							</button>
+						</div>
+
 					</ul>
+					<!--  -->
 				</div>
 				<!-- --------END Live Trade Button------------- -->
 				<!-- Main navbar END -->
@@ -417,8 +433,8 @@
 
 				<div class="dropdown ms-1 ms-lg-0">
 
-					<a href="sign-in.html" class="btn text-white mb-0 d-none" rel="noopener"
-						style="background-color: #41B06E;">Sign In</a>
+					<a href="sign-in.html" class="btn text-white mb-0 d-none" style="background-color: #41B06E;">Sign
+						In</a>
 
 					<a class="avatar avatar-sm p-0" href="#" id="profileDropdown" role="button"
 						data-bs-auto-close="outside" data-bs-display="static" data-bs-toggle="dropdown"
@@ -832,6 +848,70 @@ Footer START -->
 	<!-- =======================
 Footer END -->
 
+	<!-- serch bar pop up start  -->
+	<div class="modal fade overflow-y-hidden" id="example" tabindex="-1" role="dialog"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title fs-2 font-bold honey" id="exampleModalLabel">Search Here</h5>
+					<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="row g-3 justify-content-center">
+							<div class=" col-12 ">
+								<div class="input-group">
+									<select id="category" class="form-select" name="choices-single-defaul"
+										style="max-width: 130px; ">
+										<option value="">Category</option>
+										<option value="arrivals">New Arrivals</option>
+										<option value="ladies">Ladies</option>
+										<option value="men">Men</option>
+									</select>
+									<input id="search" type="text" class="form-control" placeholder="Enter Keywords?" />
+									<button class="btn btn-primary" type="button" onclick="filterProducts()">
+										<i class="fas fa-search"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		var modal = document.getElementById("myModal");
+
+		// Get the button that opens the modal
+		var btn = document.getElementById("myBtn");
+
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		// When the user clicks on the button, open the modal
+		btn.onclick = function () {
+			modal.style.display = "block";
+		}
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function () {
+			modal.style.display = "none";
+		}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function (event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+	<!-- serch bar pop up End  -->
 	<!-- Back to top -->
 	<div class="back-top"><i class="bi bi-arrow-up-short position-absolute top-50 start-50 translate-middle"></i>
 	</div>
