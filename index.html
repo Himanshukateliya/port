@@ -387,9 +387,9 @@
 								aria-haspopup="true" aria-expanded="false">Services</a>
 
 							<ul class="dropdown-menu" aria-labelledby="demoMenu">
-								<li> <a class="dropdown-item" href="training.html" target="_blank">Export Import
+								<li> <a class="dropdown-item" href="training.html">Export Import
 										Training</a></li>
-								<li> <a class="dropdown-item" target="_blank" href="setup.html">Exim Business Setup</a>
+								<li> <a class="dropdown-item" href="setup.html">Exim Business Setup</a>
 								</li>
 								<li> <a class="dropdown-item" href="gsp.html">GSP</a></li>
 								<li> <a class="dropdown-item" href="ecommerce.html">E-Commerce</a></li>
@@ -947,9 +947,8 @@
 							<!-- Video button -->
 							<div class="d-flex align-items-center justify-content-center py-2 ms-0 ms-sm-4">
 
-								<a href="#v01" data-aos="fade-left" data-aos-duration="1000"
-									onclick="return changeSrc(('https://youtu.be/sdnKi5kYc-E?si=ZnzhybHsrwv82QJr'))"
-									data-bs-toggle="modal" data-view="#v01-view"
+								<a href="#exampleModalCenter" data-bs-toggle="modal" data-view="#exampleModalCenter"
+									data-target="#exampleModalCenter"
 									class="btn btn-round btn-primary-shadow mb-0 overflow-visible me-7">
 									<i class="fas fa-play"></i>
 									<h6
@@ -1165,7 +1164,33 @@
 
 		<!-- Counter END -->
 
-		<div class="modal fade" id="v01" tabindex="-1">
+		<!-- Button trigger modal -->
+
+		<!-- Modal -->
+		<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+			aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-md" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLongTitle">Grow OF GFE Group</h5>
+						<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<iframe class="ifr" id="video"
+							src="https://www.youtube.com/embed/sdnKi5kYc-E?si=qun1JySascnF2m-S"
+							title="YouTube video player" frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<!-- <div class="modal fade" id="v01" tabindex="-1">
 			<div class="modal-dialog modal-dialog-centered" role="document">
 				<div class="modal-content border-0">
 					<div class="view show" id="v01-view">
@@ -1174,7 +1199,6 @@
 								aria-label="btn-close "></button>
 						</div>
 						<div class="modal-body p-2">
-
 							<iframe width="485" height="315"
 								src="https://www.youtube.com/embed/sdnKi5kYc-E?si=qun1JySascnF2m-S"
 								title="YouTube video player" frameborder="0"
@@ -1184,7 +1208,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
 		<!-- Popular course START -->
 
@@ -3746,6 +3770,17 @@
 
 	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+	<!-- --------vieo thumbnail------ -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('#exampleModalCenter').on('hide.bs.modal', function () {
+				$('#video').attr('src', $('#video').attr('src'));
+			});
+		});
+	</script>
+
 </body>
 
 </html>

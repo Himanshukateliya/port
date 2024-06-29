@@ -26661,6 +26661,11 @@ html[dir=rtl] .choices__input {
     bottom: 40% !important;
   }
 
+  /* .ifr {
+    height: 315px;
+    width: 100px;
+  } */
+
   .t-whit {
     color: var(--bs-black);
     font-weight: bolder;
@@ -26762,9 +26767,10 @@ html[dir=rtl] .choices__input {
     /* font-size: 10px !important; */
   }
 
+  /* 
   iframe {
     width: 340px;
-  }
+  } */
 
   .playy {
     right: 45%;
@@ -26790,6 +26796,11 @@ html[dir=rtl] .choices__input {
   .fs-5 {
     font-size: 1.10rem !important;
   }
+
+  /* .ifr {
+    height: 315px;
+    width: 200px;
+  } */
 
   .review-padd {
     padding: 15px !important;
@@ -26852,6 +26863,11 @@ html[dir=rtl] .choices__input {
     width: 35%;
     margin-bottom: 5px;
   }
+
+  /* .ifr {
+    height: 350px;
+    width: 225px;
+  } */
 
   .review-padd {
     padding: 15px !important;
@@ -26925,6 +26941,12 @@ html[dir=rtl] .choices__input {
     /* font-size: 10px !important; */
   }
 
+
+  /* .ifr {
+    height: 315px;
+    width: 465px;
+  } */
+
   .Heena {
     padding: 8px 12px !important;
   }
@@ -26948,6 +26970,11 @@ html[dir=rtl] .choices__input {
     top: 41%;
   }
 
+}
+
+.ifr {
+  height: 315px;
+  width: 100%;
 }
 
 /* <button class="button-62" role="button">Button 62</button */
